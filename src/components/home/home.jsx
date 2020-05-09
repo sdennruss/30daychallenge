@@ -1,10 +1,11 @@
 import React from 'react';
+import Calendar from '../calendar/calendar';
 
-const Home= (props) => {
+const Home= ({challenges, onDaysClicked}) => {
 
   return (
-    null
-   );
+null
+  )
 }
 
 export default Home;

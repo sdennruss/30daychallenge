@@ -1,9 +1,8 @@
 import React,{Component} from 'react';
 import Days from './days';
-import ProgressBar from '../progress/progressBar';
 
 
-const Calendar = ({challenges, onDaysClicked, value, item}) => {
+const Calendar = ({challenges, onDaysClicked}) => {
   return (
     <React.Fragment>
     <h1>Pick a Day to Get Started!</h1>
@@ -18,10 +17,7 @@ const Calendar = ({challenges, onDaysClicked, value, item}) => {
         </div>
       ))}
       </div>
-      <ProgressBar
-      value={value}
-      item={item}
-      />
+
     </div>
 
     </React.Fragment>

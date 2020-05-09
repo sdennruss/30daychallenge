@@ -14,22 +14,24 @@
     display: flex;
   }
 
+  .contact-container {
+    display: flex;
+  }
+
 }
 
 @media(min-width: 300px){
   .challenge-container{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     width: 100%;
   }
 
   .challenge-div{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
   }
 
 }
@@ -39,8 +41,7 @@
   .challenge-container{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     width: 30%;
   }
 
@@ -126,9 +127,10 @@
   padding: 5px;
 }
 
-.CircularProgressbar .CircularProgressbar-path {
-  stroke: #3e98c7;
-  stroke-linecap: round;
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
+.contact-container{
+  background:lightpink;
+  padding: 5px;
+  margin: 10px 10px 0 10px;
+  height: 290px;
+  flex: 1;
 }

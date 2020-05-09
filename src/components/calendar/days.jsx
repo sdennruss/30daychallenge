@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import {Link} from "react-router-dom"
 
 
@@ -13,6 +13,7 @@ const Days = ({challenge, onClick}) => {
         className="challenge-items"
         >{challenge.days}</h6>
         </Link>
+
  </React.Fragment>
   );
 }

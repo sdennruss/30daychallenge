@@ -1,12 +1,18 @@
 import React from 'react';
+import ProgressBar from '../progress/progressBar';
 
-const MenuItems = ({ match }) => {
-  const {params: { days, breakfast, lunch, dinner }} = match
+const MenuItems = ({ match, value, item  }) => {
+  const {params: { days, breakfast, lunch, dinner, }} = match
 
 
   return (
     <React.Fragment>
       <h1>{days}</h1>
+
+      <ProgressBar
+      value={value}
+      item={item}
+      />
           <div className="menu-container">
             <div className="breakfast">
              <h4 className="breakfast-item">{breakfast}</h4>
