@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
-}
+@media(min-width: 568px){
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .navbar-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* .challenge-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1%;
+    width: 100%
+  } */
+  .challenge-div{
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-container{
+    display: flex;
   }
+
+}
+
+@media(min-width: 300px){
+  .challenge-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .challenge-div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+}
+
+@media(min-width: 920px){
+
+  .challenge-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30%;
+  }
+
+}
+
+
+.navbar-container>div{
+  background-color: #DAF7A6;
+  margin: 5px;
+  padding: 5px;
+}
+
+.unordered-list{
+  padding: 0px
+  }
+
+  .list-items{
+  list-style: none;
+  }
+
+  .home{
+    flex:4
+  }
+
+  .resources{
+    flex: 1
+  }
+
+  .food{
+    flex: 1
+  }
+
+  .contact{
+    flex:1
+  }
+
+
+  .challenge-container>div{
+    background:bisque;
+    padding: 5px;
+    margin: 0 5px 5px 5px;
+    flex: 1 0 16%;
+}
+
+.menu-container>div{
+  background-color: lightblue;
+  flex-flow: row wrap;
+  margin: 10px;
+  flex: 1;
+  height: 400px;
+}
+
+.breakfast{
+  padding: 20px;
+  height: 190px
+}
+
+.lunch{
+  padding: 20px;
+  height: 190px;
+}
+
+.dinner{
+  padding: 20px;
+  height: 190px
+}
+
+.breakfast-item{
+  background: whitesmoke;
+  height: 360px;
+  padding: 5px;
+}
+
+.lunch-item{
+  background: whitesmoke;
+  height: 360px;
+  padding: 5px;
+}
+
+.dinner-item{
+  background: whitesmoke;
+  height: 360px;
+  padding: 5px;
 }
