@@ -9,6 +9,7 @@ import {challenges} from "./components/calendar/challenges"
 import Calendar from './components/calendar/calendar';
 import MenuItems from './components/menu/menuItems';
 import './App.css';
+
 class App extends Component {
   state = {
     navigations: ["home", "resources", "food", "contact"],
@@ -16,7 +17,7 @@ class App extends Component {
     challenges: [],
     item: 0
   }
-
+// Will add approp color / design after completing the funnctionality part :)
   componentDidMount() {
   this.setState({ challenges })
   }
