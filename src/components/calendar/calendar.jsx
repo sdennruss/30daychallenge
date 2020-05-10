@@ -1,11 +1,11 @@
-import React,{Component} from 'react';
+import React from 'react';
 import Days from './days';
 
 
-const Calendar = ({challenges, onDaysClicked}) => {
+const Calendar = ({value, item, challenges, onDaysClicked}) => {
   return (
     <React.Fragment>
-    <h1>Pick a Day to Get Started!</h1>
+    <h1>Pick a Day and Let's Get Started!</h1>
     <div className="progress-challenge-container">
       <div className="challenge-container">
         {challenges.map(challenge => (
@@ -17,7 +17,6 @@ const Calendar = ({challenges, onDaysClicked}) => {
         </div>
       ))}
       </div>
-
     </div>
 
     </React.Fragment>

@@ -1,12 +1,17 @@
 import React from 'react';
 import ProgressBar from '../progress/progressBar';
+import Calendar from '../calendar/calendar';
 
-const MenuItems = ({ match, value, item  }) => {
+const MenuItems = ({ onDaysClicked, challenges, match, value, item  }) => {
   const {params: { days, breakfast, lunch, dinner, }} = match
 
 
   return (
     <React.Fragment>
+    <Calendar
+    challenges={challenges}
+    onDaysClicked={onDaysClicked}
+    />
       <h1>{days}</h1>
 
       <ProgressBar

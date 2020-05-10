@@ -8,6 +8,7 @@
 
   .challenge-div{
     display: flex;
+    width: auto;
   }
 
   .menu-container{
@@ -15,6 +16,11 @@
   }
 
   .contact-container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .progress-challenge-container{
     display: flex;
   }
 
@@ -45,6 +51,19 @@
     width: 30%;
   }
 
+  .equal-height-container{
+    /* max-width: 900px; */
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: row; */
+  }
+
+  /* .resources-container-2{
+    display: flex;
+    justify-content: flex-end;
+
+  } */
+
 }
 
 
@@ -63,7 +82,7 @@
   }
 
   .home{
-    flex:4
+    flex: 50%
   }
 
   .resources{
@@ -85,13 +104,16 @@
     margin: 0 5px 5px 5px;
     flex: 1 0 16%;
 }
+.progress-challenge-container{
+  margin: 5px;
+}
 
 .menu-container>div{
   background-color: lightblue;
   flex-flow: row wrap;
   margin: 10px;
   flex: 1;
-  height: 400px;
+  height: 390px;
 }
 
 .breakfast{
@@ -111,26 +133,73 @@
 
 .breakfast-item{
   background: whitesmoke;
-  height: 360px;
+  height: 350px;
   padding: 5px;
 }
 
 .lunch-item{
   background: whitesmoke;
-  height: 360px;
+  height: 350px;
   padding: 5px;
 }
 
 .dinner-item{
   background: whitesmoke;
-  height: 360px;
+  height: 350px;
   padding: 5px;
 }
 
 .contact-container{
   background:lightpink;
   padding: 5px;
-  margin: 10px 10px 0 10px;
-  height: 290px;
+  margin: 0px 10px 0 10px;
+}
+
+.resources-image-first{
+  background-color: white;
+  padding: 20px;
+  height: 500px;
+  flex: 5;
+}
+
+
+.resources-container-second{
+  background-color: linen;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.resource-1{
+background-color: thistle;
+flex: 1;
+margin: 5px;
+}
+
+.resource-2{
+  background-color: teal;
   flex: 1;
+  margin: 5px;
+}
+
+.resources-container-third{
+  background-color: plum;
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  margin: 5px;
+
+}
+
+.resource-3{
+  background-color: royalblue;
+  flex: 1;
+  margin: 5px;
+}
+
+.resource-4{
+  background-color: seagreen;
+  flex: 1;
+  margin: 5px;
 }

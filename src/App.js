@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
 import {Route, Switch, Redirect} from "react-router-dom";
 import NavBar from './components/navbar/navbar';
-import Home from "./components/home/home"
 import Resources from './components/resources/resources';
 import Food from './components/food/food';
 import NotFound from "./components/notfound/notfound"
 import {challenges} from "./components/calendar/challenges"
 import Calendar from './components/calendar/calendar';
 import MenuItems from './components/menu/menuItems';
-import './App.css';
 import Contact from './components/contact/contact';
+import './App.css';
 
 class App extends Component {
   state = {
     navigations: ["home", "resources", "food", "contact"],
     expand: false,
     challenges: [],
-    item: 1
+    item: 0
   }
 // Will add approp color / design after completing the funnctionality part :)
   componentDidMount() {
@@ -39,25 +38,22 @@ class App extends Component {
     navigations={navigations}
     />
 
-    <Calendar
-    challenges={challenges}
-    onDaysClicked={this.handleDaysClicked}
-    />
+
 
       <div className="routing">
       <Switch>
-        <Route path="/calendar/:breakfast/:lunch/:dinner/:days" render = {(props) => <MenuItems value={data} item={this.state.item} challenge={challenges} {...props}/> }/>
+        <Route path="/calendar/:breakfast/:lunch/:dinner/:days" render = {(props) => <MenuItems  onDaysClicked={this.handleDaysClicked} value={data} item={this.state.item} challenges={challenges} {...props}/> }/>
         <Route path="/resources" component={Resources} />
         <Route path="/food" component={Food} />
         <Route path="/notfound" component={NotFound} />
-        <Route path="/home" render={(props) => <Home challenges={challenges} onDaysClicked={this.handleDaysClicked} {...props} />} />
-        <Route path="/contact" component={Contact} />
-        <Route path='/' render={(props) => <Home challenges={challenges} onDaysClicked={this.handleDaysClicked} {...props} />} />
+        <Route path="/home" render={(props) => <Calendar challenges={challenges} onDaysClicked={this.handleDaysClicked} value={data} item={this.state.item} {...props}  />} />
+        <Route path='/' render={(props) => <Calendar challenges={challenges} onDaysClicked={this.handleDaysClicked} value={data} item={this.state.item} {...props} />} />
         <Redirect to="/notfound" />
         </Switch>
       </div>
 
       <Contact />
+
 
     </React.Fragment>
 
