@@ -1,10 +1,115 @@
-@media(min-width: 568px){
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
-  .navbar-container{
-    display: flex;
-    justify-content: space-evenly;
-    width: auto;
+.navbar-container{
+  display: flex;
+}
+
+.navbar-container>div{
+  background-color: #DAF7A6;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.unordered-list{
+  padding: 0rem;
+  justify-content: space-evenly;
   }
+
+
+  .list-items{
+  list-style: none;
+  text-align: center;
+  }
+
+
+  .home{
+    flex: 2;
+  }
+
+  .resources{
+    flex: 1
+  }
+
+  .contact{
+    flex:1;
+  }
+
+  .hamburger{
+    position: absolute;
+  }
+
+
+  .navbar-mobile-container{
+    flex-direction: column;
+  }
+
+  .navbar-mobile-container>div{
+    margin: 0rem;
+    padding: 0rem;
+    background-color: khaki;
+  }
+
+  .mobile-unnorder-list{
+    padding: 0px;
+    justify-content: space-evenly;
+  }
+
+  .mobile-list-items{
+    list-style: none;
+    text-align: center;
+  }
+
+  .hamburger-container{
+    display: flex;
+    height: vh;
+  }
+
+  .hamburger{
+    flex: 1;
+    z-index: 0.2rem;
+    padding: 0.3rem;
+    margin-top: 0.7rem;
+    font-size: 3.1rem;
+    width: 3rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .line{
+    width: 3rem;
+    height: 0.3rem;
+    margin: 0.5rem;
+    background: black;
+  }
+
+  .x{
+    margin-left: 0.8rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 600px) {
+
 
   .challenge-div{
     display: flex;
@@ -26,7 +131,7 @@
 
 }
 
-@media(min-width: 300px){
+@media(min-width: 320px){
   .challenge-container{
     display: flex;
     justify-content: space-evenly;
@@ -42,7 +147,7 @@
 
 }
 
-@media(min-width: 920px){
+@media(min-width: 900px){
 
   .challenge-container{
     display: flex;
@@ -66,36 +171,6 @@
 
 }
 
-
-.navbar-container>div{
-  background-color: #DAF7A6;
-  margin: 5px;
-  padding: 5px;
-}
-
-.unordered-list{
-  padding: 0px
-  }
-
-  .list-items{
-  list-style: none;
-  }
-
-  .home{
-    flex: 50%
-  }
-
-  .resources{
-    flex: 1
-  }
-
-  .food{
-    flex: 1
-  }
-
-  .contact{
-    flex:1
-  }
 
 
   .challenge-container>div{
