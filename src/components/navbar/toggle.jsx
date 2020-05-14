@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavMobile from './navmobile';
 import NavBar from './navbar';
 
-const Toggle = ({navigations, expand, onClick}) => {
+const Toggle = ({navigations, expand, onClick, clicked, onNavStrike}) => {
 
   const changeNavClass = (expand ? "x" : "line")
   const x = (expand ? "x" : null)
@@ -17,7 +17,7 @@ const Toggle = ({navigations, expand, onClick}) => {
           <div className={changeNavClass}>{}</div>
         </div>
       </div>
-      {expand && <NavMobile navigations={navigations} />}
+      {expand && <NavMobile click={clicked} onNavStrike={onNavStrike} navigations={navigations} />}
     </React.Fragment>
    );
 }

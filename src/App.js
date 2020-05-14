@@ -8,34 +8,39 @@ import {challenges} from "./components/calendar/challenges"
 import Calendar from './components/calendar/calendar';
 import MenuItems from './components/menu/menuItems';
 import Contact from './components/contact/contact';
-import NavMobile from "./components/navbar/navmobile";
-import './App.css';
 import Toggle from './components/navbar/toggle';
+import './App.css';
 
 class App extends Component {
-  state = {
-    navigations: ["home", "resources", "contact"],
-    challenges: [],
-    item: 0,
-    expand: false
-  }
-// Will add approp color / design after completing the funnctionality part :)
-  componentDidMount() {
-  this.setState({ challenges })
-  }
+state = {
+  navigations: ["home", "resources", "collab"],
 
-  handleDaysClicked = (challenge) =>{
-    const item = Math.round(challenge.days / 30 * 100)
-    this.setState({item})
-    console.log(item)
-  }
+  challenges: [],
+  item: 0,
+  expand: false,
+  strikeVar: ""
+}
+componentDidMount() {
+this.setState({ challenges })
+}
+
+handleDaysClicked = (challenge) =>{
+  const item = Math.round(challenge.days / 30 * 100)
+  this.setState({item})
+}
 
 handleToggle = (expand) => {
+  console.log(expand)
 this.setState({ expand  });
 }
 
+handleNavStrike = (strikeVar) => {
+  console.log(strikeVar)
+this.setState({clicked: strikeVar});
+}
+
   render() {
-    const {navigations, challenges, item: data, expand}=this.state
+    const {navigations, challenges, item: data, expand, clicked}=this.state
 
     return (
     <React.Fragment>
@@ -44,7 +49,9 @@ this.setState({ expand  });
       <Toggle
       navigations={navigations}
       expand={expand}
+      clicked={clicked}
       onClick={this.handleToggle}
+      onNavStrike = {this.handleNavStrike}
       />
     </MediaQuery>
 
