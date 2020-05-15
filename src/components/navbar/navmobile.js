@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 
-const NavMobile = ({navigations, onNavStrike, clicked}) => {
-
-
+const NavMobile = ({navigations, navBarClass, onNavSelected}) => {
   return (
     <React.Fragment>
 
@@ -14,8 +12,8 @@ const NavMobile = ({navigations, onNavStrike, clicked}) => {
           <ul className="mobile-unordered-list">
             <li className="mobile-list-items">
             <Link
-            onClick={() => onNavStrike(navigation)}
-            className={navigation} to={`/${navigation}`}>{navigation}</Link>
+            onClick={() => onNavSelected(navigation)}
+            className={navigation} to={`/${navigation}`}><span className = {navBarClass} >{navigation}</span></Link>
             </li>
           </ul>
         </nav>

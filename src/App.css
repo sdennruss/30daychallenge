@@ -16,86 +16,108 @@
 }
 
 .unordered-list{
+padding: 0rem;
+justify-content: space-evenly;
+}
+
+
+.list-items{
+list-style: none;
+text-align: center;
+}
+
+
+.home{
+  flex: 2;
+}
+
+.resources{
+  flex: 1;
+}
+
+.collab{
+  flex: 1;
+}
+
+
+.navbar-mobile-container{
+  flex-direction: column;
+}
+
+.navbar-mobile-container>div{
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.mobile-unorder-list{
   padding: 0rem;
   justify-content: space-evenly;
-  }
+}
 
-
-  .list-items{
+.mobile-list-items{
   list-style: none;
   text-align: center;
-  }
+
+}
+
+.hamburger-container{
+  display: flex;
+}
+
+.hamburger{
+  flex: 1;
+  z-index: 0.2rem;
+  padding: 0.3rem;
+  font-size: 3.1rem;
+  width: 3rem;
+  position: relative;
+  cursor: pointer;
+}
+.line{
+  width: 3rem;
+  height: 0.3rem;
+  margin: 0.5rem;
+  background: black;
+}
+
+.x{
+  margin-left: 0.8rem;
+}
 
 
-  .home{
-    flex: 2;
-  }
-
-  .resources{
-    flex: 1;
-  }
-
-  .collab{
-    flex: 1;
-  }
-
-
-  .navbar-mobile-container{
-    flex-direction: column;
-  }
-
-  .navbar-mobile-container>div{
-    margin: 0rem;
-    padding: 0rem;
-  }
-
-  .mobile-unorder-list{
-    padding: 0rem;
-    justify-content: space-evenly;
-  }
-
-  .mobile-list-items{
-    list-style: none;
-    text-align: center;
-
-  }
-
-  .hamburger-container{
-    display: flex;
-  }
-
-  .hamburger{
-    flex: 1;
-    z-index: 0.2rem;
-    padding: 0.3rem;
-    font-size: 3.1rem;
-    width: 3rem;
-    position: relative;
-    cursor: pointer;
-  }
-  .line{
-    width: 3rem;
-    height: 0.3rem;
-    margin: 0.5rem;
-    background: black;
-  }
-a.home, a.resources{
+a.home, a.resources, a.connect{
   color: black;
   text-decoration: none;
+  background-color: none;
+  background: none;
 }
 
-a.collab{
-  color: black;
-}
 
-  a:hover{
-    color: black;
-    text-decoration: line-through
+  .navbar-home:hover{
+    width: 6rem;
+    height: 0.8rem;
+    display: inline-block;
+    background-color: #BBDEFB;
+    opacity: 0.8;
   }
 
-  .x{
-    margin-left: 0.8rem;
+
+  .navbar-resources:hover{
+    width: 6rem;
+    height: 0.8rem;
+    display: inline-block;
+    background-color: #C8E6C9;
+    opacity: 0.8;
   }
+
+  .navbar-connect:hover{
+    width: 7rem;
+    height: 0.8rem;
+    display: inline-block;
+    background-color: #FFF9C4;
+    opacity: 0.8;
+  }
+
 
 
 

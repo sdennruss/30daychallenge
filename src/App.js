@@ -9,17 +9,19 @@ import Calendar from './components/calendar/calendar';
 import MenuItems from './components/menu/menuItems';
 import Contact from './components/contact/contact';
 import Toggle from './components/navbar/toggle';
+import {navStyles} from "./components/navbar/navStyles"
 import './App.css';
 
 class App extends Component {
 state = {
-  navigations: ["home", "resources", "collab"],
-
+  navigations: ["home", "resources", "connect"],
   challenges: [],
+  navBarClass: "",
   item: 0,
   expand: false,
-  strikeVar: ""
+
 }
+
 componentDidMount() {
 this.setState({ challenges })
 }
@@ -31,16 +33,15 @@ handleDaysClicked = (challenge) =>{
 
 handleToggle = (expand) => {
   console.log(expand)
-this.setState({ expand  });
+  this.setState({ expand  });
 }
 
-handleNavStrike = (strikeVar) => {
-  console.log(strikeVar)
-this.setState({clicked: strikeVar});
+handleNavigationSelection = (title) => {
+  this.setState({ navBarClass: `navbar-${title}` });
 }
 
   render() {
-    const {navigations, challenges, item: data, expand, clicked}=this.state
+    const {navigations, challenges, item: data, expand, clicked, navBarClass}=this.state
 
     return (
     <React.Fragment>
@@ -51,7 +52,8 @@ this.setState({clicked: strikeVar});
       expand={expand}
       clicked={clicked}
       onClick={this.handleToggle}
-      onNavStrike = {this.handleNavStrike}
+      navBarClass={navBarClass}
+      onNavSelected = {this.handleNavigationSelection}
       />
     </MediaQuery>
 
