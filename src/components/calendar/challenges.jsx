@@ -254,4 +254,12 @@ export const challenges =  [
 
 ]
 
+export const meals =  [
+    {
+    breakfast: 'Breakfast',
+    lunch: "Lunch",
+    dinner: "Dinner"
+    }
+]
+
 export default challenges

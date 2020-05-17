@@ -9,13 +9,13 @@ import Calendar from './components/calendar/calendar';
 import MenuItems from './components/menu/menuItems';
 import Contact from './components/contact/contact';
 import Toggle from './components/navbar/toggle';
-import {navStyles} from "./components/navbar/navStyles"
 import './App.css';
 
 class App extends Component {
 state = {
-  navigations: ["home", "resources", "connect"],
+  navigations: ["home", "vegan resources", "connect"],
   challenges: [],
+  meals: [],
   navBarClass: "",
   item: 0,
   expand: false,
@@ -23,7 +23,7 @@ state = {
 }
 
 componentDidMount() {
-this.setState({ challenges })
+this.setState({ challenges})
 }
 
 handleDaysClicked = (challenge) =>{
@@ -55,6 +55,7 @@ handleNavigationSelection = (title) => {
       navBarClass={navBarClass}
       onNavSelected = {this.handleNavigationSelection}
       />
+
     </MediaQuery>
 
     <MediaQuery query="(min-device-width: 769px)">

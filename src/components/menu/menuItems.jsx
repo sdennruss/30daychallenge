@@ -1,9 +1,11 @@
 import React from 'react';
 import ProgressBar from '../progress/progressBar';
 import Calendar from '../calendar/calendar';
+import MediaQuery from "react-responsive";
+import Meals from './meals';
 
 const MenuItems = ({ onDaysClicked, challenges, match, value, item  }) => {
-  const {params: { days, breakfast, lunch, dinner, }} = match
+  const {params: { days, breakfast, lunch, dinner}} = match
 
 
   return (
@@ -12,30 +14,23 @@ const MenuItems = ({ onDaysClicked, challenges, match, value, item  }) => {
     challenges={challenges}
     onDaysClicked={onDaysClicked}
     />
-      <h1>{days}</h1>
 
-      <ProgressBar
-      value={value}
-      item={item}
+      <h1 className="progress-days">{days}</h1>
+
+      <MediaQuery query="(max-device-width: 768px)" >
+        <ProgressBar
+        value={value}
+        item={item}
+        />
+      </MediaQuery>
+
+      <Meals
+      breakfast={breakfast}
+      lunch={lunch}
+      dinner={dinner}
       />
-          <div className="menu-container">
-            <div className="breakfast">
-             <h4 className="breakfast-item">{breakfast}</h4>
-            </div>
 
-            <div className="lunch">
-              <h4 className="lunch-item">{lunch}</h4>
-            </div>
-
-            <div className="dinner">
-              <h4 className="dinner-item">{dinner}</h4>
-            </div>
-
-
-        </div>
     </React.Fragment>
-
-     );
+    );
   }
-
 export default MenuItems;

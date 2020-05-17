@@ -2,14 +2,19 @@ import React from 'react';
 import Days from './days';
 
 
-const Calendar = ({value, item, challenges, onDaysClicked}) => {
+const Calendar = ({challenges, onDaysClicked}) => {
   return (
     <React.Fragment>
-    <h1>Pick a Day and Let's Get Started!</h1>
-    <div className="progress-challenge-container">
-      <div className="challenge-container">
+    <h1 className="thirty-day-challenge">30 Day Vegan Challenge</h1>
+    <h3 className="pick-calendar-day">Pick a Day and Let's Get Started! </h3>
+      <div className="challenge-container" >
         {challenges.map(challenge => (
-          <div  key={challenge.id} className="challenge-divs">
+          <div
+          key={challenge.id}
+          className="challenge-divs"
+          onClick={() => onDaysClicked(challenge)}
+          >
+
             <Days
             challenge={challenge}
             onClick = {() => onDaysClicked(challenge) }
@@ -17,8 +22,6 @@ const Calendar = ({value, item, challenges, onDaysClicked}) => {
         </div>
       ))}
       </div>
-    </div>
-
     </React.Fragment>
    );
 }
