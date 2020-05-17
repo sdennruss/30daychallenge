@@ -6,8 +6,8 @@ const Meals = ({breakfast, lunch, dinner}) => {
     <React.Fragment>
 
       <div className="menu-container">
+
         <div className="breakfast-container">
-          <div className="corner-stroke-left"></div>
             <h3 class="meal-name">Breakfast</h3>
             <div className="recipes">
             <p className="breakfast-item">{breakfast}</p>
@@ -16,22 +16,21 @@ const Meals = ({breakfast, lunch, dinner}) => {
           </div>
 
         <div className="lunch-container">
-          <div className="corner-stroke-left"></div>
           <h3 class="meal-name">Lunch</h3>
-          <div className="recipes">
+            <div className="recipes">
             <p className="lunch-item">{lunch}</p>
-          </div>
+            </div>
             <a><button className="details-button">View Details</button></a>
           </div>
 
           <div className="dinner-container">
-          <div className="corner-stroke-left"></div>
-          <h3 class="meal-name">Dinner</h3>
-          <div className="recipes">
-            <p className="dinner-item">{meals.dinner}</p>
-           <a><button className="details-button">View Details</button></a>
+            <h3 class="meal-name">Dinner</h3>
+              <div className="recipes">
+              <p className="dinner-item">{dinner}</p>
           </div>
+          <a><button className="details-button">View Details</button></a>
         </div>
+
         </div>
     </React.Fragment>
   );

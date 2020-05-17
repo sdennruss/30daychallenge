@@ -90,7 +90,7 @@ margin-left: 0.8rem;
 }
 
 
-a.home, a.vegan.resources, a.connect{
+a.home, a.resources, a.connect{
 text-decoration: none;
 background-color: none;
 background: none;
@@ -115,7 +115,7 @@ transition: all 0.5s ease-in;
 }
 
 
-.navbar-vegan.resources:hover{
+.navbar-resources:hover{
 width: 7rem;
 height: 0.8rem;
 display: inline-block;
@@ -274,12 +274,18 @@ transition: all 0.5s ease-in;
   }
 
   .breakfast-container{
-    padding: 2rem;
+    padding: 1rem;
   }
 
-  .breakfast-item, .lunch-item, .dinner-item, .meal-name{
-    /* font-size: 2rem; */
+  .breakfast-item, .lunch-item, .dinner-item{
+    font-size: 1rem;
     font-family: "Nunito";
+  }
+
+  .meal-name{
+    font-family: "Quicksand";
+    font-size: 3rem;
+
   }
 
 .details-button{
@@ -293,12 +299,19 @@ transition: all 0.5s ease-in;
   }
 
   .lunch-container{
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .dinner-container{
-    padding: 2rem;
+    padding: 1rem;
   }
+
+  .contact-container{
+    background:lightpink;
+    margin: 0.5rem;
+    height: 20rem;
+  }
+
 }
 
 

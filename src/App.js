@@ -13,7 +13,7 @@ import './App.css';
 
 class App extends Component {
 state = {
-  navigations: ["home", "vegan resources", "connect"],
+  navigations: ["home", "resources", "connect"],
   challenges: [],
   meals: [],
   navBarClass: "",
