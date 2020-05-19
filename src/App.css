@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Roboto|Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Francois+One|Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Sacramento&display=swap');
 
 *{
 margin: 0px;
@@ -9,6 +10,8 @@ padding: 0px;
 box-sizing: border-box;
 font-size: 62.5%;
 }
+
+
 /* Navigation Being */
 .navbar-container{
 display: flex;
@@ -64,29 +67,32 @@ text-align: center;
 
 }
 
-.hamburger-container{
+/* .hamburger-container{
 display: flex;
+flex-direction: row-reverse;
+width: 6rem;
 }
 
 .hamburger{
 flex: 1;
-z-index: 0.2rem;
 padding: 0.3rem;
 margin: 0.5rem;
 font-size: 3.1rem;
-width: 3rem;
 position: relative;
 cursor: pointer;
 }
+
 .line{
 width: 3rem;
 height: 0.3rem;
 margin: 0.5rem;
 background: black;
-}
+} */
+
 
 .x{
 margin-left: 0.8rem;
+
 }
 
 
@@ -94,15 +100,12 @@ a.home, a.resources, a.connect{
 text-decoration: none;
 background-color: none;
 background: none;
-font-family: "Nunito";
+font-family: "Josefine Sans";
 text-transform: capitalize;
 color:#2D3748;
 font-size: 1.7rem;
 }
 
-/* .navbar-home, .navbar-resources, .navbar-connect{
-  text-transform: uppercase;
-} */
 
 .navbar-home:hover{
 width: 7rem;
@@ -165,10 +168,38 @@ transition: all 0.5s ease-in;
 
 /* mobile */
 @media(max-width: 768px){
+.hamburger-container{
+  display: flex;
+  flex-direction: row;
+  width: 6rem;
+  margin: 0.3rem;
+  }
+
+  .hamburger{
+  flex: 1;
+  padding: 0.3rem;
+  font-size: 3rem;
+  position: relative;
+  cursor: pointer;
+  }
+
+  .line{
+  width: 3rem;
+  height: 0.3rem;
+  margin: 0.5rem;
+  background: black;
+  }
+
+
+  .x{
+  margin-left: 0.8rem;
+
+  }
+
   .thirty-day-challenge{
     text-align: center;
-    font-family: "Quicksand";
-    font-weight:bolder;
+    font-family: "Francois One";
+    /* font-weight:bolder; */
     font-size: 2.5rem;
     margin: 0.5rem;
     padding: 0.5rem;
@@ -176,7 +207,7 @@ transition: all 0.5s ease-in;
   .pick-calendar-day{
     margin-top: 2rem;
     text-align: center;
-    font-family: "Nunito";
+    font-family: "Josefine";
     font-size: 1.5rem;
     padding: 0.5rem;
     margin: 0.5rem;
@@ -186,9 +217,8 @@ transition: all 0.5s ease-in;
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
-    width: 96%;
+    width: 100%;
     height: 30rem;
-    margin: 1rem 0.5rem;
     padding-bottom: 0.5rem;
     border-right: solid 0rem white;
     border-bottom: solid 0rem white;
@@ -214,8 +244,9 @@ transition: all 0.5s ease-in;
   .challenge-items{
     color:#2D3748;
     text-decoration: none;
-    font-family: "Nunito";
-    margin-bottom: 0px;
+    font-family: "Josefine Sans";
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
 
   }
 
@@ -234,8 +265,7 @@ transition: all 0.5s ease-in;
 
 
   .progress-days{
-    font-family: "Quicksand";
-    font-weight:bolder;
+    font-family: "Francois One";
     text-align: center;
     margin: 0.5rem;
     padding: 0.5rem;
@@ -245,7 +275,7 @@ transition: all 0.5s ease-in;
   .check-your-progress{
     margin-top: 2rem;
     text-align: center;
-    font-family: "Nunito";
+    font-family: "Josefine Sans";
     font-size: 1.5rem;
     padding: 0.5rem;
     margin: 0px;
@@ -268,7 +298,7 @@ transition: all 0.5s ease-in;
 
   .menu-container>div{
     flex-flow: row wrap;
-    margin: 2.5rem 1rem;
+    margin: 2rem 1rem;
     height: 30rem;
    border: solid 0.6rem #DAE5EA;
   }
@@ -279,12 +309,13 @@ transition: all 0.5s ease-in;
 
   .breakfast-item, .lunch-item, .dinner-item{
     font-size: 1rem;
-    font-family: "Nunito";
+    font-family: "Josefine Sans";
   }
 
   .meal-name{
-    font-family: "Quicksand";
-    font-size: 3rem;
+    font-family: "Francois One";
+    font-size: 2.5rem;
+    text-align: center;
 
   }
 
@@ -307,9 +338,88 @@ transition: all 0.5s ease-in;
   }
 
   .contact-container{
-    background:lightpink;
     margin: 0.5rem;
-    height: 20rem;
+    height: 24rem;
+    background-color: #FCFCFA;
+  }
+
+  .contact-header{
+    font-family: "Francois One";
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .email-container{
+    display: flex;
+    height: 10.25rem;
+  }
+
+  .email-address{
+    font-size: 1rem;
+  }
+
+  .fa-envelope-o{
+    padding: 0.5rem;
+  }
+
+  .instagram-container{
+    display: flex;
+    height: 10.25rem;
+  }
+
+  .instagram-handle{
+    font-family: "Josefine Sans";
+    font-size: 1.2rem;
+  }
+
+  .fa-instagram{
+    padding: 0.5rem;
+  }
+
+.resources-header{
+  font-family: "Francois One";
+  text-align: center;
+}
+
+  .equal-height-container{
+    display: flex;
+    /* background: orange; */
+    height: 26rem;
+    align-items: center;
+  }
+
+  .resources-image-first{
+    flex: 1;
+    /* background-color: green; */
+    /* padding: 1rem; */
+    margin-top: 0.5rem;
+    height: 25rem;
+  }
+
+  .baby-cows{
+    max-width: 100%;
+  }
+
+  .left-arrow-container, .right-arrow-container{
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    margin: 0.5rem;
+    height: 3rem;
+    background-color:black;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+  }
+
+  .left-arrow-container:hover, .right-arrow-container:hover{
+    background-color:  #B17FAB;
+  }
+
+
+  .left-arrow, .right-arrow{
+    flex:1;
+    padding: 0.8rem;
   }
 
 }
@@ -364,14 +474,14 @@ flex: 1 0 17%;
   padding: 5px;
 } */
 
-.contact-container{
-  background:lightpink;
-  padding: 5px;
-  margin: 0px 10px 0 10px;
-}
+/* .contact-container{
+  background:B17FAB;
+  margin: 1rem 1rem;
+  padding: 1rem;
+} */
 
-.resources-image-first{
-  background-color: white;
+/* .resources-image-first{
+  background-color: green;
   padding: 20px;
   height: 500px;
   flex: 5;
@@ -417,4 +527,4 @@ margin: 5px;
   background-color: seagreen;
   flex: 1;
   margin: 5px;
-}
+} */

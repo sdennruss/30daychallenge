@@ -1,5 +1,4 @@
 import React from 'react';
-import { meals } from '../calendar/challenges';
 
 const Meals = ({breakfast, lunch, dinner}) => {
   return (
@@ -8,7 +7,7 @@ const Meals = ({breakfast, lunch, dinner}) => {
       <div className="menu-container">
 
         <div className="breakfast-container">
-            <h3 class="meal-name">Breakfast</h3>
+            <h3 className="meal-name">Breakfast</h3>
             <div className="recipes">
             <p className="breakfast-item">{breakfast}</p>
             </div>
