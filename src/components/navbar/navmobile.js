@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 const NavMobile = ({navigations, navBarClass, onNavSelected}) => {
+
+
   return (
     <React.Fragment>
 

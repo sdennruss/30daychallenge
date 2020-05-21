@@ -9,43 +9,51 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 font-size: 62.5%;
+text-align: unset;
 }
 
 
-/* Navigation Being */
+.hamburger-container{
+display: flex;
+flex-direction: row;
+width: 6rem;
+margin: 0.3rem;
+}
+
+.hamburger{
+flex: 1;
+padding: 0.3rem;
+font-size: 3rem;
+position: relative;
+cursor: pointer;
+}
+
+.line{
+width: 3rem;
+height: 0.3rem;
+margin: 0.5rem;
+background: black;
+}
+
+.x{
+margin-left: 0.8rem;
+}
+
 .navbar-container{
 display: flex;
+flex-direction: row;
 }
 
 .navbar-container>div{
-background-color: #DAF7A6;
-margin: 0.5rem;
+margin: 0rem;
 padding: 0.5rem;
 }
 
-.unordered-list{
-padding: 0rem;
-justify-content: space-evenly;
-}
 
-
-.list-items{
-list-style: none;
-text-align: center;
-}
-
-
-.home{
-flex: 2;
-}
-
-.resources{
+.home, .resources, .connect{
 flex: 1;
 }
 
-.collab{
-flex: 1;
-}
 
 .navbar-mobile-container{
 flex-direction: column;
@@ -64,35 +72,6 @@ justify-content: space-evenly;
 .mobile-list-items{
 list-style: none;
 text-align: center;
-
-}
-
-/* .hamburger-container{
-display: flex;
-flex-direction: row-reverse;
-width: 6rem;
-}
-
-.hamburger{
-flex: 1;
-padding: 0.3rem;
-margin: 0.5rem;
-font-size: 3.1rem;
-position: relative;
-cursor: pointer;
-}
-
-.line{
-width: 3rem;
-height: 0.3rem;
-margin: 0.5rem;
-background: black;
-} */
-
-
-.x{
-margin-left: 0.8rem;
-
 }
 
 
@@ -103,13 +82,13 @@ background: none;
 font-family: "Josefine Sans";
 text-transform: capitalize;
 color:#2D3748;
-font-size: 1.7rem;
+font-size: 2.5rem;
 }
 
 
 .navbar-home:hover{
 width: 7rem;
-height: 0.8rem;
+height: 1rem;
 background-color: #B17FAB;
 opacity: 0.8;
 display: inline-block;
@@ -120,7 +99,7 @@ transition: all 0.5s ease-in;
 
 .navbar-resources:hover{
 width: 7rem;
-height: 0.8rem;
+height: 1rem;
 display: inline-block;
 background-color: #9FC4A4;
 opacity: 0.8;
@@ -131,369 +110,396 @@ display: inline-block;
 
 .navbar-connect:hover{
 width: 7rem;
-height: 0.8rem;
+height: 1rem;
 display: inline-block;
 background-color: #EAE7DA;
 transition: all 0.5s ease-in;
 -webkit-transition: all 0.5s ease-in;
 }
 
+.thirty-day-challenge{
+text-align: center;
+font-family: "Francois One";
+font-size: 5rem;
+margin: 0.5rem;
+padding: 0.5rem;
+}
 
-/* desktop & ipad */
-@media(min-width: 768px){
+.pick-calendar-day{
+margin-top: 2rem;
+text-align: center;
+font-family: "Josefine";
+font-size: 2rem;
+padding: 0.5rem;
+margin: 0.5rem;
+}
 
-  .challenge-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    width: 100%;
-  }
+.challenge-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  flex-basis: 100%;
+  height: 30rem;
+  padding: 1rem;
+  padding-left: 0.667rem;
+  border-right: solid 0rem white;
+  border-bottom: solid 0rem white;
+}
 
-  .menu-container{
-    display: flex;
-  }
+.challenge-container>div{
+  flex: 1 0 17%;
+}
 
-  .contact-container {
-    display: flex;
-    align-items: flex-end;
-  }
-  /* .resources-container-2{
-    display: flex;
-    justify-content: flex-end;
+.challenge-divs{
+  flex: 1;
+  text-align: center;
+  position: relative;
+  justify-content: space-evenly;
+  border-left: solid  white;
+  border-top: solid  white;
+  padding: 1.5rem 0.5rem;
+  background: #F1F8E9;
+}
 
-  } */
+
+.challenge-divs:hover{
+  background-color: #B17FAB;
+  color: white;
+}
+
+.challenge-items{
+  color:#2D3748;
+  text-decoration: none;
+  font-family: "Josefine Sans";
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+}
+
+.challenge-items:hover{
+  color: white;
+}
+
+.challenge-items>div{
+  margin: 0px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.progress-days{
+  font-family: "Francois One";
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 3.5rem;
+}
+
+.check-your-progress{
+margin-top: 2rem;
+text-align: center;
+font-family: "Josefine";
+font-size: 2rem;
+padding: 0.5rem;
+margin: 0px;
+}
+
+.progress-bar-div{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  justify-content: center;
+}
+
+.progress-bar-container{
+margin: 2rem 4rem !important;
+}
+
+.progressbar{
+  padding-right:0px !important;
+  width: 15% !important;
+}
+
+.menu-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu-container>div{
+margin: 2rem 1rem;
+height: 35rem;
+border: solid 0.6rem #DAE5EA;
+}
+
+.breakfast-container, .lunch-container, .dinner-container{
+padding: 1rem;
+flex-basis: 50%;
+}
+
+.breakfast-item, .lunch-item, .dinner-item{
+font-size: 1rem;
+font-family: "Josefine Sans";
+}
+
+.meal-name{
+font-family: "Francois One";
+font-size: 2.5rem;
+text-align: center;
 
 }
+
+.recipes{
+height: 20rem;
+}
+
+
+
+.contact-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+
+
+
+
+
+
 
 
 /* mobile */
 @media(max-width: 768px){
-.hamburger-container{
-  display: flex;
-  flex-direction: row;
-  width: 6rem;
-  margin: 0.3rem;
-  }
 
-  .hamburger{
-  flex: 1;
-  padding: 0.3rem;
-  font-size: 3rem;
-  position: relative;
-  cursor: pointer;
-  }
-
-  .line{
-  width: 3rem;
-  height: 0.3rem;
+.thirty-day-challenge{
+  text-align: center;
+  font-family: "Francois One";
+  font-weight:bolder;
+  font-size: 2.5rem;
   margin: 0.5rem;
-  background: black;
-  }
+  padding: 0.5rem;
+} */
 
+.pick-calendar-day{
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Josefine";
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
 
-  .x{
-  margin-left: 0.8rem;
+.challenge-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  height: 30rem;
+  padding-bottom: 0.5rem;
+  border-right: solid 0rem white;
+  border-bottom: solid 0rem white;
+}
 
-  }
+.challenge-divs{
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  border-left: solid  white;
+  border-top: solid  white;
+  padding: 1.5rem 0.5rem;
+  background: #F1F8E9;
+}
 
-  .thirty-day-challenge{
-    text-align: center;
-    font-family: "Francois One";
-    /* font-weight:bolder; */
-    font-size: 2.5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-  }
-  .pick-calendar-day{
-    margin-top: 2rem;
-    text-align: center;
-    font-family: "Josefine";
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
-  }
+.challenge-divs:hover{
+  background-color: #B17FAB;
+  color: white;
+}
 
-  .challenge-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 30rem;
-    padding-bottom: 0.5rem;
-    border-right: solid 0rem white;
-    border-bottom: solid 0rem white;
-  }
+.challenge-items{
+  color:#2D3748;
+  text-decoration: none;
+  font-family: "Josefine Sans";
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+}
 
-  .challenge-divs{
-    display: flex;
-    position: relative;
-    justify-content: space-evenly;
-    border-left: solid  white;
-    border-top: solid  white;
-    padding: 1.5rem 0.5rem;
-    background: #F1F8E9;
+.challenge-items:hover{
+  color: white;
+}
 
-    /* flex-flow: row wrap; */
-  }
-
-  .challenge-divs:hover{
-    background-color: #B17FAB;
-    color: white;
-  }
-
-  .challenge-items{
-    color:#2D3748;
-    text-decoration: none;
-    font-family: "Josefine Sans";
-    margin-bottom: 0rem;
-    font-size: 1.2rem;
-
-  }
-
-  .challenge-items:hover{
-    color: white;
-  }
-
-  .challenge-items>div{
-    margin: 0px;
-  }
-
-
-  a:hover{
-    text-decoration: none;
-  }
-
-
-  .progress-days{
-    font-family: "Francois One";
-    text-align: center;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    font-size: 2.5rem;
-  }
-
-  .check-your-progress{
-    margin-top: 2rem;
-    text-align: center;
-    font-family: "Josefine Sans";
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin: 0px;
-  }
-
-  .progress-bar-div{
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    justify-content: center;
-  }
-
-  .progress-bar-container{
-  margin: 2rem 4rem !important;
-  }
-
-  .progressbar{
-    padding-right:0px !important;
-  }
-
-
-  .menu-container>div{
-    flex-flow: row wrap;
-    margin: 2rem 1rem;
-    height: 30rem;
-   border: solid 0.6rem #DAE5EA;
-  }
-
-  .breakfast-container{
-    padding: 1rem;
-  }
-
-  .breakfast-item, .lunch-item, .dinner-item{
-    font-size: 1rem;
-    font-family: "Josefine Sans";
-  }
-
-  .meal-name{
-    font-family: "Francois One";
-    font-size: 2.5rem;
-    text-align: center;
-
-  }
-
-.details-button{
-  background-color: white;
-  padding: 0.4rem;
+.challenge-items>div{
+  margin: 0px;
 }
 
 
-  .recipes{
-    height: 20rem;
-  }
+a:hover{
+  text-decoration: none;
+}
 
-  .lunch-container{
-    padding: 1rem;
-  }
 
-  .dinner-container{
-    padding: 1rem;
-  }
-
-  .contact-container{
-    margin: 0.5rem;
-    height: 24rem;
-    background-color: #FCFCFA;
-  }
-
-  .contact-header{
-    font-family: "Francois One";
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .email-container{
-    display: flex;
-    height: 10.25rem;
-  }
-
-  .email-address{
-    font-size: 1rem;
-  }
-
-  .fa-envelope-o{
-    padding: 0.5rem;
-  }
-
-  .instagram-container{
-    display: flex;
-    height: 10.25rem;
-  }
-
-  .instagram-handle{
-    font-family: "Josefine Sans";
-    font-size: 1.2rem;
-  }
-
-  .fa-instagram{
-    padding: 0.5rem;
-  }
-
-.resources-header{
+.progress-days{
   font-family: "Francois One";
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.check-your-progress{
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Josefine";
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin: 0px;
+}
+
+.progress-bar-div{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  justify-content: center;
+}
+
+.progress-bar-container{
+margin: 2rem 4rem !important;
+}
+
+.progressbar{
+  padding-right:0px !important;
+}
+
+.menu-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column ;
+}
+
+.menu-container>div{
+margin: 2rem 1rem;
+height: 30rem;
+border: solid 0.6rem #DAE5EA;
+}
+
+.breakfast-container, .lunch-container, .dinner-container{
+padding: 1rem;
+flex-basis: 30%;
+}
+
+.breakfast-item, .lunch-item, .dinner-item{
+font-size: 1rem;
+font-family: "Josefine Sans";
+}
+
+.meal-name{
+font-family: "Francois One";
+font-size: 2.5rem;
+text-align: center;
+
+}
+
+.details-button{
+background-color: white;
+padding: 0.4rem;
+}
+
+
+.recipes{
+  height: 20rem;
+}
+
+.lunch-container{
+  padding: 1rem;
+}
+
+.dinner-container{
+  padding: 1rem;
+}
+
+.contact-container{
+  margin: 0.5rem;
+  height: 24rem;
+  background-color: #FCFCFA;
+}
+
+.contact-header{
+  font-family: "Francois One";
+  font-size: 2.5rem;
   text-align: center;
 }
 
-  .equal-height-container{
-    display: flex;
-    /* background: orange; */
-    height: 26rem;
-    align-items: center;
-  }
+.email-container{
+  display: flex;
+  height: 10.25rem;
+}
 
-  .resources-image-first{
-    flex: 1;
-    /* background-color: green; */
-    /* padding: 1rem; */
-    margin-top: 0.5rem;
-    height: 25rem;
-  }
+.email-address{
+  font-size: 1rem;
+}
 
-  .baby-cows{
-    max-width: 100%;
-  }
+.fa-envelope-o{
+  padding: 0.5rem;
+}
 
-  .left-arrow-container, .right-arrow-container{
-    display: flex;
-    flex-direction: column;
-    width: 3rem;
-    margin: 0.5rem;
-    height: 3rem;
-    background-color:black;
-    align-items: center;
-    border-radius: 50%;
-    color: white;
-  }
+.instagram-container{
+  display: flex;
+  height: 10.25rem;
+}
 
-  .left-arrow-container:hover, .right-arrow-container:hover{
-    background-color:  #B17FAB;
-  }
+.instagram-handle{
+  font-family: "Josefine Sans";
+  font-size: 1.2rem;
+}
 
+.fa-instagram{
+  padding: 0.5rem;
+}
 
-  .left-arrow, .right-arrow{
-    flex:1;
-    padding: 0.8rem;
-  }
+.equal-heigh-container{
+  max-width: 900px;
+  margin: 0 auto;
+  display:flex;
+}
+
+.resources-image{
+padding: 2rem;
+flex: 1;
+}
+
+.resources-header-container{
+background-color: khaki;
+flex: 1
+}
+
+.first{
+background-color: greenyellow;
+}
+
+.second{
+background-color: hotpink;
+}
 
 }
 
 
-.challenge-container>div{
-/* padding: 0.2rem; */
-/* padding-right: 0px; */
-/* margin: 1rem 0.5rem 0.5rem 0.5rem; */
-flex: 1 0 17%;
-
-}
-
-/* .menu-container>div{
-  background-color: lightblue;
-  flex-flow: row wrap;
-  margin: 1rem;
-  flex: 1;
-  height: 39rem;
-}
-
-.breakfast{
-  padding: 20px;
-  height: 190px;
-}
-
-.lunch{
-  padding: 20px;
-  height: 190px;
-}
-
-.dinner{
-  padding: 20px;
-  height: 190px
-}
-
-.breakfast-item{
-  background: whitesmoke;
-  height: 350px;
-  padding: 5px;
-}
-
-.lunch-item{
-  background: whitesmoke;
-  height: 350px;
-  padding: 5px;
-}
-
-.dinner-item{
-  background: whitesmoke;
-  height: 350px;
-  padding: 5px;
-} */
 
 /* .contact-container{
-  background:B17FAB;
-  margin: 1rem 1rem;
-  padding: 1rem;
+background:B17FAB;
+margin: 1rem 1rem;
+padding: 1rem;
 } */
 
 /* .resources-image-first{
-  background-color: green;
-  padding: 20px;
-  height: 500px;
-  flex: 5;
+background-color: green;
+padding: 20px;
+height: 500px;
+flex: 5;
 }
 
 
 .resources-container-second{
-  background-color: linen;
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
+background-color: linen;
+flex: 3;
+display: flex;
+flex-direction: column;
+margin: 5px;
 }
 
 .resource-1{
@@ -503,28 +509,28 @@ margin: 5px;
 }
 
 .resource-2{
-  background-color: teal;
-  flex: 1;
-  margin: 5px;
+background-color: teal;
+flex: 1;
+margin: 5px;
 }
 
 .resources-container-third{
-  background-color: plum;
-  display: flex;
-  flex: 3;
-  flex-direction: column;
-  margin: 5px;
+background-color: plum;
+display: flex;
+flex: 3;
+flex-direction: column;
+margin: 5px;
 
 }
 
 .resource-3{
-  background-color: royalblue;
-  flex: 1;
-  margin: 5px;
+background-color: royalblue;
+flex: 1;
+margin: 5px;
 }
 
 .resource-4{
-  background-color: seagreen;
-  flex: 1;
-  margin: 5px;
+background-color: seagreen;
+flex: 1;
+margin: 5px;
 } */

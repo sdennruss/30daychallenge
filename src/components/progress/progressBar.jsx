@@ -3,7 +3,7 @@ import {CircularProgressbar, buildStyles} from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 import ProgressBarStyle from './styleProgress';
 
-const ProgressBar = ({value, item}) => {
+const ProgressBar = ({value, item }) => {
 
   const percentage = (item === 0 ? 0 : value)
   const completed = (value === 100 ? "#9FC4A4" : "#B17FAB")

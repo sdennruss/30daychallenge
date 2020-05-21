@@ -1,26 +1,29 @@
 import React from 'react';
 import {Link} from "react-router-dom"
 
-const NavBar = ({navigations}) => {
+const NavBar = ({navigations, onNavSelected, navBarClass}) => {
 
 return (
+
   <React.Fragment>
 
-  <div className="navbar-container">
+  <div className="navbar-mobile-container">
     {navigations.map(navigation => (
       <div key={navigation} className={navigation}>
-          <nav className="navigation">
-            <ul className="unordered-list">
-              <li className="list-items">
-              <Link className = "navigation-links" to={`/${navigation}`}>{navigation}</Link>
-              </li>
-            </ul>
-          </nav>
+      <nav className="navigation-mobile">
+        <ul className="mobile-unordered-list">
+          <li className="mobile-list-items">
+          <Link
+          onClick={() => onNavSelected(navigation)}
+          className={`mobile-${navigation}`} to={`/${navigation}`}><span className = {navBarClass} >{navigation}</span></Link>
+          </li>
+        </ul>
+      </nav>
       </div>
     ))}
-  </div>
+    </div>
   </React.Fragment>
-   );
-}
 
+ );
+}
 export default NavBar;

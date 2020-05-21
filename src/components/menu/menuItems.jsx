@@ -24,6 +24,13 @@ const MenuItems = ({ onDaysClicked, challenges, match, value, item  }) => {
         />
       </MediaQuery>
 
+      <MediaQuery query="(min-device-width: 769px)" >
+      <ProgressBar
+      value={value}
+      item={item}
+      />
+    </MediaQuery>
+
       <Meals
       breakfast={breakfast}
       lunch={lunch}

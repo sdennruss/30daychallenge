@@ -16,6 +16,7 @@ const Toggle = ({navigations, expand, onClick, clicked, navBarClass, onNavSelect
           <div className={changeNavClass}>{}</div>
         </div>
       </div>
+
       {expand &&
         <NavMobile
         click={clicked}

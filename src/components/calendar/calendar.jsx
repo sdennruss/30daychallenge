@@ -1,8 +1,11 @@
 import React from 'react';
 import Days from './days';
+import MediaQuery from "react-responsive";
+import ProgressBar from "../progress/progressBar";
 
 
-const Calendar = ({challenges, onDaysClicked}) => {
+
+const Calendar = ({challenges, onDaysClicked, value, item}) => {
   return (
     <React.Fragment>
     <h1 className="thirty-day-challenge">30 Day Vegan Challenge</h1>
@@ -22,6 +25,7 @@ const Calendar = ({challenges, onDaysClicked}) => {
         </div>
       ))}
       </div>
+
     </React.Fragment>
    );
 }

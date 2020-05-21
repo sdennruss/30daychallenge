@@ -40,13 +40,16 @@ handleNavigationSelection = (title) => {
   this.setState({ navBarClass: `navbar-${title}` });
 }
 
+handleRightArrow = () =>{
+  console.log("Right arrow clicked")
+}
+
   render() {
     const {navigations, challenges, item: data, expand, clicked, navBarClass}=this.state
 
     return (
     <React.Fragment>
 
-    <MediaQuery query="(max-device-width: 768px)" >
       <Toggle
       navigations={navigations}
       expand={expand}
@@ -56,18 +59,13 @@ handleNavigationSelection = (title) => {
       onNavSelected = {this.handleNavigationSelection}
       />
 
-    </MediaQuery>
-
-    <MediaQuery query="(min-device-width: 769px)">
-      <NavBar navigations={navigations}/>
-    </MediaQuery>
 
 
 
     <div className="routing">
       <Switch>
         <Route path="/calendar/:breakfast/:lunch/:dinner/:days" render = {(props) => <MenuItems  onDaysClicked={this.handleDaysClicked} value={data} item={this.state.item} challenges={challenges} {...props}/> }/>
-        <Route path="/resources" component={Resources} />
+        <Route path="/resources" render={(props) => <Resources onClick={this.handleRightArrow}{...props} /> } />
         <Route path="/notfound" component={NotFound} />
         <Route path="/home" render={(props) => <Calendar challenges={challenges} onDaysClicked={this.handleDaysClicked} value={data} item={this.state.item} {...props}  />} />
         <Route path='/' render={(props) => <Calendar challenges={challenges} onDaysClicked={this.handleDaysClicked} value={data} item={this.state.item} {...props} />} />
