@@ -1,27 +1,18 @@
-import React, { useState } from 'react';
-import Cows from "./brown-cow.jpg"
+import React from 'react';
+import Docs from "./docs";
+import Books from "./books";
+import FoodInspo from './foodInspo';
 
 
 const Resources = ({onClick}) => {
 
   return (
     <React.Fragment>
+      <Docs />
 
-    <div className="equal-height-container">
+      <Books />
 
-    <div className="resources-image">
-      <p className="cow"> Shanice Dennins-Russell Shanice Dennins-Russell Shanice Dennins-Russell Shanice Dennins-Russell Shanice Dennins-Russell</p>
-      </div>
-
-      <div className="resources-header-container">
-        <div className="first">
-        </div>
-
-        <div className="second">
-        </div>
-      </div>
-
-      </div>
+      <FoodInspo />
 
     </React.Fragment>
 

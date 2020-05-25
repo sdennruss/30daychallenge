@@ -251,6 +251,136 @@ text-align: center;
 height: 20rem;
 }
 
+/* Docs */
+
+.doc-title, .food-inspo-title{
+  padding: 1rem;
+}
+
+.resources-container-1{
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.column-1{
+  flex: 2.4;
+}
+.brown-cow-1{
+  max-width: 99%;
+  flex: 1;
+  margin: 0.5rem;
+  margin-right: 0rem;
+  cursor: pointer;
+}
+
+.column-2{
+flex: 1;
+padding: 0rem;
+display: flex;
+flex-direction: column;
+}
+
+.title-1{
+background-color: plum;
+flex: 1;
+margin: 0.5rem;
+margin-bottom: 0;
+}
+
+.info-1{
+margin: 0.5rem;
+background-color: powderblue;
+flex: 3;
+}
+
+/* Books */
+
+.book-title{
+  padding: 1rem;
+}
+
+.resources-container-2{
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.column-3{
+flex: 1;
+padding: 0rem;
+display: flex;
+flex-direction: column;
+}
+
+.title-2{
+  background-color: burlywood;
+  flex: 1;
+  margin: 0.5rem;
+  margin-bottom: 0;
+  }
+
+  .info-2{
+  margin: 0.5rem;
+  background-color: khaki;
+  flex: 3;
+  }
+
+.column-4{
+  flex: 2.4;
+}
+
+.brown-cow-2{
+  max-width: 99%;
+  flex: 1;
+  margin: 0.5rem;
+  margin-left: 0rem;
+  cursor: pointer;
+  }
+
+  .brown-cow-2:hover{
+    opacity: 1rem;
+  }
+
+  /* Food Inspo */
+
+.resources-container-3{
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.column-5{
+  flex: 2.4;
+}
+.brown-cow-3{
+  max-width: 99%;
+  flex: 1;
+  margin: 0.5rem;
+  margin-right: 0rem;
+  cursor: pointer;
+  opacity: 1rem;
+}
+
+  .column-6{
+  flex: 1;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .title-3{
+  background-color: lightcyan;
+  flex: 1;
+  margin: 0.5rem;
+  margin-bottom: 0;
+  }
+
+  .info-3{
+  margin: 0.5rem;
+  background-color: peru;
+  flex: 3;
+  }
 
 
 .contact-container {
@@ -452,85 +582,4 @@ padding: 0.4rem;
   padding: 0.5rem;
 }
 
-.equal-heigh-container{
-  max-width: 900px;
-  margin: 0 auto;
-  display:flex;
 }
-
-.resources-image{
-padding: 2rem;
-flex: 1;
-}
-
-.resources-header-container{
-background-color: khaki;
-flex: 1
-}
-
-.first{
-background-color: greenyellow;
-}
-
-.second{
-background-color: hotpink;
-}
-
-}
-
-
-
-/* .contact-container{
-background:B17FAB;
-margin: 1rem 1rem;
-padding: 1rem;
-} */
-
-/* .resources-image-first{
-background-color: green;
-padding: 20px;
-height: 500px;
-flex: 5;
-}
-
-
-.resources-container-second{
-background-color: linen;
-flex: 3;
-display: flex;
-flex-direction: column;
-margin: 5px;
-}
-
-.resource-1{
-background-color: thistle;
-flex: 1;
-margin: 5px;
-}
-
-.resource-2{
-background-color: teal;
-flex: 1;
-margin: 5px;
-}
-
-.resources-container-third{
-background-color: plum;
-display: flex;
-flex: 3;
-flex-direction: column;
-margin: 5px;
-
-}
-
-.resource-3{
-background-color: royalblue;
-flex: 1;
-margin: 5px;
-}
-
-.resource-4{
-background-color: seagreen;
-flex: 1;
-margin: 5px;
-} */

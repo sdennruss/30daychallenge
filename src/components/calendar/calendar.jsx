@@ -1,7 +1,5 @@
 import React from 'react';
 import Days from './days';
-import MediaQuery from "react-responsive";
-import ProgressBar from "../progress/progressBar";
 
 
 
