@@ -17,6 +17,7 @@ state = {
   challenges: [],
   meals: [],
   navBarClass: "",
+  desktopNavClass: "",
   item: 0,
   expand: false,
 
@@ -37,7 +38,7 @@ handleToggle = (expand) => {
 }
 
 handleNavigationSelection = (title) => {
-  this.setState({ navBarClass: `navbar-${title}` });
+  this.setState({ navBarClass: `navbar-${title}`, desktopNavClass: `desktop-${title}` });
 }
 
 handleRightArrow = () =>{
@@ -45,20 +46,29 @@ handleRightArrow = () =>{
 }
 
   render() {
-    const {navigations, challenges, item: data, expand, clicked, navBarClass}=this.state
+    const {navigations, challenges, item: data, expand, clicked, navBarClass, desktopNavClass}=this.state
 
     return (
     <React.Fragment>
 
-      <Toggle
-      navigations={navigations}
-      expand={expand}
-      clicked={clicked}
-      onClick={this.handleToggle}
-      navBarClass={navBarClass}
-      onNavSelected = {this.handleNavigationSelection}
-      />
+    <MediaQuery maxDeviceWidth={769}>
+        <Toggle
+        navigations={navigations}
+        expand={expand}
+        clicked={clicked}
+        onClick={this.handleToggle}
+        navBarClass={navBarClass}
+        onNavSelected = {this.handleNavigationSelection}
+        />
+      </MediaQuery>
 
+      <MediaQuery minDeviceWidth={769}>
+        <NavBar
+        navigations={navigations}
+        onNavSelected={this.handleNavigationSelection}
+        desktopNavClass={desktopNavClass}
+        />
+      </MediaQuery>
 
 
 

@@ -8,6 +8,7 @@ const FoodInspo = () => {
     <div className="resources-container-3">
       <div className="column-5">
       <img className="brown-cow-3" src={Cows}/>
+      <p className="page-start-3">1</p> <p className="page-end-3">3</p>
       </div>
 
       <div className="column-6">

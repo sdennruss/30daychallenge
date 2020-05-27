@@ -13,31 +13,6 @@ text-align: unset;
 }
 
 
-.hamburger-container{
-display: flex;
-flex-direction: row;
-width: 6rem;
-margin: 0.3rem;
-}
-
-.hamburger{
-flex: 1;
-padding: 0.3rem;
-font-size: 3rem;
-position: relative;
-cursor: pointer;
-}
-
-.line{
-width: 3rem;
-height: 0.3rem;
-margin: 0.5rem;
-background: black;
-}
-
-.x{
-margin-left: 0.8rem;
-}
 
 .navbar-container{
 display: flex;
@@ -55,24 +30,16 @@ flex: 1;
 }
 
 
-.navbar-mobile-container{
-flex-direction: column;
-}
-
-.navbar-mobile-container>div{
-margin: 0rem;
-padding: 0rem;
-}
-
-.mobile-unorder-list{
+.desktop-unorder-list{
 padding: 0rem;
 justify-content: space-evenly;
 }
 
-.mobile-list-items{
+.desktop-list-items{
 list-style: none;
 text-align: center;
 }
+
 
 
 a.home, a.resources, a.connect{
@@ -86,7 +53,7 @@ font-size: 2.5rem;
 }
 
 
-.navbar-home:hover{
+.desktop-home:hover{
 width: 7rem;
 height: 1rem;
 background-color: #B17FAB;
@@ -97,7 +64,7 @@ transition: all 0.5s ease-in;
 }
 
 
-.navbar-resources:hover{
+.desktop-resources:hover{
 width: 7rem;
 height: 1rem;
 display: inline-block;
@@ -108,7 +75,7 @@ transition: all 0.5s ease-in;
 display: inline-block;
 }
 
-.navbar-connect:hover{
+.desktop-connect:hover{
 width: 7rem;
 height: 1rem;
 display: inline-block;
@@ -261,6 +228,7 @@ height: 20rem;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 
 .column-1{
@@ -271,7 +239,24 @@ height: 20rem;
   flex: 1;
   margin: 0.5rem;
   margin-right: 0rem;
-  cursor: pointer;
+  cursor: e-resize;
+}
+
+
+.page-start{
+  position: absolute;
+  font-size: 4rem;
+  color:whitesmoke;
+  left: 35%;
+  bottom: 0%;
+}
+
+.page-end{
+  position: absolute;
+  font-size: 4rem;
+  color: whitesmoke;
+  right: 31%;
+  bottom: 0%;
 }
 
 .column-2{
@@ -304,6 +289,7 @@ flex: 3;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 
 .column-3{
@@ -335,12 +321,30 @@ flex-direction: column;
   flex: 1;
   margin: 0.5rem;
   margin-left: 0rem;
-  cursor: pointer;
+  cursor: w-resize;
   }
 
   .brown-cow-2:hover{
     opacity: 1rem;
   }
+
+  .page-start-2{
+    position: absolute;
+    font-size: 4rem;
+    color:whitesmoke;
+    left: 65%;
+    bottom: 0%;
+  }
+
+  .page-end-2{
+    position: absolute;
+    font-size: 4rem;
+    color: whitesmoke;
+    right: 2%;
+    bottom: 0%;
+  }
+
+
 
   /* Food Inspo */
 
@@ -348,6 +352,7 @@ flex-direction: column;
   max-width: 100%;
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 
 .column-5{
@@ -358,9 +363,27 @@ flex-direction: column;
   flex: 1;
   margin: 0.5rem;
   margin-right: 0rem;
-  cursor: pointer;
+  cursor: e-resize;
   opacity: 1rem;
 }
+
+
+.page-start-3{
+  position: absolute;
+  font-size: 4rem;
+  color:whitesmoke;
+  left: 35%;
+  bottom: 0%;
+}
+
+.page-end-3{
+  position: absolute;
+  font-size: 4rem;
+  color: whitesmoke;
+  right: 31%;
+  bottom: 0%;
+}
+
 
   .column-6{
   flex: 1;
@@ -390,15 +413,98 @@ flex-direction: column;
 
 
 
-
-
-
-
-
-
-
 /* mobile */
 @media(max-width: 768px){
+.hamburger-container{
+display: flex;
+flex-direction: row;
+width: 6rem;
+margin: 0.3rem;
+}
+
+.hamburger{
+flex: 1;
+padding: 0.3rem;
+font-size: 3rem;
+position: relative;
+cursor: pointer;
+}
+
+.line{
+width: 3rem;
+height: 0.3rem;
+margin: 0.5rem;
+background: black;
+}
+
+.x{
+margin-left: 0.8rem;
+}
+
+
+.navbar-mobile-container{
+flex-direction: column;
+}
+
+.navbar-mobile-container>div{
+margin: 0rem;
+padding: 0rem;
+}
+
+.mobile-unorder-list{
+padding: 0rem;
+justify-content: space-evenly;
+}
+
+.mobile-list-items{
+list-style: none;
+text-align: center;
+}
+
+.mobile-home, .mobile-resources, .mobile-connect{
+  flex: 1;
+  }
+
+a.mobile-home, a.mobile-resources, a.mobile-connect{
+  text-decoration: none;
+  background-color: none;
+  background: none;
+  font-family: "Josefine Sans";
+  text-transform: capitalize;
+  color:#2D3748;
+  font-size: 2.5rem;
+  }
+
+.navbar-home:hover{
+width: 7rem;
+height: 1rem;
+background-color: #B17FAB;
+opacity: 0.8;
+display: inline-block;
+transition: all 0.5s ease-in;
+-webkit-transition: all 0.5s ease-in;
+}
+
+
+.navbar-resources:hover{
+width: 7rem;
+height: 1rem;
+display: inline-block;
+background-color: #9FC4A4;
+opacity: 0.8;
+transition: all 0.5s ease-in;
+-webkit-transition: all 0.5s ease-in;
+display: inline-block;
+}
+
+.navbar-connect:hover{
+width: 7rem;
+height: 1rem;
+display: inline-block;
+background-color: #EAE7DA;
+transition: all 0.5s ease-in;
+-webkit-transition: all 0.5s ease-in;
+}
 
 .thirty-day-challenge{
   text-align: center;

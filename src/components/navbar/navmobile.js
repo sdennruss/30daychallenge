@@ -15,7 +15,7 @@ const NavMobile = ({navigations, navBarClass, onNavSelected}) => {
             <li className="mobile-list-items">
             <Link
             onClick={() => onNavSelected(navigation)}
-            className={navigation} to={`/${navigation}`}><span className = {navBarClass} >{navigation}</span></Link>
+            className={`mobile-${navigation}`} to={`/${navigation}`}><span className = {navBarClass} >{navigation}</span></Link>
             </li>
           </ul>
         </nav>

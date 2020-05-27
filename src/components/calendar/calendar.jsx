@@ -2,7 +2,6 @@ import React from 'react';
 import Days from './days';
 
 
-
 const Calendar = ({challenges, onDaysClicked, value, item}) => {
   return (
     <React.Fragment>

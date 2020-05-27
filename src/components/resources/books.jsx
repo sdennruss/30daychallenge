@@ -13,6 +13,7 @@ const Books = () => {
 
         <div className="column-4">
           <img className="brown-cow-2" src={Cows}/>
+          <p className="page-start-2">1</p> <p className="page-end-2">3</p>
         </div>
       </div>
     </React.Fragment>
