@@ -1,160 +1,155 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand');
-@import url('https://fonts.googleapis.com/css?family=Roboto|Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Francois+One|Josefin+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Oswald|Sacramento&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito|Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Francois+One|Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Sacramento&display=swap");
 
-*{
-margin: 0px;
-padding: 0px;
-box-sizing: border-box;
-font-size: 62.5%;
-text-align: unset;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  text-align: unset;
 }
 
-
-
-.navbar-container{
-display: flex;
-flex-direction: row;
+.navbar-container {
+  display: flex;
+  flex-direction: row;
 }
 
-.navbar-container>div{
-margin: 0rem;
-padding: 0.5rem;
+.navbar-container > div {
+  margin: 0rem;
+  padding: 0.5rem;
 }
 
-
-.home, .resources, .connect{
-flex: 1;
+.home,
+.resources,
+.connect {
+  flex: 1;
 }
 
-
-.desktop-unorder-list{
-padding: 0rem;
-justify-content: space-evenly;
+.desktop-unorder-list {
+  padding: 0rem;
+  justify-content: space-evenly;
 }
 
-.desktop-list-items{
-list-style: none;
-text-align: center;
+.desktop-list-items {
+  list-style: none;
+  text-align: center;
 }
 
-
-
-a.home, a.resources, a.connect{
-text-decoration: none;
-background-color: none;
-background: none;
-font-family: "Josefine Sans";
-text-transform: capitalize;
-color:#2D3748;
-font-size: 2.5rem;
+a.home,
+a.resources,
+a.connect {
+  text-decoration: none;
+  background-color: none;
+  background: none;
+  font-family: "Josefine Sans";
+  text-transform: capitalize;
+  color: #2d3748;
+  font-size: 2.5rem;
 }
 
-
-.desktop-home:hover{
-width: 7rem;
-height: 1rem;
-background-color: #B17FAB;
-opacity: 0.8;
-display: inline-block;
-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
+.desktop-home:hover {
+  width: 7rem;
+  height: 1rem;
+  background-color: #b17fab;
+  opacity: 0.8;
+  display: inline-block;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
 }
 
-
-.desktop-resources:hover{
-width: 7rem;
-height: 1rem;
-display: inline-block;
-background-color: #9FC4A4;
-opacity: 0.8;
-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
-display: inline-block;
+.desktop-resources:hover {
+  width: 7rem;
+  height: 1rem;
+  display: inline-block;
+  background-color: #9fc4a4;
+  opacity: 0.8;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  display: inline-block;
 }
 
-.desktop-connect:hover{
-width: 7rem;
-height: 1rem;
-display: inline-block;
-background-color: #EAE7DA;
-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
+.desktop-connect:hover {
+  width: 7rem;
+  height: 1rem;
+  display: inline-block;
+  background-color: #eae7da;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
 }
 
-.thirty-day-challenge{
-text-align: center;
-font-family: "Francois One";
-font-size: 5rem;
-margin: 0.5rem;
-padding: 0.5rem;
+.thirty-day-challenge {
+  text-align: center;
+  font-family: "Francois One";
+  font-size: 5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
-.pick-calendar-day{
-margin-top: 2rem;
-text-align: center;
-font-family: "Josefine";
-font-size: 2rem;
-padding: 0.5rem;
-margin: 0.5rem;
+.pick-calendar-day {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Josefine";
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
-.challenge-container{
+.challenge-container {
   display: flex;
   justify-content: space-evenly;
   flex-flow: row wrap;
   flex-basis: 100%;
-  height: 30rem;
+  height: 38rem;
   padding: 1rem;
   padding-left: 0.667rem;
   border-right: solid 0rem white;
   border-bottom: solid 0rem white;
 }
 
-.challenge-container>div{
+.challenge-container > div {
   flex: 1 0 17%;
 }
 
-.challenge-divs{
+.challenge-divs {
   flex: 1;
   text-align: center;
   position: relative;
   justify-content: space-evenly;
-  border-left: solid  white;
-  border-top: solid  white;
-  padding: 1.5rem 0.5rem;
-  background: #F1F8E9;
+  border-left: solid white;
+  border-top: solid white;
+  padding: 2rem 0.5rem;
+  background: #f1f8e9;
 }
 
-
-.challenge-divs:hover{
-  background-color: #B17FAB;
+.challenge-divs:hover {
+  background-color: #b17fab;
   color: white;
 }
 
-.challenge-items{
-  color:#2D3748;
+.challenge-items {
+  color: #2d3748;
   text-decoration: none;
   font-family: "Josefine Sans";
   margin-bottom: 0rem;
   font-size: 1.2rem;
 }
 
-.challenge-items:hover{
+.challenge-items:hover {
   color: white;
 }
 
-.challenge-items>div{
+.challenge-items > div {
   margin: 0px;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
-.progress-days{
+.progress-days {
   font-family: "Francois One";
   text-align: center;
   margin: 0.5rem;
@@ -162,79 +157,98 @@ a:hover{
   font-size: 3.5rem;
 }
 
-.check-your-progress{
-margin-top: 2rem;
-text-align: center;
-font-family: "Josefine";
-font-size: 2rem;
-padding: 0.5rem;
-margin: 0px;
+.check-your-progress {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Josefine";
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0px;
 }
 
-.progress-bar-div{
+.progress-bar-div {
   margin-top: 0 !important;
   padding-top: 0 !important;
   justify-content: center;
 }
 
-.progress-bar-container{
-margin: 2rem 4rem !important;
+.progress-bar-container {
+  margin: 2rem 4rem !important;
 }
 
-.progressbar{
-  padding-right:0px !important;
+.progressbar {
+  padding-right: 0px !important;
   width: 15% !important;
 }
 
-.menu-container{
+/* left column */
+
+.progress-container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+}
+
+.menu-container {
   display: flex;
   justify-content: space-evenly;
 }
 
-.menu-container>div{
-margin: 2rem 1rem;
-height: 35rem;
-border: solid 0.6rem #DAE5EA;
+.menu-container > div {
+  margin: 0rem 1rem 1rem 1rem;
+  height: 30rem;
+  border: solid 0.6rem #dae5ea;
 }
 
-.breakfast-container, .lunch-container, .dinner-container{
-padding: 1rem;
-flex-basis: 50%;
+.breakfast-container,
+.lunch-container,
+.dinner-container {
+  padding: 1rem;
+  flex-basis: 50%;
 }
 
-.breakfast-item, .lunch-item, .dinner-item{
-font-size: 1rem;
-font-family: "Josefine Sans";
+.breakfast-item,
+.lunch-item,
+.dinner-item {
+  font-size: 1rem;
+  font-family: "Josefine Sans";
 }
 
-.meal-name{
-font-family: "Francois One";
-font-size: 2.5rem;
-text-align: center;
-
+.meal-name {
+  font-family: "Francois One";
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-.recipes{
-height: 20rem;
+.recipes {
+  height: 20rem;
 }
 
 /* Docs */
 
-.doc-title, .food-inspo-title{
+.doc-title,
+.food-inspo-title {
   padding: 1rem;
 }
 
-.resources-container-1{
+.resources-container-1 {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
   position: relative;
 }
 
-.column-1{
-  flex: 2.4;
+.column-1 {
+  flex: 2;
 }
-.brown-cow-1{
+.brown-cow-1 {
   max-width: 99%;
   flex: 1;
   margin: 0.5rem;
@@ -242,16 +256,15 @@ height: 20rem;
   cursor: e-resize;
 }
 
-
-.page-start{
+.page-start {
   position: absolute;
   font-size: 4rem;
-  color:whitesmoke;
+  color: whitesmoke;
   left: 35%;
   bottom: 0%;
 }
 
-.page-end{
+.page-end {
   position: absolute;
   font-size: 4rem;
   color: whitesmoke;
@@ -259,106 +272,104 @@ height: 20rem;
   bottom: 0%;
 }
 
-.column-2{
-flex: 1;
-padding: 0rem;
-display: flex;
-flex-direction: column;
+.column-2 {
+  flex: 1;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.title-1{
-background-color: plum;
-flex: 1;
-margin: 0.5rem;
-margin-bottom: 0;
+.title-1 {
+  background-color: plum;
+  flex: 1;
+  margin: 0.5rem;
+  margin-bottom: 0;
 }
 
-.info-1{
-margin: 0.5rem;
-background-color: powderblue;
-flex: 3;
+.info-1 {
+  margin: 0.5rem;
+  background-color: powderblue;
+  flex: 3;
 }
 
 /* Books */
 
-.book-title{
+.book-title {
   padding: 1rem;
 }
 
-.resources-container-2{
+.resources-container-2 {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
   position: relative;
 }
 
-.column-3{
-flex: 1;
-padding: 0rem;
-display: flex;
-flex-direction: column;
+.column-3 {
+  flex: 1;
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.title-2{
+.title-2 {
   background-color: burlywood;
   flex: 1;
   margin: 0.5rem;
   margin-bottom: 0;
-  }
+}
 
-  .info-2{
+.info-2 {
   margin: 0.5rem;
   background-color: khaki;
   flex: 3;
-  }
+}
 
-.column-4{
+.column-4 {
   flex: 2.4;
 }
 
-.brown-cow-2{
+.brown-cow-2 {
   max-width: 99%;
   flex: 1;
   margin: 0.5rem;
   margin-left: 0rem;
   cursor: w-resize;
-  }
+}
 
-  .brown-cow-2:hover{
-    opacity: 1rem;
-  }
+.brown-cow-2:hover {
+  opacity: 1rem;
+}
 
-  .page-start-2{
-    position: absolute;
-    font-size: 4rem;
-    color:whitesmoke;
-    left: 65%;
-    bottom: 0%;
-  }
+.page-start-2 {
+  position: absolute;
+  font-size: 4rem;
+  color: whitesmoke;
+  left: 65%;
+  bottom: 0%;
+}
 
-  .page-end-2{
-    position: absolute;
-    font-size: 4rem;
-    color: whitesmoke;
-    right: 2%;
-    bottom: 0%;
-  }
+.page-end-2 {
+  position: absolute;
+  font-size: 4rem;
+  color: whitesmoke;
+  right: 2%;
+  bottom: 0%;
+}
 
+/* Food Inspo */
 
-
-  /* Food Inspo */
-
-.resources-container-3{
+.resources-container-3 {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
   position: relative;
 }
 
-.column-5{
+.column-5 {
   flex: 2.4;
 }
-.brown-cow-3{
+.brown-cow-3 {
   max-width: 99%;
   flex: 1;
   margin: 0.5rem;
@@ -367,16 +378,15 @@ flex-direction: column;
   opacity: 1rem;
 }
 
-
-.page-start-3{
+.page-start-3 {
   position: absolute;
   font-size: 4rem;
-  color:whitesmoke;
+  color: whitesmoke;
   left: 35%;
   bottom: 0%;
 }
 
-.page-end-3{
+.page-end-3 {
   position: absolute;
   font-size: 4rem;
   color: whitesmoke;
@@ -384,308 +394,362 @@ flex-direction: column;
   bottom: 0%;
 }
 
-
-  .column-6{
+.column-6 {
   flex: 1;
   padding: 0rem;
   display: flex;
   flex-direction: column;
-  }
+}
 
-  .title-3{
+.title-3 {
   background-color: lightcyan;
   flex: 1;
   margin: 0.5rem;
   margin-bottom: 0;
-  }
+}
 
-  .info-3{
+.info-3 {
   margin: 0.5rem;
   background-color: peru;
   flex: 3;
-  }
-
+}
 
 .contact-container {
   display: flex;
-  align-items: flex-end;
+  height: 20rem;
+  background-color: #e0eafa;
+  margin: 0.5rem;
+  margin-top: 0rem;
+  justify-content: center;
+  align-items: center;
 }
 
+.contact-column-left,
+.contact-column-right {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
 
+.contactus-container {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.contactus-top {
+  flex: 1;
+  height: 50vh;
+  background-color: lightyellow;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.dont-be-shy {
+  flex: 1;
+}
+
+.contactus-bottom {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  height: 50vh;
+}
+
+.contact-image {
+  background-color: plum;
+  flex: 2;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.tranisiton-statement {
+  flex: 1;
+  background-color: powderblue;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.say-hi {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 5rem;
+}
 
 /* mobile */
-@media(max-width: 768px){
-.hamburger-container{
-display: flex;
-flex-direction: row;
-width: 6rem;
-margin: 0.3rem;
-}
+@media (max-width: 768px) {
+  .hamburger-container {
+    display: flex;
 
-.hamburger{
-flex: 1;
-padding: 0.3rem;
-font-size: 3rem;
-position: relative;
-cursor: pointer;
-}
-
-.line{
-width: 3rem;
-height: 0.3rem;
-margin: 0.5rem;
-background: black;
-}
-
-.x{
-margin-left: 0.8rem;
-}
-
-
-.navbar-mobile-container{
-flex-direction: column;
-}
-
-.navbar-mobile-container>div{
-margin: 0rem;
-padding: 0rem;
-}
-
-.mobile-unorder-list{
-padding: 0rem;
-justify-content: space-evenly;
-}
-
-.mobile-list-items{
-list-style: none;
-text-align: center;
-}
-
-.mobile-home, .mobile-resources, .mobile-connect{
-  flex: 1;
+    flex-direction: row;
+    width: 6rem;
+    margin: 0.3rem;
   }
 
-a.mobile-home, a.mobile-resources, a.mobile-connect{
-  text-decoration: none;
-  background-color: none;
-  background: none;
-  font-family: "Josefine Sans";
-  text-transform: capitalize;
-  color:#2D3748;
-  font-size: 2.5rem;
+  .hamburger {
+    flex: 1;
+    padding: 0.3rem;
+    font-size: 3rem;
+    position: relative;
+    cursor: pointer;
   }
 
-.navbar-home:hover{
-width: 7rem;
-height: 1rem;
-background-color: #B17FAB;
-opacity: 0.8;
-display: inline-block;
-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
-}
+  .line {
+    width: 3rem;
+    height: 0.3rem;
+    margin: 0.5rem;
+    background: black;
+  }
 
+  .x {
+    margin-left: 0.8rem;
+  }
 
-.navbar-resources:hover{
-width: 7rem;
-height: 1rem;
-display: inline-block;
-background-color: #9FC4A4;
-opacity: 0.8;
-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
-display: inline-block;
-}
+  .navbar-mobile-container {
+    flex-direction: column;
+  }
 
-.navbar-connect:hover{
-width: 7rem;
-height: 1rem;
-display: inline-block;
-background-color: #EAE7DA;
-transition: all 0.5s ease-in;
--webkit-transition: all 0.5s ease-in;
-}
+  .navbar-mobile-container > div {
+    margin: 0rem;
+    padding: 0rem;
+  }
 
-.thirty-day-challenge{
-  text-align: center;
-  font-family: "Francois One";
-  font-weight:bolder;
-  font-size: 2.5rem;
-  margin: 0.5rem;
-  padding: 0.5rem;
-} */
+  .mobile-unorder-list {
+    padding: 0rem;
+    justify-content: space-evenly;
+  }
 
-.pick-calendar-day{
-  margin-top: 2rem;
-  text-align: center;
-  font-family: "Josefine";
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
+  .mobile-list-items {
+    list-style: none;
+    text-align: center;
+  }
 
-.challenge-container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  height: 30rem;
-  padding-bottom: 0.5rem;
-  border-right: solid 0rem white;
-  border-bottom: solid 0rem white;
-}
+  .mobile-home,
+  .mobile-resources,
+  .mobile-connect {
+    flex: 1;
+  }
 
-.challenge-divs{
-  display: flex;
-  position: relative;
-  justify-content: space-evenly;
-  border-left: solid  white;
-  border-top: solid  white;
-  padding: 1.5rem 0.5rem;
-  background: #F1F8E9;
-}
+  a.mobile-home,
+  a.mobile-resources,
+  a.mobile-connect {
+    text-decoration: none;
+    background-color: none;
+    background: none;
+    font-family: "Josefine Sans";
+    text-transform: capitalize;
+    color: #2d3748;
+    font-size: 2.5rem;
+  }
 
-.challenge-divs:hover{
-  background-color: #B17FAB;
-  color: white;
-}
+  .navbar-home:hover {
+    width: 7rem;
+    height: 1rem;
+    background-color: #b17fab;
+    opacity: 0.8;
+    display: inline-block;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+  }
 
-.challenge-items{
-  color:#2D3748;
-  text-decoration: none;
-  font-family: "Josefine Sans";
-  margin-bottom: 0rem;
-  font-size: 1.2rem;
-}
+  .navbar-resources:hover {
+    width: 7rem;
+    height: 1rem;
+    display: inline-block;
+    background-color: #9fc4a4;
+    opacity: 0.8;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    display: inline-block;
+  }
 
-.challenge-items:hover{
-  color: white;
-}
+  .navbar-connect:hover {
+    width: 7rem;
+    height: 1rem;
+    display: inline-block;
+    background-color: #eae7da;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+  }
 
-.challenge-items>div{
-  margin: 0px;
-}
+  .thirty-day-challenge {
+    text-align: center;
+    font-family: "Francois One";
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  */ .pick-calendar-day {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: "Josefine";
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
 
+  .progress-container {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-a:hover{
-  text-decoration: none;
-}
+  .challenge-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    height: 30rem;
+    padding-bottom: 0.5rem;
+    border-right: solid 0rem white;
+    border-bottom: solid 0rem white;
+  }
 
+  .challenge-divs {
+    position: relative;
+    justify-content: space-evenly;
+    border-left: solid white;
+    border-top: solid white;
+    padding: 2rem 0.5rem;
+    background: #f1f8e9;
+  }
 
-.progress-days{
-  font-family: "Francois One";
-  text-align: center;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  font-size: 2.5rem;
-}
+  .challenge-divs:hover {
+    background-color: #b17fab;
+    color: white;
+  }
 
-.check-your-progress{
-  margin-top: 2rem;
-  text-align: center;
-  font-family: "Josefine";
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  margin: 0px;
-}
+  .challenge-items {
+    color: #2d3748;
+    text-decoration: none;
+    font-family: "Josefine Sans";
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+  }
 
-.progress-bar-div{
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  justify-content: center;
-}
+  .challenge-items:hover {
+    color: white;
+  }
 
-.progress-bar-container{
-margin: 2rem 4rem !important;
-}
+  .challenge-items > div {
+    margin: 0px;
+  }
 
-.progressbar{
-  padding-right:0px !important;
-}
+  a:hover {
+    text-decoration: none;
+  }
 
-.menu-container{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column ;
-}
+  .progress-days {
+    font-family: "Francois One";
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+  }
 
-.menu-container>div{
-margin: 2rem 1rem;
-height: 30rem;
-border: solid 0.6rem #DAE5EA;
-}
+  .check-your-progress {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: "Josefine";
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin: 0px;
+  }
 
-.breakfast-container, .lunch-container, .dinner-container{
-padding: 1rem;
-flex-basis: 30%;
-}
+  .progress-bar-div {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    justify-content: center;
+  }
 
-.breakfast-item, .lunch-item, .dinner-item{
-font-size: 1rem;
-font-family: "Josefine Sans";
-}
+  .progress-bar-container {
+    margin: 2rem 4rem !important;
+  }
 
-.meal-name{
-font-family: "Francois One";
-font-size: 2.5rem;
-text-align: center;
+  .progressbar {
+    padding-right: 0px !important;
+  }
 
-}
+  .menu-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
 
-.details-button{
-background-color: white;
-padding: 0.4rem;
-}
+  .menu-container > div {
+    margin: 0.5rem 1rem;
+    height: 30rem;
+    border: solid 0.6rem #dae5ea;
+  }
 
+  .breakfast-container,
+  .lunch-container,
+  .dinner-container {
+    padding: 1rem;
+    flex-basis: 30%;
+  }
 
-.recipes{
-  height: 20rem;
-}
+  .breakfast-item,
+  .lunch-item,
+  .dinner-item {
+    font-size: 1rem;
+    font-family: "Josefine Sans";
+  }
 
-.lunch-container{
-  padding: 1rem;
-}
+  .meal-name {
+    font-family: "Francois One";
+    font-size: 2.5rem;
+    text-align: center;
+  }
 
-.dinner-container{
-  padding: 1rem;
-}
+  .details-button {
+    background-color: white;
+    padding: 0.4rem;
+  }
 
-.contact-container{
-  margin: 0.5rem;
-  height: 24rem;
-  background-color: #FCFCFA;
-}
+  .recipes {
+    height: 20rem;
+  }
 
-.contact-header{
-  font-family: "Francois One";
-  font-size: 2.5rem;
-  text-align: center;
-}
+  .lunch-container {
+    padding: 1rem;
+  }
 
-.email-container{
-  display: flex;
-  height: 10.25rem;
-}
+  .dinner-container {
+    padding: 1rem;
+  }
 
-.email-address{
-  font-size: 1rem;
-}
+  .contact-container {
+    margin: 0.5rem;
+    height: 24rem;
+    background-color: #fcfcfa;
+  }
 
-.fa-envelope-o{
-  padding: 0.5rem;
-}
+  .contact-header {
+    font-family: "Francois One";
+    font-size: 2.5rem;
+    text-align: center;
+  }
 
-.instagram-container{
-  display: flex;
-  height: 10.25rem;
-}
+  .email-address {
+    font-size: 1rem;
+  }
 
-.instagram-handle{
-  font-family: "Josefine Sans";
-  font-size: 1.2rem;
-}
+  .fa-envelope-o {
+    padding: 0.5rem;
+  }
 
-.fa-instagram{
-  padding: 0.5rem;
-}
+  .instagram-container {
+    display: flex;
+    height: 10.25rem;
+  }
 
+  .instagram-handle {
+    font-family: "Josefine Sans";
+    font-size: 1.2rem;
+  }
+
+  .fa-instagram {
+    padding: 0.5rem;
+  }
 }

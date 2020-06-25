@@ -1,30 +1,25 @@
-import React from 'react';
-import Days from './days';
+import React from "react";
+import Days from "./days";
 
-
-const Calendar = ({challenges, onDaysClicked, value, item}) => {
+const Calendar = ({ challenges, onDaysClicked, value, item }) => {
   return (
     <React.Fragment>
-    <h1 className="thirty-day-challenge">30 Day Vegan Challenge</h1>
-    <h3 className="pick-calendar-day">Pick a Day and Let's Get Started! </h3>
-      <div className="challenge-container" >
-        {challenges.map(challenge => (
+      <h1 className="thirty-day-challenge">30 Day Vegan Challenge</h1>
+      <h3 className="pick-calendar-day">Pick a Day and Let's Get Started! </h3>
+      <div className="challenge-container">
+        {challenges.map((challenge) => (
           <div
-          key={challenge.id}
-          className="challenge-divs"
-          onClick={() => onDaysClicked(challenge)}
+            key={challenge.id}
+            style={{ cursor: "pointer" }}
+            className="challenge-divs"
+            onClick={() => onDaysClicked(challenge)}
           >
-
-            <Days
-            challenge={challenge}
-            onClick = {() => onDaysClicked(challenge) }
-            />
-        </div>
-      ))}
+            <Days challenge={challenge} />
+          </div>
+        ))}
       </div>
-
     </React.Fragment>
-   );
-}
+  );
+};
 
 export default Calendar;

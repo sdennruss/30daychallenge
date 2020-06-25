@@ -1,39 +1,35 @@
-import React from 'react';
+import React from "react";
 
-const Meals = ({breakfast, lunch, dinner}) => {
+const Meals = ({ breakfast, lunch, dinner }) => {
   return (
     <React.Fragment>
-
       <div className="menu-container">
-
         <div className="breakfast-container">
-            <h3 className="meal-name">Breakfast</h3>
-            <div className="recipes">
+          <a className="meal-name">Breakfast</a>
+          <div className="recipes">
             <p className="breakfast-item">{breakfast}</p>
-            </div>
-            <a><button className="details-button">View Details</button></a>
           </div>
+          <button className="details-button">View Details</button>
+        </div>
 
         <div className="lunch-container">
-          <h3 class="meal-name">Lunch</h3>
-            <div className="recipes">
+          <a className="meal-name">Lunch</a>
+          <div className="recipes">
             <p className="lunch-item">{lunch}</p>
-            </div>
-            <a><button className="details-button">View Details</button></a>
           </div>
-
-          <div className="dinner-container">
-            <h3 class="meal-name">Dinner</h3>
-              <div className="recipes">
-              <p className="dinner-item">{dinner}</p>
-          </div>
-          <a><button className="details-button">View Details</button></a>
+          <button className="details-button">View Details</button>
         </div>
 
+        <div className="dinner-container">
+          <a className="meal-name">Dinner</a>
+          <div className="recipes">
+            <p className="dinner-item">{dinner}</p>
+          </div>
+          <button className="details-button">View Details</button>
         </div>
+      </div>
     </React.Fragment>
   );
-}
-
+};
 
 export default Meals;
