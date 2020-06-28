@@ -22,6 +22,7 @@ class App extends Component {
     desktopNavClass: "",
     item: 0,
     expand: false,
+    clicked: false,
   };
 
   componentDidMount() {
@@ -34,8 +35,8 @@ class App extends Component {
   };
 
   handleToggle = (expand) => {
-    console.log(expand);
     this.setState({ expand });
+    console.log(expand);
   };
 
   handleNavigationSelection = (title) => {
@@ -63,24 +64,15 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <MediaQuery maxDeviceWidth={769}>
-          <Toggle
-            navigations={navigations}
-            expand={expand}
-            clicked={clicked}
-            onClick={this.handleToggle}
-            navBarClass={navBarClass}
-            onNavSelected={this.handleNavigationSelection}
-          />
-        </MediaQuery>
-
-        <MediaQuery minDeviceWidth={769}>
-          <NavBar
-            navigations={navigations}
-            onNavSelected={this.handleNavigationSelection}
-            desktopNavClass={desktopNavClass}
-          />
-        </MediaQuery>
+        <Toggle
+          clicked={clicked}
+          navigations={navigations}
+          expand={expand}
+          clicked={clicked}
+          onClick={this.handleToggle}
+          navBarClass={navBarClass}
+          onNavSelected={this.handleNavigationSelection}
+        />
 
         <div className="routing-container">
           <Switch>

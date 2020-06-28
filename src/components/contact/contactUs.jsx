@@ -1,4 +1,5 @@
 import React from "react";
+import Hello from "./hello.jpg";
 
 const ContactUs = () => {
   return (
@@ -6,9 +7,6 @@ const ContactUs = () => {
       <div className="contactus-container">
         <div className="contactus-top">
           <h2 className="dont-be-shy">Don't Be Shy.</h2>
-        </div>
-        <div className="contactus-bottom">
-          <h1 className="contact-image">Img</h1>
           <p className="tranisiton-statement">
             <span className="say-hi">Say Hi.</span>
             The transition to eating no meat products isn't easy, especially if
