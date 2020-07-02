@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import MediaQuery from "react-responsive";
-import NavBar from "./components/navbar/navbar";
+
 import Resources from "./components/resources/resources";
 import NotFound from "./components/notfound/notfound";
 import { challenges } from "./components/calendar/challenges";
@@ -10,8 +9,8 @@ import MenuItems from "./components/menu/menuItems";
 import Contact from "./components/contact/contact";
 import Toggle from "./components/navbar/toggle";
 import "./App.css";
-import Home from "./components/home/home";
 import ContactUs from "./components/contact/contactUs";
+import HomePage from "./components/homepage/homepage";
 
 class App extends Component {
   state = {
@@ -22,7 +21,7 @@ class App extends Component {
     desktopNavClass: "",
     item: 0,
     expand: false,
-    clicked: false,
+    close: false,
   };
 
   componentDidMount() {
@@ -34,9 +33,10 @@ class App extends Component {
     this.setState({ item });
   };
 
-  handleToggle = (expand) => {
-    this.setState({ expand });
-    console.log(expand);
+  handleToggle = (expand, close) => {
+    this.setState({ expand, close });
+    console.log(close);
+    console.log("Label has been clicked");
   };
 
   handleNavigationSelection = (title) => {
@@ -60,11 +60,13 @@ class App extends Component {
       clicked,
       navBarClass,
       desktopNavClass,
+      close,
     } = this.state;
 
     return (
       <React.Fragment>
         <Toggle
+          close={close}
           clicked={clicked}
           navigations={navigations}
           expand={expand}
@@ -108,23 +110,10 @@ class App extends Component {
               )}
             />
             <Route path="/connect" component={ContactUs} />
-            <Route
-              path="/"
-              render={(props) => (
-                <Calendar
-                  challenges={challenges}
-                  onDaysClicked={this.handleDaysClicked}
-                  value={data}
-                  item={this.state.item}
-                  {...props}
-                />
-              )}
-            />
+            <Route path="/" render={(props) => <HomePage {...props} />} />
             <Redirect to="/notfound" />
           </Switch>
         </div>
-
-        <Contact />
       </React.Fragment>
     );
   }

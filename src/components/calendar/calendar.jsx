@@ -1,5 +1,6 @@
 import React from "react";
 import Days from "./days";
+import Contact from "../contact/contact";
 
 const Calendar = ({ challenges, onDaysClicked, value, item }) => {
   return (
@@ -18,6 +19,7 @@ const Calendar = ({ challenges, onDaysClicked, value, item }) => {
           </div>
         ))}
       </div>
+      <Contact />
     </React.Fragment>
   );
 };

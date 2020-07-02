@@ -8,12 +8,9 @@ const NavMobile = ({
   onNavSelected,
   onClick,
 }) => {
-  const navTransition = expand ? "-open" : "";
-  console.log(navTransition);
-
   return (
     <React.Fragment>
-      <div className={`navbar-mobile-container${navTransition}`}>
+      <div className="navbar-mobile-container">
         {navigations.map((navigation) => (
           <div key={navigation} className={navigation}>
             <nav className="navigation-mobile">

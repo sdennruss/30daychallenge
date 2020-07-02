@@ -1,29 +1,37 @@
 import React from "react";
 import NavMobile from "./navmobile";
+import MenuNav from "./menuNav";
 
 const Toggle = ({
   navigations,
   expand,
   onClick,
-  clicked,
   navBarClass,
   onNavSelected,
+  close,
 }) => {
-  const changeNavClass = expand ? "x" : "line";
-  const x = expand ? "x" : null;
+  // const changeNavClass = expand ? "x" : "line";
+  const x = !expand ? null : "open";
 
   return (
     <React.Fragment>
       <div className="hamburger-container">
-        <div onClick={() => onClick(!expand)} className="hamburger">
-          <div className={changeNavClass}>{x}</div>
-          <div className={changeNavClass}>{}</div>
-          <div className={changeNavClass}>{}</div>
+        <div className="hamburger">
+          <input type="checkbox" id="menuToggle"></input>
+
+          <label
+            onClick={() => onClick(!expand)}
+            htmlFor="menuToggle"
+            className="menuOpen"
+          >
+            <div className="open"></div>
+          </label>
         </div>
       </div>
 
       {expand && (
-        <NavMobile
+        <MenuNav
+          close={close}
           onClick={onClick}
           expand={expand}
           navBarClass={navBarClass}
