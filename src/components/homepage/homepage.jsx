@@ -1,47 +1,68 @@
-import React, { useState } from "react";
-import Plants from "./plants.jpg";
-import Leaves from "./leaves.jpg";
+import React from "react";
+import Berries from "./berries.jpg";
+import Citrus from "./citrus.jpg";
+import Banana from "./banana.jpg";
+import Calendar from "../calendar/calendar";
 
-const HomePage = ({ history }) => {
+const HomePage = ({
+  handleCalendar,
+  hideLanding,
+  showCalendar,
+  challenges,
+  onDaysClicked,
+  value,
+  item,
+}) => {
   return (
     <React.Fragment>
-      <div className="overlay">
-        <div className="homepage-container">
-          <div className="container-content">
-            <div className="container-content-inner">
-              <div className="homepage-title">
-                <h1 className="veg-chal">Vegan Challenge</h1>
-              </div>
-              <div className="homepage-paragraph-container">
-                <p className="homepage-paragraph">
-                  Over 115 million animals – mice, rats, dogs, cats, rabbits,
-                  monkeys, birds, among others – are killed in laboratory
-                  experiments worldwide for chemical, drug, food, and cosmetics
-                  testing every year. This 30 day vegan challenge has been
-                  designed to help you start a new lifestyle by eliminating the
-                  consumption of animal products from your diet. Those who are
-                  curious, sometimes lack guidance on how to get started. If
-                  you're ready to go make the swtich, click the{" "}
-                  <span className="start-word">start</span> button to begin.
-                </p>
-              </div>
-              <div className="homepage-button">
-                <button onClick={() => history.push("/home")} className="btns">
-                  Start
-                </button>
-              </div>
+      <div style={{ display: hideLanding }} className="homepage-container">
+        <div className="container-content">
+          <div className="container-content-inner">
+            <div className="homepage-title">
+              <h1 className="veg-chal">Vegan Challenge</h1>
             </div>
-          </div>
-          <div className="homepage"></div>
-          <div className="overlay"></div>
-
-          <div className="homepage-image-container">
-            <div className="inner-image">
-              <img src={Plants} alt="plant" className="container_img" />
+            <div className="paragraph-container">
+              <p className="homepage-paragraph">
+                Over 115 million animals – mice, rats, dogs, cats, rabbits,
+                monkeys, birds, among others – are killed in laboratory
+                experiments worldwide for chemical, drug, food, and cosmetics
+                testing every year. This 30 day vegan challenge is designed to
+                help you start a new lifestyle by eliminating the consumption of
+                animal products from your diet. Those who are curious, sometimes
+                lack guidance on how to get started. If you're ready to go make
+                the swtich, click the <span className="start-word">start</span>{" "}
+                button to begin.
+              </p>
+            </div>
+            <div className="homepage-button">
+              <button
+                onClick={() => handleCalendar("", "none")}
+                className="button-to-calendar"
+              >
+                Start
+              </button>
             </div>
           </div>
         </div>
+
+        <div className="homepage-image-container">
+          <div className="container-image-1">
+            <img src={Citrus} alt="plant" className="citrus-image" />
+            <img src={Berries} alt="plant" className="almond-image" />
+          </div>
+          <div className="container-image-2">
+            <img src={Banana} alt="Avacado-Smash" className="avacado-smash" />
+          </div>
+        </div>
       </div>
+      <div style={{ display: hideLanding }} className="overlay"></div>
+      <Calendar
+        challenges={challenges}
+        onDaysClicked={onDaysClicked}
+        value={value}
+        item={item}
+        showCalendar={showCalendar}
+      />
     </React.Fragment>
   );
 };

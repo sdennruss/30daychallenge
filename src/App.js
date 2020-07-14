@@ -1,27 +1,25 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-
 import Resources from "./components/resources/resources";
 import NotFound from "./components/notfound/notfound";
 import { challenges } from "./components/calendar/challenges";
 import Calendar from "./components/calendar/calendar";
 import MenuItems from "./components/menu/menuItems";
-import Contact from "./components/contact/contact";
 import Toggle from "./components/navbar/toggle";
-import "./App.css";
+import Contact from "./components/contact/contact";
 import ContactUs from "./components/contact/contactUs";
 import HomePage from "./components/homepage/homepage";
+import "./App.css";
 
 class App extends Component {
   state = {
     navigations: ["home", "resources", "connect"],
     challenges: [],
     meals: [],
-    navBarClass: "",
-    desktopNavClass: "",
     item: 0,
     expand: false,
-    close: false,
+    showCalendar: "none",
+    hideLanding: "flex",
   };
 
   componentDidMount() {
@@ -33,22 +31,13 @@ class App extends Component {
     this.setState({ item });
   };
 
-  handleToggle = (expand, close) => {
-    this.setState({ expand, close });
-    console.log(close);
-    console.log("Label has been clicked");
+  handleToggle = (expand) => {
+    this.setState({ expand });
+    console.log("Expand", expand);
   };
 
-  handleNavigationSelection = (title) => {
-    this.setState({
-      navBarClass: `navbar-${title}`,
-      desktopNavClass: `desktop-${title}`,
-    });
-    console.log(title);
-  };
-
-  handleRightArrow = () => {
-    console.log("Right arrow clicked");
+  handleCalendar = (show, hide) => {
+    this.setState({ showCalendar: show, hideLanding: hide });
   };
 
   render() {
@@ -57,23 +46,16 @@ class App extends Component {
       challenges,
       item: data,
       expand,
-      clicked,
-      navBarClass,
-      desktopNavClass,
-      close,
+      showCalendar,
+      hideLanding,
     } = this.state;
 
     return (
       <React.Fragment>
         <Toggle
-          close={close}
-          clicked={clicked}
           navigations={navigations}
           expand={expand}
-          clicked={clicked}
-          onClick={this.handleToggle}
-          navBarClass={navBarClass}
-          onNavSelected={this.handleNavigationSelection}
+          onToggle={this.handleToggle}
         />
 
         <div className="routing-container">
@@ -97,10 +79,15 @@ class App extends Component {
               )}
             />
             <Route path="/notfound" component={NotFound} />
+            <Route path="/connect" component={ContactUs} />
             <Route
               path="/home"
+              exact
               render={(props) => (
-                <Calendar
+                <HomePage
+                  handleCalendar={this.handleCalendar}
+                  showCalendar={showCalendar}
+                  hideLanding={hideLanding}
                   challenges={challenges}
                   onDaysClicked={this.handleDaysClicked}
                   value={data}
@@ -109,11 +96,26 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/connect" component={ContactUs} />
-            <Route path="/" render={(props) => <HomePage {...props} />} />
+            <Route
+              path="/"
+              exact
+              render={(props) => (
+                <HomePage
+                  handleCalendar={this.handleCalendar}
+                  showCalendar={showCalendar}
+                  hideLanding={hideLanding}
+                  challenges={challenges}
+                  onDaysClicked={this.handleDaysClicked}
+                  value={data}
+                  item={this.state.item}
+                  {...props}
+                />
+              )}
+            />
             <Redirect to="/notfound" />
           </Switch>
         </div>
+        <Contact showCalendar={showCalendar} />
       </React.Fragment>
     );
   }

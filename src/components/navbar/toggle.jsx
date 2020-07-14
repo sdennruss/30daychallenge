@@ -1,43 +1,28 @@
 import React from "react";
-import NavMobile from "./navmobile";
+import PlantLogo from "./veg-logo.png";
 import MenuNav from "./menuNav";
 
-const Toggle = ({
-  navigations,
-  expand,
-  onClick,
-  navBarClass,
-  onNavSelected,
-  close,
-}) => {
-  // const changeNavClass = expand ? "x" : "line";
-  const x = !expand ? null : "open";
-
+const Toggle = ({ navigations, expand, onToggle }) => {
   return (
     <React.Fragment>
       <div className="hamburger-container">
         <div className="hamburger">
-          <input type="checkbox" id="menuToggle"></input>
+          <input
+            onClick={() => onToggle(!expand)}
+            type="checkbox"
+            id="menuToggle"
+            checked={expand}
+            onChange={() => onToggle(!expand)}
+          />
 
-          <label
-            onClick={() => onClick(!expand)}
-            htmlFor="menuToggle"
-            className="menuOpen"
-          >
+          <label htmlFor="menuToggle" className="menuOpen">
             <div className="open"></div>
           </label>
         </div>
       </div>
 
       {expand && (
-        <MenuNav
-          close={close}
-          onClick={onClick}
-          expand={expand}
-          navBarClass={navBarClass}
-          onNavSelected={onNavSelected}
-          navigations={navigations}
-        />
+        <MenuNav onClick={onToggle} expand={expand} navigations={navigations} />
       )}
     </React.Fragment>
   );

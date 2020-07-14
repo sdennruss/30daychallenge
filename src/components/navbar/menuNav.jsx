@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MenuNav = ({ navigations, expand, onClick, close }) => {
+const MenuNav = ({ navigations, expand, onClick }) => {
   return (
     <React.Fragment>
-      <div class="menu menuEffects">
-        <div class="menuContent">
+      <div className="menu menuEffects">
+        <div className="menuContent">
           {navigations.map((navigation) => (
-            <nav>
+            <nav key={navigation}>
               <ul className="unlisted-items">
                 <li className="nav-items">
                   <Link

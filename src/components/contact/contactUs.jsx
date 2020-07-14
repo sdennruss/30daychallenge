@@ -1,5 +1,4 @@
 import React from "react";
-import Hello from "./hello.jpg";
 
 const ContactUs = () => {
   return (
