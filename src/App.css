@@ -7,7 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Notable&display=swap");
 
 * {
-  margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-size: 62.5%;
@@ -15,34 +14,74 @@
 }
 
 :root {
-  --secondary-color: #edf2f9;
-  --contrast-color: #d3d9cc;
+  --dominant-color: #faf8f2;
+  --secondary-color: #60bea0;
+  --background-color: white;
+  --accent-color-1: #f2e592;
+  --accent-color-2: #937e6a;
+  --accent-color-3: #d1c8c0;
+}
+
+.homepage-outer-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.yellow-circle,
+.brown-circle {
+  position: absolute;
+  display: flex;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  animation: transitionIn 2000ms;
+}
+
+.yellow-circle {
+  background-color: var(--accent-color-1);
+  right: -6rem;
+  top: -15rem;
+  z-index: 5;
+}
+
+.brown-circle {
+  background-color: var(--accent-color-2);
+  left: -5rem;
+  top: 35rem;
+  z-index: -9;
 }
 
 .overlay {
+  display: flex;
   position: absolute;
-  top: 4rem;
-  left: 0;
-  right: 0;
-  bottom: 1rem;
-  height: 75rem;
-  z-index: -10;
-  background-color: var(--contrast-color);
+  top: 0;
+  /* left: 0;
+  right: 0; */
+  bottom: 0.5rem;
+  height: 70rem;
+  z-index: -11;
+  background-color: var(--accent-color-1);
+  width: 95%;
 }
 
 .homepage-container {
   display: flex;
-  height: 75rem;
+  position: relative;
+  height: 70rem;
+  top: 0;
+  bottom: 0.5rem;
   justify-content: space-around;
   align-items: center;
   animation: expand 800ms ease forwards;
-  background-color: var(--secondary-color);
+  background-color: var(--dominant-color);
   position: relative;
   transition: all 800ms ease;
+  width: 95%;
 }
 
 .container-content {
-  width: 80%;
+  width: 90%;
   flex: 1;
 }
 
@@ -55,69 +94,50 @@
 .homepage-image-container {
   flex: 1;
   margin: 5rem;
-  max-width: 50%;
+  max-width: 100%;
   overflow: hidden;
   display: flex;
-}
-
-.container-image-1 {
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-right: 1rem;
-}
-.container-image-2 {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
-.citrus-image,
-.almond-image {
-  width: 100%;
-  flex: 1;
-  animation: slideIn 1200ms ease-in-out forwards;
-  /* opacity: 0.8; */
+.container-image {
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.almond-image {
-  margin-top: 1rem;
-}
-
-.avacado-smash {
-  width: 50%;
+.avacado-image {
+  width: 10%;
   flex: 1 1 4rem;
   animation: slideIn 1500ms ease-in-out forwards;
-  /* opacity: 0.8; */
 }
 
-.avacado-smash:hover,
-.citrus-image:hover,
-.almond-image:hover {
+.avacado-image:hover {
   opacity: 0.9;
 }
 
 .paragraph-container {
   height: auto;
   overflow: hidden;
+  position: relative;
 }
 
 .homepage-paragraph {
   line-height: 2.8rem;
   transform: translateY(30rem);
   color: #343534;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: "Open Sans Condensed", sans-serif;
   animation: slideUp 800ms ease-in-out forwards 800ms;
   text-align: justify;
 }
 
 .start-word {
+  /* font-weight: bolder; */
+  font-size: 1.5rem;
   font-weight: bolder;
-  font-size: 1.4rem;
   color: black;
   font-family: "Open Sans Condensed", sans-serif;
 }
@@ -130,31 +150,30 @@
 }
 
 .button-to-calendar {
-  background: transparent;
-  border: 0.1rem solid black;
-  border-radius: 5rem;
-  padding: 0.8rem 1.2rem;
-  color: black;
-  font-size: 1.3rem;
+  background-color: var(--accent-color-3);
+  border: 0.1rem solid var(--accent-color-3);
+  border-radius: 1rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  transform: translateY(5rem);
   text-transform: uppercase;
   position: relative;
-  margin-top: 1.5rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: black;
   outline: none;
+  cursor: pointer;
   font-weight: bolder;
-  transform: translateY(5rem);
   animation: slideUp 800ms ease-in-out forwards 1000ms;
 }
 
 .button-to-calendar:hover {
-  background-color: black;
-  border: 0.1rem solid black;
   font-weight: bolder;
-  color: white;
-  cursor: pointer;
-  transition-duration: 200ms;
-  transition-property: "background";
+  background-color: var(--accent-color-1);
+  border: 0.1rem solid var(--accent-color-1);
+  padding: 1.1rem 2.5rem;
+  color: black;
 }
-
 .transition-calendar-container {
   animation: transitionIn 1000ms;
 }
@@ -165,7 +184,7 @@
 }
 
 .veg-chal {
-  font-size: 6rem;
+  font-size: 8rem;
   margin-bottom: 2rem;
   transform: translateY(10rem);
   animation: slideUp 800ms ease forwards 500ms;
@@ -278,7 +297,7 @@ input {
   height: 100vh;
   top: 0;
   left: 0;
-  background: #d3ccc4;
+  background: #f2e592;
   z-index: 2;
 }
 
@@ -302,7 +321,7 @@ input {
 
 .menu ul li a {
   display: flex;
-  color: white;
+  color: black;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -319,7 +338,7 @@ input {
 }
 
 .menu ul li:hover {
-  background: white;
+  background-color: #faf8f2;
   transition-duration: 500ms;
 }
 
@@ -378,8 +397,8 @@ input {
   flex-direction: row;
   position: relative;
   width: 6rem;
-  margin: 0.3rem;
-  height: 3.4rem;
+  margin: 0rem;
+  height: 3.2rem;
   z-index: 3;
 }
 
@@ -403,21 +422,12 @@ input {
   margin-left: 0.8rem;
 }
 
-/* .veg-logo {
-  flex: 1;
-  bottom: 10rem;
-}
-
-.plant-logo {
-  flex: 1;
-  width: 10rem;
-} */
-
 .thirty-day-challenge {
   text-align: center;
   font-family: "Amatic SC", cursive;
+  font-weight: bolder;
   font-size: 6rem;
-  margin: 0.5rem;
+  /* margin: 1.5rem; */
   padding: 0.5rem;
 }
 
@@ -425,7 +435,7 @@ input {
   margin-top: 2rem;
   text-align: center;
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 0.5rem;
   margin: 0.5rem;
 }
@@ -454,12 +464,11 @@ input {
   border-left: solid white;
   border-top: solid white;
   padding: 2rem 0.5rem;
-  background: #f1f8e9;
+  background: #d4c8be;
 }
 
 .challenge-divs:hover {
-  background-color: #b17fab;
-  color: white;
+  background-color: #f5f4f4;
   transition-duration: 500ms;
 }
 
@@ -472,7 +481,7 @@ input {
 }
 
 .challenge-items:hover {
-  color: white;
+  color: black;
 }
 
 .challenge-items > div {
@@ -484,7 +493,7 @@ a:hover {
 }
 
 .progress-days {
-  font-family: "Francois One";
+  font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -496,8 +505,8 @@ a:hover {
 .check-your-progress {
   margin-top: 2rem;
   text-align: center;
-  font-family: "Josefine";
-  font-size: 2rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.5rem;
   padding: 0.5rem;
   margin: 0px;
 }
@@ -514,7 +523,7 @@ a:hover {
 
 .progressbar {
   padding-right: 0px !important;
-  width: 40% !important;
+  width: 30% !important;
 }
 
 /* left column */
@@ -525,6 +534,18 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.CircularProgressbar-trail {
+  stroke: #f2f0ea !important;
+}
+
+.CircularProgressbar-path {
+  stroke: #43474d !important;
+}
+
+.CircularProgressbar-text {
+  fill: #43474d !important;
 }
 
 .left-column,
@@ -548,32 +569,64 @@ a:hover {
 .dinner-container {
   padding: 1rem;
   flex-basis: 50%;
+  height: 5rem;
+  /* text-align: center;
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
   margin: 0rem 1rem 0rem 1rem;
-  height: 30rem;
 }
 
 .breakfast-container {
-  background-color: #eef3f5;
+  background-color: #f5f4f4;
+  margin-left: 1rem;
 }
 
 .lunch-container {
-  background-color: #fcfcfc;
-  margin-left: 0rem;
+  background-color: #f5f4f4;
+  margin: 0rem 1rem;
 }
 .dinner-container {
-  background-color: #eef3f5;
-  margin-left: 0rem;
+  background-color: #f5f4f4;
+  margin-right: 1rem;
+}
+
+.breakfast-container:hover,
+.lunch-container:hover,
+.dinner-container:hover {
+  background-color: #43474d;
+  color: white;
 }
 
 .breakfast-item,
 .lunch-item,
 .dinner-item {
   font-size: 1rem;
-  font-family: "Josefine Sans";
+  font-family: "Cabin", sans-serif;
+}
+
+.recipe-button {
+  background: transparent;
+  border: none;
+  padding: 0.6rem;
+  color: var(--dominant-color);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.recipe-button:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  color: var(--secondary-color);
+}
+
+.view-recipe {
+  font-family: "Cabin", sans-serif;
 }
 
 .meal-name {
-  font-family: "Francois One";
+  font-family: "Amatic SC", cursive;
   font-size: 2.5rem;
   text-align: center;
 }
@@ -764,43 +817,39 @@ a:hover {
   background-color: peru;
   flex: 3;
 }
-.footer-container {
-  display: flex;
-  height: 4rem;
-  background-color: #edf2f9;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
-  /* margin: 0.5rem; */
-}
 
 .contact-container {
   display: flex;
-  /* width: 100%; */
-  height: 18rem;
-  /* background-color: #edf2f9; */
-  justify-content: flex-end;
-  align-items: flex-end;
   position: relative;
+  /* height: 14rem; */
+  justify-content: flex-end;
 }
 
-.green-leaf {
-  width: 100%;
-  /* height: 18rem; */
+.help {
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  color: black;
 }
-
-/* .hide-contact {
+.contact-column-right,
+.contact-column-left {
+  flex: 1;
   display: flex;
-} */
+  align-items: center;
+  /* justify-content: center; */
+}
 
 .contact-column-left {
-  flex: 10;
-  margin-left: 1.5rem;
+  /* position: relative; */
+  margin-left: 3.5rem;
 }
 
-.instagram-container {
-  display: flex;
-  flex-flow: row wrap;
+.contact-column-right {
+  justify-content: flex-end;
+  margin-right: 3.5rem;
+}
+
+.fa-copyright {
+  font-size: 1.5rem;
 }
 
 .email,
@@ -810,35 +859,22 @@ a:hover {
   font-size: 2rem;
 }
 
-.email {
-  margin-right: 0.2rem;
-}
-
 .email:hover,
-.insta:hover {
+.insta:hover,
+.help:hover {
   font-weight: bolder;
-  color: #d3ccc4;
+  color: var(--accent-color-1);
 }
+/*
 .instagram-handle,
 .email-address {
   margin-bottom: 0;
-  margin-left: 0.5rem;
-}
+} */
 
-.contact-column-right {
-  flex: 1;
+.instagram-container {
   display: flex;
-  text-align: right;
-}
-
-.help {
-  font-family: "Amatic SC", cursive;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.fa-copyright {
-  font-size: 1.5rem;
+  flex-flow: row wrap;
+  margin-left: 2rem;
 }
 
 .email-container {
@@ -955,11 +991,11 @@ a:hover {
     border-left: solid white;
     border-top: solid white;
     padding: 2rem 0.5rem;
-    background: #f1f8e9;
+    background: #f6f2e9;
   }
 
   .challenge-divs:hover {
-    background-color: #b17fab;
+    background-color: #d7d4d3;
     color: white;
   }
 
@@ -1014,6 +1050,14 @@ a:hover {
     padding-right: 0px !important;
   }
 
+  .CircularProgressbar-trail {
+    stroke: #f2f0ea !important;
+  }
+
+  .CircularProgressbar-path {
+    stroke: #dbcca9 !important;
+  }
+
   .menu-container {
     display: flex;
     justify-content: space-evenly;
@@ -1046,13 +1090,30 @@ a:hover {
     text-align: center;
   }
 
-  .details-button {
-    background-color: white;
-    padding: 0.4rem;
+  .recipe-button {
+    background: transparent;
+    border: 0.1rem solid black;
+    border-radius: 5rem;
+    padding: 0.8rem 1.2rem;
+    color: black;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+
+  .recipe-button:hover {
+    background-color: var(--dominant-color);
+    border: 0.1rem solid var(--dominant-color);
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    transition-duration: 200ms;
+    transition-property: "background";
   }
 
   .recipes {
     height: 20rem;
+    background-color: #f5f4f4;
   }
 
   .lunch-container {

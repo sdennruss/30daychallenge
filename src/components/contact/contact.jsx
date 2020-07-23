@@ -1,15 +1,14 @@
 import React from "react";
-import Leaves from "./leaves.jpg";
+import { Link } from "react-router-dom";
 
 const Contact = ({ showCalendar }) => {
   return (
     <React.Fragment>
-      <div style={{ display: showCalendar }} className="contact-container">
+      <div className="contact-container">
         <div className="contact-column-left">
-          <h3 className="help">
-            Shanice Dennis-Russell{" "}
-            <i className="fa fa-copyright" aria-hidden="true"></i> 2020
-          </h3>
+          <Link to="/home">
+            <h3 className="help">Need up with the transition?</h3>
+          </Link>
         </div>
 
         <div className="contact-column-right">
@@ -21,7 +20,7 @@ const Contact = ({ showCalendar }) => {
                 rel="noopener noreferrer"
                 className="email"
               >
-                Email
+                sdennisrussell@gmail.com
               </a>
             </p>
           </div>
@@ -34,7 +33,7 @@ const Contact = ({ showCalendar }) => {
                 rel="noopener noreferrer"
                 className="insta"
               >
-                Instagram
+                @onewayshan
               </a>
             </p>
           </div>

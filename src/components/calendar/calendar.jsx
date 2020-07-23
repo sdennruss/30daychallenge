@@ -9,7 +9,7 @@ const Calendar = ({ challenges, onDaysClicked, showCalendar }) => {
         style={{ display: showCalendar }}
         className="transition-calendar-container"
       >
-        <h1 className="thirty-day-challenge">30 Day Vegan Challenge</h1>
+        <h1 className="thirty-day-challenge">30 Day Vegan Calendar</h1>
         <h3 className="pick-calendar-day">
           Pick a Day and Let's Get Started!{" "}
         </h3>
@@ -26,7 +26,6 @@ const Calendar = ({ challenges, onDaysClicked, showCalendar }) => {
           ))}
         </div>
       </div>
-      <div></div>
     </React.Fragment>
   );
 };

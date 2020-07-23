@@ -2,6 +2,7 @@ import React from "react";
 import ProgressBar from "../progress/progressBar";
 import Calendar from "../calendar/calendar";
 import MediaQuery from "react-responsive";
+import NewMenu from "./newMenu";
 import Meals from "./meals";
 import Contact from "../contact/contact";
 
@@ -37,7 +38,7 @@ const MenuItems = ({
         </div>
       </div>
 
-      <Meals
+      <NewMenu
         breakfast={breakfast}
         lunch={lunch}
         dinner={dinner}

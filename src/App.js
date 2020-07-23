@@ -115,7 +115,7 @@ class App extends Component {
             <Redirect to="/notfound" />
           </Switch>
         </div>
-        <Contact showCalendar={showCalendar} />
+        <Contact />
       </React.Fragment>
     );
   }
