@@ -58,7 +58,7 @@ const HomePage = ({
           </div>
         </div>
         <div style={{ display: hideLanding }} className="brown-circle"></div>
-        <div style={{ display: hideLanding }} className="yellow-circle"></div>
+        <div className="yellow-circle"></div>
       </div>
       <Calendar
         challenges={challenges}

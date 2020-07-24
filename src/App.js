@@ -20,15 +20,17 @@ class App extends Component {
     expand: false,
     showCalendar: "none",
     hideLanding: "flex",
+    transitionColor: "#faf8f2",
+    challengeDivColor: "#60bea0",
   };
 
   componentDidMount() {
     this.setState({ challenges });
   }
 
-  handleDaysClicked = (challenge) => {
+  handleDaysClicked = (challenge, transitionColor, challengeDivColor) => {
     const item = Math.round((challenge.days / 30) * 100);
-    this.setState({ item });
+    this.setState({ item, transitionColor, challengeDivColor });
   };
 
   handleToggle = (expand) => {
@@ -48,6 +50,8 @@ class App extends Component {
       expand,
       showCalendar,
       hideLanding,
+      challengeDivColor,
+      transitionColor,
     } = this.state;
 
     return (
@@ -68,6 +72,8 @@ class App extends Component {
                   value={data}
                   item={this.state.item}
                   challenges={challenges}
+                  challengeDivColor={challengeDivColor}
+                  transitionColor={transitionColor}
                   {...props}
                 />
               )}

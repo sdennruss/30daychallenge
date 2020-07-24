@@ -1,17 +1,32 @@
 import React from "react";
+import ShaniceDR from "./shanicedr.jpg";
 
 const ContactUs = () => {
   return (
     <React.Fragment>
-      <div className="contactus-container">
-        <div className="contactus-top">
-          <h2 className="dont-be-shy">Don't Be Shy.</h2>
-          <p className="tranisiton-statement">
-            <span className="say-hi">Say Hi.</span>
-            The transition to eating no meat products isn't easy, especially if
-            you don't have a support system. Shoot me a message via email if
-            you're struggling with the transition!
-          </p>
+      <div className="contact-us-outer-container">
+        <div className="contact-us-container">
+          <div className="contact-left-column">
+            <h1 className="dont-be-shy">
+              Don't be shy, say <span className="highlight-hi">hi!</span>
+            </h1>
+            <p className="contact-information">
+              Making the transition to eliminating meat, seafood and dairy
+              products is never easy, especially when people are against your
+              personal lifestyle choice. Shoot me a message if you're
+              struggling, and I'll be more than happy to offer recommendations
+              and hear ya out. With love, Shanice Dennis-Russell
+            </p>
+          </div>
+          <div className="contact-right-column">
+            <div className="shanice-image-container">
+              <img
+                className="shanice-image"
+                src={ShaniceDR}
+                alt="Shanince Dennis-Russell"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>

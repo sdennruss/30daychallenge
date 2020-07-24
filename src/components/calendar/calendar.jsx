@@ -2,29 +2,52 @@ import React from "react";
 import Days from "./days";
 import Contact from "../contact/contact";
 
-const Calendar = ({ challenges, onDaysClicked, showCalendar }) => {
+const Calendar = ({
+  challenges,
+  onDaysClicked,
+  showCalendar,
+  value,
+  challengeDivColor,
+  transitionColor,
+}) => {
+  const changeBackground = value ? "#FAF8F2" : null;
+
+  const changeDivColor = value ? "#60bea0" : null;
   return (
     <React.Fragment>
-      <div
-        style={{ display: showCalendar }}
-        className="transition-calendar-container"
-      >
-        <h1 className="thirty-day-challenge">30 Day Vegan Calendar</h1>
-        <h3 className="pick-calendar-day">
-          Pick a Day and Let's Get Started!{" "}
-        </h3>
-        <div className="challenge-container">
-          {challenges.map((challenge) => (
-            <div
-              key={challenge.id}
-              style={{ cursor: "pointer" }}
-              className="challenge-divs"
-              onClick={() => onDaysClicked(challenge)}
-            >
-              <Days challenge={challenge} />
-            </div>
-          ))}
+      <div className="transition-outer-container">
+        <div
+          style={{ display: showCalendar }}
+          className="overlay-calendar"
+        ></div>
+        <div
+          style={{
+            display: showCalendar,
+            backgroundColor: transitionColor,
+          }}
+          className="transition-calendar-container"
+        >
+          <h1 className="thirty-day-challenge">30 Day Vegan Calendar</h1>
+          <h3 className="pick-calendar-day">
+            Pick a Day and Let's Get Started!{" "}
+          </h3>
+          <div className="challenge-container">
+            {challenges.map((challenge) => (
+              <div
+                key={challenge.id}
+                style={{
+                  backgroundColor: challengeDivColor,
+                  borderColor: transitionColor,
+                }}
+                className="challenge-divs"
+                onClick={() => onDaysClicked(challenge, "#faf8f2", "#60bea0")}
+              >
+                <Days challenge={challenge} />
+              </div>
+            ))}
+          </div>
         </div>
+        <div className="plus-sign">+</div>
       </div>
     </React.Fragment>
   );

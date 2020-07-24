@@ -11,8 +11,10 @@ const MenuItems = ({
   challenges,
   match,
   value,
-  item,
   showContact,
+  hideLanding,
+  challengeDivColor,
+  transitionColor,
 }) => {
   const {
     params: { days, breakfast, lunch, dinner },
@@ -22,28 +24,24 @@ const MenuItems = ({
     <React.Fragment>
       <div className="progress-container">
         <div className="left-column">
-          <Calendar challenges={challenges} onDaysClicked={onDaysClicked} />
+          <Calendar
+            challengeDivColor={challengeDivColor}
+            transitionColor={transitionColor}
+            challenges={challenges}
+            onDaysClicked={onDaysClicked}
+            value={value}
+          />
         </div>
 
         <div className="right-column">
-          <h1 className="progress-days">{days}</h1>
-
-          <MediaQuery query="(max-device-width: 768px)">
-            <ProgressBar value={value} item={item} />
-          </MediaQuery>
-
-          <MediaQuery query="(min-device-width: 769px)">
-            <ProgressBar value={value} item={item} />
-          </MediaQuery>
+          <NewMenu
+            breakfast={breakfast}
+            lunch={lunch}
+            dinner={dinner}
+            showContact={showContact}
+          />
         </div>
       </div>
-
-      <NewMenu
-        breakfast={breakfast}
-        lunch={lunch}
-        dinner={dinner}
-        showContact={showContact}
-      />
     </React.Fragment>
   );
 };
