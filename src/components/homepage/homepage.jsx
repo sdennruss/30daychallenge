@@ -1,7 +1,6 @@
 import React from "react";
 import Avacado from "./cado.png";
 import Calendar from "../calendar/calendar";
-import Contact from "../contact/contact";
 
 const HomePage = ({
   handleCalendar,

@@ -3,14 +3,14 @@ import ProgressBar from "../progress/progressBar";
 import Calendar from "../calendar/calendar";
 import MediaQuery from "react-responsive";
 import NewMenu from "./newMenu";
-import Meals from "./meals";
-import Contact from "../contact/contact";
+import NewProgressBar from "../progress/newProgressBar";
 
 const MenuItems = ({
   onDaysClicked,
   challenges,
   match,
   value,
+  item,
   showContact,
   hideLanding,
   challengeDivColor,
@@ -31,6 +31,7 @@ const MenuItems = ({
             onDaysClicked={onDaysClicked}
             value={value}
           />
+          <NewProgressBar item={item} value={value} days={days} />
         </div>
 
         <div className="right-column">

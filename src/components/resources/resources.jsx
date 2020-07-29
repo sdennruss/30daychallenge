@@ -1,22 +1,14 @@
-import React from 'react';
-import Docs from "./docs";
-import Books from "./books";
-import FoodInspo from './foodInspo';
+import React from "react";
+import CowSpiracy from "./cowspiracy";
 
-
-const Resources = ({onClick}) => {
-
+const Resources = ({ onClick }) => {
   return (
     <React.Fragment>
-      <Docs />
-
-      <Books />
-
-      <FoodInspo />
-
+      <div>
+        <CowSpiracy />
+      </div>
     </React.Fragment>
-
-   );
-}
+  );
+};
 
 export default Resources;

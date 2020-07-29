@@ -3,7 +3,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Resources from "./components/resources/resources";
 import NotFound from "./components/notfound/notfound";
 import { challenges } from "./components/calendar/challenges";
-import Calendar from "./components/calendar/calendar";
 import MenuItems from "./components/menu/menuItems";
 import Toggle from "./components/navbar/toggle";
 import Contact from "./components/contact/contact";
