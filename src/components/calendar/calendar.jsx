@@ -1,6 +1,5 @@
 import React from "react";
 import Days from "./days";
-import Contact from "../contact/contact";
 
 const Calendar = ({
   challenges,
@@ -10,9 +9,6 @@ const Calendar = ({
   challengeDivColor,
   transitionColor,
 }) => {
-  const changeBackground = value ? "#FAF8F2" : null;
-
-  const changeDivColor = value ? "#60bea0" : null;
   return (
     <React.Fragment>
       <div className="transition-outer-container">

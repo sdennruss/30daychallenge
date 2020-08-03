@@ -1,7 +1,5 @@
 import React from "react";
-import ProgressBar from "../progress/progressBar";
 import Calendar from "../calendar/calendar";
-import MediaQuery from "react-responsive";
 import NewMenu from "./newMenu";
 import NewProgressBar from "../progress/newProgressBar";
 
@@ -12,9 +10,9 @@ const MenuItems = ({
   value,
   item,
   showContact,
-  hideLanding,
   challengeDivColor,
   transitionColor,
+  imageIndex,
 }) => {
   const {
     params: { days, breakfast, lunch, dinner },
@@ -39,6 +37,7 @@ const MenuItems = ({
             breakfast={breakfast}
             lunch={lunch}
             dinner={dinner}
+            imageIndex={imageIndex}
             showContact={showContact}
           />
         </div>

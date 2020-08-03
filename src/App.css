@@ -701,6 +701,14 @@ a:hover {
 
 .menu-items {
   position: relative;
+  height: 0;
+}
+
+.breakfast-img {
+  max-width: 100%;
+  max-height: 27.5rem;
+  padding: 1rem;
+  flex: 1;
 }
 
 .recipes {

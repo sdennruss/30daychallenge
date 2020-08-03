@@ -1,6 +1,7 @@
 import React from "react";
 
-const CowSpiracy = () => {
+const CowSpiracy = ({ resources }) => {
+  // const[]
   return (
     <React.Fragment>
       <div className="cowspiracy-outer-container">

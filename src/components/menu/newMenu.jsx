@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import images from "../assets/breakfast";
 
-const NewMenu = ({ breakfast, lunch, dinner }) => {
+const NewMenu = ({ breakfast, lunch, dinner, imageIndex }) => {
   const [openMenu, setOpenMenu] = useState(null);
 
-  const breakfastkBrownDiv = openMenu === breakfast ? "#937e6a" : null;
-  const lunchkBrownDiv = openMenu === lunch ? "#937e6a" : null;
-  const dinnerkBrownDiv = openMenu === dinner ? "#937e6a" : null;
+  const breakfastBrownDiv = openMenu === breakfast ? "#937e6a" : null;
+  const lunchBrownDiv = openMenu === lunch ? "#937e6a" : null;
+  const dinnerBrownDiv = openMenu === dinner ? "#937e6a" : null;
 
   const handleOpenMenu = (open) => {
     console.log("Menu has been opened", open);
+    console.log(images[imageIndex].src);
     setOpenMenu(open);
   };
 
@@ -16,14 +18,14 @@ const NewMenu = ({ breakfast, lunch, dinner }) => {
     <React.Fragment>
       <div className="menu-container">
         <div
-          style={{ backgroundColor: breakfastkBrownDiv }}
+          style={{ backgroundColor: breakfastBrownDiv }}
           onClick={() => handleOpenMenu(breakfast)}
           className="breakfast-container"
         >
           <a className="meal-name">Breakfast</a>
         </div>
         <div
-          style={{ backgroundColor: lunchkBrownDiv }}
+          style={{ backgroundColor: lunchBrownDiv }}
           onClick={() => handleOpenMenu(lunch)}
           className="lunch-container"
         >
@@ -31,7 +33,7 @@ const NewMenu = ({ breakfast, lunch, dinner }) => {
         </div>
 
         <div
-          style={{ backgroundColor: dinnerkBrownDiv }}
+          style={{ backgroundColor: dinnerBrownDiv }}
           onClick={() => handleOpenMenu(dinner)}
           className="dinner-container"
         >
@@ -42,7 +44,12 @@ const NewMenu = ({ breakfast, lunch, dinner }) => {
       <div className="menu-items">
         {openMenu === breakfast ? (
           <div className="recipes">
-            <p className="breakfast-item">{breakfast}</p>
+            <div>
+              <img className="breakfast-img" src={images[imageIndex].src} />
+            </div>
+            <div>
+              <p className="breakfast-item">{breakfast}</p>
+            </div>
           </div>
         ) : null}
         {openMenu === lunch ? (

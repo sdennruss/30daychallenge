@@ -1,11 +1,11 @@
 import React from "react";
 import CowSpiracy from "./cowspiracy";
 
-const Resources = ({ onClick }) => {
+const Resources = ({ resources }) => {
   return (
     <React.Fragment>
       <div>
-        <CowSpiracy />
+        <CowSpiracy resources={resources} />
       </div>
     </React.Fragment>
   );

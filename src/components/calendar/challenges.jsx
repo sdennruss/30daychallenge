@@ -16,6 +16,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -26,6 +27,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -36,6 +38,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -46,6 +49,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -56,6 +60,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -66,6 +71,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -76,6 +82,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -86,6 +93,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -96,6 +104,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -106,6 +115,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -116,6 +126,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 
   {
@@ -126,6 +137,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 14,
@@ -135,6 +147,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 15,
@@ -144,6 +157,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 16,
@@ -153,6 +167,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 17,
@@ -162,6 +177,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 18,
@@ -171,6 +187,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 19,
@@ -180,6 +197,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 20,
@@ -189,6 +207,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 21,
@@ -198,6 +217,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 22,
@@ -207,6 +227,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 23,
@@ -216,6 +237,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 24,
@@ -225,6 +247,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 25,
@@ -234,6 +257,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 26,
@@ -243,6 +267,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 27,
@@ -252,6 +277,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 28,
@@ -261,6 +287,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 29,
@@ -270,6 +297,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
   {
     days: 30,
@@ -279,6 +307,7 @@ export const challenges = [
     breakfast: "avo toast",
     lunch: "avopasta",
     dinner: "homefries",
+    img: "",
   },
 ];
 
@@ -287,6 +316,7 @@ export const meals = [
     breakfast: "Breakfast",
     lunch: "Lunch",
     dinner: "Dinner",
+    breakfastImg: "Breakfast Image",
   },
 ];
 

@@ -21,6 +21,8 @@ class App extends Component {
     hideLanding: "flex",
     transitionColor: "#faf8f2",
     challengeDivColor: "#60bea0",
+    resources: [],
+    imageIndex: "",
   };
 
   componentDidMount() {
@@ -28,8 +30,14 @@ class App extends Component {
   }
 
   handleDaysClicked = (challenge, transitionColor, challengeDivColor) => {
+    const { challenges } = this.state;
+
     const item = Math.round((challenge.days / 30) * 100);
-    this.setState({ item, transitionColor, challengeDivColor });
+    const newChallenge = [...challenges];
+    const imageIndex = newChallenge.indexOf(challenge);
+    console.log("This is the image index", imageIndex);
+    this.setState({ item, transitionColor, challengeDivColor, imageIndex });
+    console.log(item);
   };
 
   handleToggle = (expand) => {
@@ -45,12 +53,14 @@ class App extends Component {
     const {
       navigations,
       challenges,
+      resources,
       item: data,
       expand,
       showCalendar,
       hideLanding,
       challengeDivColor,
       transitionColor,
+      imageIndex,
     } = this.state;
 
     return (
@@ -73,15 +83,14 @@ class App extends Component {
                   challenges={challenges}
                   challengeDivColor={challengeDivColor}
                   transitionColor={transitionColor}
+                  imageIndex={imageIndex}
                   {...props}
                 />
               )}
             />
             <Route
               path="/resources"
-              render={(props) => (
-                <Resources onClick={this.handleRightArrow} {...props} />
-              )}
+              render={(props) => <Resources resourcs={resources} {...props} />}
             />
             <Route path="/notfound" component={NotFound} />
             <Route path="/connect" component={ContactUs} />
