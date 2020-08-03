@@ -39,6 +39,7 @@ const MenuItems = ({
             dinner={dinner}
             imageIndex={imageIndex}
             showContact={showContact}
+            days={days}
           />
         </div>
       </div>

@@ -31,7 +31,6 @@ class App extends Component {
 
   handleDaysClicked = (challenge, transitionColor, challengeDivColor) => {
     const { challenges } = this.state;
-
     const item = Math.round((challenge.days / 30) * 100);
     const newChallenge = [...challenges];
     const imageIndex = newChallenge.indexOf(challenge);

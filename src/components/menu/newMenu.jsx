@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import images from "../assets/breakfast";
 
-const NewMenu = ({ breakfast, lunch, dinner, imageIndex }) => {
+const NewMenu = ({ breakfast, lunch, dinner, imageIndex, days }) => {
   const [openMenu, setOpenMenu] = useState(null);
 
   const breakfastBrownDiv = openMenu === breakfast ? "#937e6a" : null;
@@ -10,7 +9,6 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex }) => {
 
   const handleOpenMenu = (open) => {
     console.log("Menu has been opened", open);
-    console.log(images[imageIndex].src);
     setOpenMenu(open);
   };
 
@@ -44,22 +42,49 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex }) => {
       <div className="menu-items">
         {openMenu === breakfast ? (
           <div className="recipes">
-            <div>
-              <img className="breakfast-img" src={images[imageIndex].src} />
+            <div className="breakfast-image-container">
+              <img
+                className="breakfast-img"
+                src={
+                  process.env.PUBLIC_URL +
+                  `/breakfast/breakfast-${imageIndex + 1}.jpg`
+                }
+              />
             </div>
-            <div>
+            <div className="breakfast-title">
               <p className="breakfast-item">{breakfast}</p>
             </div>
           </div>
         ) : null}
         {openMenu === lunch ? (
           <div className="recipes">
-            <p className="lunch-item">{lunch}</p>
+            <div className="lunch-image-container">
+              <img
+                className="lunch-img"
+                src={
+                  process.env.PUBLIC_URL + `/lunch/lunch-${imageIndex + 1}.jpg`
+                }
+              />
+            </div>
+            <div className="lunch-title">
+              <p className="lunch-item">{lunch}</p>
+            </div>
           </div>
         ) : null}
         {openMenu === dinner ? (
           <div className="recipes">
-            <p className="dinner-item">{dinner}</p>
+            <div className="dinner-image-container">
+              <img
+                className="dinner-img"
+                src={
+                  process.env.PUBLIC_URL +
+                  `/dinner/dinner-${imageIndex + 1}.jpg`
+                }
+              />
+            </div>
+            <div className="dinner-title">
+              <p className="dinner-item">{dinner}</p>
+            </div>
           </div>
         ) : null}
       </div>
