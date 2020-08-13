@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { breakfastDetails } from "./breakfast";
+import { lunchDetails } from "./lunch";
+import { dinnerDetails } from "./dinner";
 
-const NewMenu = ({ breakfast, lunch, dinner, imageIndex, days }) => {
+const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
   const [openMenu, setOpenMenu] = useState(null);
 
   const breakfastBrownDiv = openMenu === breakfast ? "#937e6a" : null;
@@ -51,11 +54,23 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, days }) => {
                 }
               />
             </div>
-            <div className="breakfast-title">
+            <div className="breakfast-content">
               <p className="breakfast-item">{breakfast}</p>
+              <p className="breakfast-details">
+                {breakfastDetails[imageIndex].description}
+              </p>
+              <a
+                href={breakfastDetails[imageIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="recipe-button"
+              >
+                + View Recipe
+              </a>
             </div>
           </div>
         ) : null}
+
         {openMenu === lunch ? (
           <div className="recipes">
             <div className="lunch-image-container">
@@ -66,8 +81,19 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, days }) => {
                 }
               />
             </div>
-            <div className="lunch-title">
+            <div className="lunch-content">
               <p className="lunch-item">{lunch}</p>
+              <p className="lunch-details">
+                {lunchDetails[imageIndex].description}
+              </p>
+              <a
+                href={lunchDetails[imageIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="recipe-button"
+              >
+                + View Recipe
+              </a>
             </div>
           </div>
         ) : null}
@@ -82,8 +108,19 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, days }) => {
                 }
               />
             </div>
-            <div className="dinner-title">
+            <div className="dinner-content">
               <p className="dinner-item">{dinner}</p>
+              <p className="dinner-details">
+                {dinnerDetails[imageIndex].description}
+              </p>
+              <a
+                href={dinnerDetails[imageIndex].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="recipe-button"
+              >
+                + View Recipe
+              </a>
             </div>
           </div>
         ) : null}

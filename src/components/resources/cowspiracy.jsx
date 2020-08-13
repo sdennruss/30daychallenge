@@ -1,34 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import resourceDetails from "./resourcesInfo";
 
 const CowSpiracy = ({ resources }) => {
-  // const[]
+  const [next, setNext] = useState(0);
+
+  const handleNextResource = (next) => {
+    const nextResource = next === 6 ? 0 : next;
+    // const prevResource = nextResource === -1 ? 5 : null;
+    console.log("New resource has been clicked", next);
+    setNext(nextResource);
+  };
+
   return (
     <React.Fragment>
       <div className="cowspiracy-outer-container">
         <div className="cowspiracy-container">
           <div className="arrow-left">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <i
+              onClick={() => handleNextResource(next - 1)}
+              className="fa fa-arrow-left"
+              aria-hidden="true"
+            ></i>
           </div>
-          <div className="resource-content-container">
-            <h2 className="resource-title">Cowspiracy</h2>
-            <p className="resource-paragraph">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum
-            </p>
-          </div>
-          <div className="image-resource-container">
-            <h2> Image</h2>
+          <div className="all-content">
+            <div className="resource-content-container">
+              <h2 className="resource-title">{resourceDetails[next].title}</h2>
+              <p className="resource-paragraph">{resourceDetails[next].body}</p>
+              <a
+                className="resource-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={resourceDetails[next].link}
+              >
+                + View Details
+              </a>
+            </div>
+            <div className="image-resource-container">
+              <img className="doc-image" src={resourceDetails[next].images} />
+            </div>
           </div>
           <div className="arrow-right">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i
+              onClick={() => handleNextResource(next + 1)}
+              className="fa fa-arrow-right"
+              aria-hidden="true"
+            ></i>
           </div>
         </div>
       </div>

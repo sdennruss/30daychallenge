@@ -28,6 +28,7 @@ const MenuItems = ({
             challenges={challenges}
             onDaysClicked={onDaysClicked}
             value={value}
+            days={days}
           />
           <NewProgressBar item={item} value={value} days={days} />
         </div>
@@ -39,6 +40,7 @@ const MenuItems = ({
             dinner={dinner}
             imageIndex={imageIndex}
             showContact={showContact}
+            onDaysClicked={onDaysClicked}
             days={days}
           />
         </div>

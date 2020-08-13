@@ -8,6 +8,7 @@ const Calendar = ({
   value,
   challengeDivColor,
   transitionColor,
+  days,
 }) => {
   return (
     <React.Fragment>
@@ -27,6 +28,7 @@ const Calendar = ({
           <h3 className="pick-calendar-day">
             Pick a Day and Let's Get Started!{" "}
           </h3>
+
           <div className="challenge-container">
             {challenges.map((challenge) => (
               <div

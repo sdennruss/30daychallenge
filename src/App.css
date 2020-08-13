@@ -13,6 +13,15 @@
   line-height: unset;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 :root {
   --dominant-color: #faf8f2;
   --secondary-color: #60bea0;
@@ -99,33 +108,6 @@
   margin-left: 5rem;
 }
 
-.homepage-image-container {
-  flex: 1;
-  margin: 5rem;
-  max-width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container-image {
-  max-width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.avacado-image {
-  width: 10%;
-  flex: 1 1 4rem;
-  animation: slideIn 1500ms ease-in-out forwards;
-}
-
-.avacado-image:hover {
-  opacity: 0.9;
-}
-
 .paragraph-container {
   height: auto;
   overflow: hidden;
@@ -134,7 +116,7 @@
 
 .homepage-paragraph {
   line-height: 2.8rem;
-  transform: translateY(30rem);
+  transform: translateY(35rem);
   color: #343534;
   font-size: 1.6rem;
   font-family: "Open Sans Condensed", sans-serif;
@@ -197,6 +179,33 @@
   font-family: "Amatic SC", cursive;
 }
 
+.homepage-image-container {
+  flex: 1;
+  margin: 5rem;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-image {
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avacado-image {
+  width: 10%;
+  flex: 1 1 4rem;
+  animation: slideIn 1500ms ease-in-out forwards;
+}
+
+.avacado-image:hover {
+  opacity: 0.9;
+}
+
 @keyframes slideIn {
   0% {
     transform: translateX(50rem) scale(0.2);
@@ -208,7 +217,7 @@
 
 @keyframes slideUp {
   0% {
-    transform: translateY(30rem);
+    transform: translateY(35rem);
   }
   100% {
     transform: translateY(0px);
@@ -560,6 +569,7 @@ a:hover {
   width: 88%;
   height: 1.5rem;
   background-color: #e0f3ed;
+  border-radius: 100rem 100rem;
 }
 
 .progress-stroke {
@@ -571,6 +581,7 @@ a:hover {
   font-size: 1.2rem;
   height: 1.5rem;
   background-color: var(--secondary-color);
+  border-radius: 100rem 100rem;
 }
 
 .progress-bar-div {
@@ -591,6 +602,7 @@ a:hover {
 /* left column */
 
 .progress-container {
+  /* height: 100%; */
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -599,22 +611,12 @@ a:hover {
   background-color: var(--dominant-color);
 }
 
-.CircularProgressbar-trail {
-  stroke: #f2f0ea !important;
-}
-
-.CircularProgressbar-path {
-  stroke: #43474d !important;
-}
-
-.CircularProgressbar-text {
-  fill: #43474d !important;
-}
-
 .right-column {
   position: relative;
-  bottom: 9rem;
+  bottom: 9.5rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .left-column {
@@ -647,6 +649,8 @@ a:hover {
   align-items: center;
   margin: 0rem 1rem 0rem 1rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .breakfast-container {
@@ -674,28 +678,40 @@ a:hover {
 .breakfast-item,
 .lunch-item,
 .dinner-item {
-  font-size: 1rem;
   font-family: "Cabin", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1rem;
 }
 
-.recipe-button {
-  background: transparent;
-  border: none;
+.breakfast-details,
+.lunch-details,
+.dinner-details {
+  font-family: "Cabin", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+a.recipe-button {
+  font-family: "Open Sans Condensed", sans-serif;
   padding: 0.6rem;
-  color: var(--dominant-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bolder;
   text-transform: uppercase;
+  color: black;
 }
 
 .recipe-button:hover {
   cursor: pointer;
   font-weight: bolder;
-  color: var(--secondary-color);
+  color: var(--accent-color-2);
 }
 
 .meal-name {
   font-family: "Amatic SC", cursive;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -705,31 +721,37 @@ a:hover {
 }
 
 .recipes {
-  height: 27.5rem;
-  background-color: var(--accent-color-3);
+  height: 32rem;
   width: 97%;
-  margin: 1rem;
-  /* top: 6rem; */
+  /* margin-top: 1rem; */
   display: flex;
-  position: absolute;
+  position: relative;
 }
 
-/* .breakfast-image-container,
+.breakfast-image-container,
 .lunch-image-container,
-.dinner-image-container,
-.breakfast-title,
-.lunch-title,
-.dinner-title {
-  flex: 1;
-} */
+.dinner-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breakfast-content,
+.lunch-content,
+.dinner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
 
 .breakfast-img,
 .lunch-img,
 .dinner-img {
-  max-width: 100%;
   max-height: 27.5rem;
   padding: 1rem;
   flex: 1;
+  border-radius: 10rem 1rem 10rem 10rem;
 }
 
 .cowspiracy-outer-container {
@@ -745,10 +767,16 @@ a:hover {
   width: 95%;
 }
 
+.all-content {
+  display: flex;
+}
+
 .resource-content-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .resource-title {
@@ -761,6 +789,22 @@ a:hover {
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-top: 1rem;
+  width: 90%;
+}
+
+.resource-button {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bolder;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: black;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.resource-button:hover {
+  color: var(--accent-color-2);
+  font-weight: bolder;
 }
 
 .arrow-left,
@@ -769,13 +813,17 @@ a:hover {
 }
 
 .image-resource-container {
-  flex: 3;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .image-resource-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 3;
+}
+
+.doc-image {
+  max-width: 80%;
 }
 
 .resource-content-container {
@@ -785,15 +833,20 @@ a:hover {
 .arrow-left,
 .arrow-right {
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .fa-arrow-left,
 .fa-arrow-right {
+  flex: 1;
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--secondary-color);
+}
+.fa-arrow-left:hover,
+.fa-arrow-right:hover {
+  color: var(--accent-color-1);
 }
 
 .contact-us-outer-container {
@@ -970,18 +1023,46 @@ a:hover {
     margin-left: 0.8rem;
   }
 
+  .menu {
+    width: 100%;
+    height: 100%;
+  }
+
+  .brown-circle {
+    display: none;
+  }
+
+  .container-image {
+    display: none;
+  }
+
+  .container-content {
+    width: 100%;
+    flex: unset;
+  }
+
+  .plus-sign {
+    font-size: 4rem;
+    bottom: 0.1rem;
+    left: 4.5rem;
+  }
+
+  .button-to-calendar {
+    font-size: 1.5rem;
+  }
+
   .thirty-day-challenge {
     text-align: center;
     font-family: "Amatic SC", cursive;
     font-weight: bolder;
     font-size: 4rem;
-    margin: 0.5rem;
+    margin-top: 5rem;
     padding: 0.5rem;
   }
   */ .pick-calendar-day {
     margin-top: 2rem;
     text-align: center;
-    font-family: "Cabin", sans-serif;
+    font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.5rem;
     padding: 0.5rem;
     margin: 0.5rem;
@@ -996,11 +1077,14 @@ a:hover {
   .challenge-container,
   .transition-calendar-container {
     display: flex;
-    flex-flow: row wrap;
     padding-bottom: 0.5rem;
     border-right: solid 0rem white;
     border-bottom: solid 0rem white;
     animation: transitionIn 1000ms;
+  }
+
+  .challenge-container {
+    width: 100%;
   }
 
   .challenge-divs {
@@ -1008,7 +1092,7 @@ a:hover {
     justify-content: space-evenly;
     border-left: solid var(--secondary-color);
     border-top: solid var(--secondary-color);
-    padding: 2rem 0.5rem;
+    /* padding: 2rem 0.5rem; */
     background: var(--dominant-color);
   }
 
@@ -1020,7 +1104,7 @@ a:hover {
   .challenge-items {
     color: #2d3748;
     text-decoration: none;
-    font-family: "Josefine Sans";
+    font-family: "Open Sans Condensed", sans-serif;
     margin-bottom: 0rem;
     font-size: 1.2rem;
   }
@@ -1038,7 +1122,7 @@ a:hover {
   }
 
   .progress-days {
-    font-family: "Francois One";
+    font-family: "Open Sans Condensed", sans-serif;
     text-align: center;
     margin: 0.5rem;
     padding: 0.5rem;
@@ -1048,67 +1132,69 @@ a:hover {
   .check-your-progress {
     margin-top: 2rem;
     text-align: center;
-    font-family: "Josefine";
+    font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.5rem;
     padding: 0.5rem;
     margin: 0px;
   }
 
-  .progress-bar-div {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    justify-content: center;
+  .progress-path {
+    position: relative;
+    align-items: center;
+    bottom: 2rem;
+    width: 90%;
+    height: 1.5rem;
+    background-color: #e0f3ed;
+    border-radius: 100rem 100rem;
   }
 
-  .progress-bar-container {
-    margin: 2rem 4rem !important;
+  .progress-stroke {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-weight: bolder;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.2rem;
+    height: 1.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 100rem 100rem;
   }
 
-  .progressbar {
-    padding-right: 0px !important;
-  }
-
-  .CircularProgressbar-trail {
-    stroke: #f2f0ea !important;
-  }
-
-  .CircularProgressbar-path {
-    stroke: #dbcca9 !important;
+  .right-column {
+    display: flex;
+    width: 95%;
   }
 
   .menu-container {
-    display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .menu-container > div {
     margin: 0.5rem 1rem;
-    height: 30rem;
-    border: solid 0.6rem #dae5ea;
   }
 
   .breakfast-container,
   .lunch-container,
   .dinner-container {
     padding: 1rem;
-    flex-basis: 30%;
+  }
+
+  .meal-name {
+    font-family: "Amatic SC", cursive;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
   }
 
   .breakfast-item,
   .lunch-item,
   .dinner-item {
+    font-family: "Cabin", sans-serif;
     font-size: 1rem;
-    font-family: "Josefine Sans";
   }
 
-  .meal-name {
-    font-family: "Francois One";
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .recipe-button {
+  /* .recipe-button {
     background: transparent;
     border: 0.1rem solid black;
     border-radius: 5rem;
@@ -1117,9 +1203,9 @@ a:hover {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: bolder;
-  }
+  } */
 
-  .recipe-button:hover {
+  /* .recipe-button:hover {
     background-color: var(--dominant-color);
     border: 0.1rem solid var(--dominant-color);
     font-weight: bolder;
@@ -1127,30 +1213,72 @@ a:hover {
     cursor: pointer;
     transition-duration: 200ms;
     transition-property: "background";
-  }
+  } */
 
   .recipes {
-    height: 20rem;
-    background-color: #f5f4f4;
+    height: 30rem;
   }
 
-  .lunch-container {
-    padding: 1rem;
-  }
-
+  .lunch-container,
   .dinner-container {
     padding: 1rem;
   }
 
-  .contact-container {
-    margin: 0.5rem;
-    height: 24rem;
-    background-color: #fcfcfa;
+  .help,
+  .email,
+  .insta {
+    font-size: 1.5rem;
   }
 
-  .contact-header {
-    font-family: "Francois One";
-    font-size: 2.5rem;
-    text-align: center;
+  .contact-container {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .contact-column-left {
+    flex: 1;
+    display: unset;
+    margin: 0rem;
+  }
+
+  .contact-column-right {
+    margin-right: 0rem;
+  }
+
+  .cowspiracy-container {
+    height: 95rem;
+  }
+  .all-content {
+    flex-direction: column;
+    position: relative;
+    top: 2rem;
+  }
+
+  .resources-paragraph {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 100%;
+    /* position: relative; */
+  }
+
+  .arrow-left,
+  .arrow-right {
+    padding: 0rem;
+    position: relative;
+  }
+
+  .fa-arrow-left,
+  .fa-arrow-right {
+    position: relative;
+    bottom: 10rem;
+    font-size: 3rem;
+    color: var(--secondary-color);
+  }
+
+  .resource-button {
+    margin-bottom: 1.5rem;
+  }
+  .image-resource-container {
+    flex: 4;
   }
 }

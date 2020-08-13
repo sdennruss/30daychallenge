@@ -3,9 +3,9 @@ export const challenges = [
     days: 1,
     description: "Shanice",
     id: "challenge-1",
-    breakfast: "avo toaster",
-    lunch: "avopasta",
-    dinner: "homefries",
+    breakfast: "Breakfast Potato Hash",
+    lunch: "Lentils with Creamy Mushroom Gravy",
+    dinner: "Rice Noodles al Pomodoro with Chili Oil",
   },
 
   {
@@ -13,10 +13,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-2",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Sweet Oil-Free Crepes",
+    lunch: "Creamy Mushroom Ramen",
+    dinner: "Crunchy Thai Peanut & Quinoa Salad",
   },
 
   {
@@ -24,10 +23,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-3",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Chickpea Scramble with Zucchini and Thyme",
+    lunch: "Creamy Coconut Curry Lentils with Spinach",
+    dinner: "Coconut-Apple-Ginger Dal",
   },
 
   {
@@ -35,10 +33,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-4",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Sweet Potato Celeriac Hash Browns",
+    lunch: "Spicy Coconut Vegetable Stir Fry",
+    dinner: "Crispy Tofu with Maple-Soy Glaze",
   },
 
   {
@@ -46,10 +43,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-5",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Kale Sweet Potato White Bean Skillet",
+    lunch: "Firecracker Vegan Lettuce Wraps Recipe",
+    dinner: "Build-Your-Own Buddha Bowl",
   },
 
   {
@@ -57,10 +53,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-6",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Apple Cinnamon Overnight Oats",
+    lunch: "BBQ Chickpea & Cauliflower Flatbreads with Avocado Mash",
+    dinner: "Hummus Quesadillas Recipe",
   },
 
   {
@@ -68,10 +63,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-7",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Broccoli and Quinoa Breakfast Patties",
+    lunch: "Spiced Chickpeas and Coconut Bacon Salad",
+    dinner: "Sugar Snap Pea and Carrot Soba Noodles",
   },
 
   {
@@ -79,10 +73,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-8",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Banana Blueberry Pancakes",
+    lunch: "Summer Pesto Pasta",
+    dinner: "Roasted Broccoli and Tofu with Creamy Miso Dressing",
   },
 
   {
@@ -90,10 +83,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-9",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Creamy Oatmeal",
+    lunch: "Farmers Market Pasta Salad",
+    dinner: "Yellow Split Pea Soup Recipe",
   },
 
   {
@@ -101,10 +93,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-10",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Breakfast Burrito",
+    lunch: "Mean Green Detox Salad",
+    dinner: "Stellar Quinoa Burger Recipe",
   },
 
   {
@@ -112,10 +103,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-11",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Enlighten Smoothie Bowl",
+    lunch: "Thai Peanut Sweet Potato Buddha Bowl",
+    dinner: "One-Pot Penne Pasta",
   },
 
   {
@@ -123,10 +113,9 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-12",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Light & Crispy Waffles",
+    lunch: "Vegan Buffalo Cauliflower Tacos",
+    dinner: "Kimchi Tofu Scramble",
   },
 
   {
@@ -134,180 +123,163 @@ export const challenges = [
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-13",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Kimchi Tofu Scamble",
+    lunch: "Creamy Vegan Pumpkin Penne",
+    dinner: "Creamy Zucchini Pesto",
   },
   {
     days: 14,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-14",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Banana French Toast",
+    lunch: "Creamy Mushroom Risotto",
+    dinner: "Creamy Kale + Mushroom Gratin",
   },
   {
     days: 15,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-15",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Tofu Scramble with Dijon & Veggies",
+    lunch: "Chickpea Sunflower Sandwich",
+    dinner: "Creamy White Bean & Cauliflower Alfredo",
   },
   {
     days: 16,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-16",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Avacado Toast",
+    lunch: "Collard Green Spring Rolls",
+    dinner: "Skillet Vegetable Shepherd's Pie",
   },
   {
     days: 17,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-17",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Avocado Toast with Cilantro Lime Cashew Cream",
+    lunch: "Vegan “BLT” Sandwich",
+    dinner: "Vegan Shepherd's Pie",
   },
   {
     days: 18,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-18",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Roasted Rainbow Vegetable Bowl",
+    lunch: "Spicy Buffalo Chickpea Wraps",
+    dinner: "Vegan Eggplant Rollatini",
   },
   {
     days: 19,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-19",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Avacado Banana Green Smoothie",
+    lunch: "Curried Tofu Salad Wraps",
+    dinner: "Instant Pot Mushroom Risotto",
   },
   {
     days: 20,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-20",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Crispy Hash Brown Haystacks",
+    lunch: "Simple Lemon Dill Quinoa Chickpea Salad",
+    dinner: "Santa Fe Quinoa Stuffed Peppers",
   },
   {
     days: 21,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-21",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "PB&J Overnight Oats",
+    lunch: "Pineapple Fried Rice",
+    dinner: "Sheet Pan Tofu Stir Fry",
   },
   {
     days: 22,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-22",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Mango Banana Smoothie Bowl",
+    lunch: "Eggplant Muffaletta",
+    dinner: "Spicy Vegan Sofritas",
   },
   {
     days: 23,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-23",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Biscuits and Gravy",
+    lunch: "Vegan Cobb Salad",
+    dinner: "Sweet Potato Cauliflower Quinoa Bowls",
   },
   {
     days: 24,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-24",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Breakfast Tacos",
+    lunch: "Tempeh Chili",
+    dinner: "Vegan Enchiladas Verde with Cashew Creme",
   },
   {
     days: 25,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-25",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Chickpea & Sweet Potato Breakfast Hash",
+    lunch: "Spicy Tofu & Pineapple Stir-Fry",
+    dinner: "Juicy Portobello Steaks",
   },
   {
     days: 26,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-26",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Muesli",
+    lunch: "Mango & Avocado Black Rice Salad with Cilantro-Lime Vinaigrette ",
+    dinner: "Jalapeño Broccoli Soup",
   },
   {
     days: 27,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-27",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Vegan Gluten-Free Buckwheat Crepes",
+    lunch: "Smashed Chickpea Avocado Salad Sandwich with Cranberries + Lemon",
+    dinner: "Bali Bowls with Peanut Tofu",
   },
   {
     days: 28,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-28",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Steel Cut Oats",
+    lunch: "Vegan Macadamia Coconut Tofu Bowls",
+    dinner: "Pasta with Creamy Vegan Artichoke Sauce, Mushrooms and Sunchoes",
   },
   {
     days: 29,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-29",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Johnny Apple Seed Oatmeal",
+    lunch:
+      "Strawberry & Mango Chopped Spinach Quinoa Salad with Sesame-Lime Vinaigrette",
+    dinner: "Zaatar Roasted Cauliflower Steaks with Green Tahini Sauce",
   },
   {
     days: 30,
     description:
       "Dolor morbi non arcu risus quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse.",
     id: "challenge-30",
-    breakfast: "avo toast",
-    lunch: "avopasta",
-    dinner: "homefries",
-    img: "",
+    breakfast: "Banana Coconut French Toast",
+    lunch: "Vegan Basil Ricotta Pinwheels",
+    dinner: "Pizza with Creamy Cashew Sauce",
   },
 ];
 
