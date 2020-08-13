@@ -22,6 +22,16 @@ const ContactUs = () => {
             <p className="contact-information-2">
               With love, Shanice Dennis-Russell
             </p>
+            <div className="person-informatiom">
+              <a
+                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=sdennisrussell@gmail.com&su=Hi Shan!&shva=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-envelope" aria-hidden="true"></i>
+              </a>
+              <i className="fa fa-instagram" aria-hidden="true"></i>
+            </div>
           </div>
           <div className="contact-right-column">
             <div className="shanice-image-container">

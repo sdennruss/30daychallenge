@@ -899,7 +899,30 @@ a.recipe-button {
 
 .contact-information-2 {
   font-weight: bolder;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+.personal-information {
+  display: flex;
+  margin: 0.5rem;
+  position: relative;
+  z-index: 11;
+}
+
+.fa-envelope,
+.fa-instagram {
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+
+.fa-envelope:hover,
+.fa-instagram:hover {
+  color: var(--accent-color-2);
+}
+
+.fa-instagram {
+  margin-left: 1rem;
 }
 
 .shanice-image-container {
@@ -1246,7 +1269,7 @@ a.recipe-button {
   }
 
   .cowspiracy-container {
-    height: 95rem;
+    height: 85rem;
   }
   .all-content {
     flex-direction: column;
@@ -1278,7 +1301,30 @@ a.recipe-button {
   .resource-button {
     margin-bottom: 1.5rem;
   }
-  .image-resource-container {
-    flex: 4;
+  .image-resource-container,
+  .resource-content-container {
+    flex: none;
+  }
+
+  .contact-us-container {
+    display: flex;
+    flex-direction: column;
+    height: 90rem;
+  }
+
+  .dont-be-shy,
+  .highlight-hi {
+    font-family: "Amatic SC", cursive;
+    font-size: 8rem;
+    position: unset;
+    z-index: 7;
+  }
+
+  .thick-border-line {
+    display: none;
+  }
+
+  .blue-circle {
+    bottom: 25rem;
   }
 }
