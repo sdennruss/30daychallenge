@@ -10,24 +10,19 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
   const lunchBrownDiv = openMenu === lunch ? "#937e6a" : null;
   const dinnerBrownDiv = openMenu === dinner ? "#937e6a" : null;
 
-  const handleOpenMenu = (open) => {
-    console.log("Menu has been opened", open);
-    setOpenMenu(open);
-  };
-
   return (
     <React.Fragment>
       <div className="menu-container">
         <div
           style={{ backgroundColor: breakfastBrownDiv }}
-          onClick={() => handleOpenMenu(breakfast)}
+          onClick={() => setOpenMenu(breakfast)}
           className="breakfast-container"
         >
           <a className="meal-name">Breakfast</a>
         </div>
         <div
           style={{ backgroundColor: lunchBrownDiv }}
-          onClick={() => handleOpenMenu(lunch)}
+          onClick={() => setOpenMenu(lunch)}
           className="lunch-container"
         >
           <a className="meal-name">Lunch</a>
@@ -35,7 +30,7 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
 
         <div
           style={{ backgroundColor: dinnerBrownDiv }}
-          onClick={() => handleOpenMenu(dinner)}
+          onClick={() => setOpenMenu(dinner)}
           className="dinner-container"
         >
           <a className="meal-name">Dinner</a>
@@ -43,7 +38,7 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
       </div>
 
       <div className="menu-items">
-        {openMenu === breakfast ? (
+        {openMenu === breakfast && (
           <div className="recipes">
             <div className="breakfast-image-container">
               <img
@@ -69,9 +64,9 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
               </a>
             </div>
           </div>
-        ) : null}
+        )}
 
-        {openMenu === lunch ? (
+        {openMenu === lunch && (
           <div className="recipes">
             <div className="lunch-image-container">
               <img
@@ -96,8 +91,9 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
               </a>
             </div>
           </div>
-        ) : null}
-        {openMenu === dinner ? (
+        )}
+
+        {openMenu === dinner && (
           <div className="recipes">
             <div className="dinner-image-container">
               <img
@@ -123,7 +119,7 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
               </a>
             </div>
           </div>
-        ) : null}
+        )}
       </div>
     </React.Fragment>
   );

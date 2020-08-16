@@ -461,7 +461,6 @@ input {
   font-size: 6rem;
   padding: 0.5rem;
   position: relative;
-  bottom: 4rem;
 }
 
 .pick-calendar-day {
@@ -472,7 +471,6 @@ input {
   padding: 0.5rem;
   margin: 0.5rem;
   position: relative;
-  bottom: 4rem;
 }
 
 .challenge-container {
@@ -484,6 +482,7 @@ input {
   border-right: solid 0rem white;
   border-bottom: solid 0rem white;
   width: 94%;
+  bottom: 25rem;
 }
 
 .challenge-container > div {
@@ -613,7 +612,7 @@ a:hover {
 
 .right-column {
   position: relative;
-  bottom: 9.5rem;
+  bottom: 11.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -870,7 +869,7 @@ a.recipe-button {
 }
 
 .contact-left-column {
-  margin-left: 7rem;
+  margin-left: 9rem;
 }
 
 .dont-be-shy,
@@ -904,9 +903,8 @@ a.recipe-button {
 }
 .personal-information {
   display: flex;
-  margin: 0.5rem;
   position: relative;
-  z-index: 11;
+  z-index: 4;
 }
 
 .fa-envelope,
@@ -1067,7 +1065,7 @@ a.recipe-button {
   .plus-sign {
     font-size: 4rem;
     bottom: 0.1rem;
-    left: 4.5rem;
+    left: 1rem;
   }
 
   .button-to-calendar {
@@ -1081,14 +1079,17 @@ a.recipe-button {
     font-size: 4rem;
     margin-top: 5rem;
     padding: 0.5rem;
+    bottom: 24rem;
   }
-  */ .pick-calendar-day {
+
+  .pick-calendar-day {
     margin-top: 2rem;
     text-align: center;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.5rem;
-    margin: 0.5rem;
+    position: relative;
+    bottom: 26rem;
   }
 
   .progress-container {
@@ -1106,8 +1107,13 @@ a.recipe-button {
     animation: transitionIn 1000ms;
   }
 
+  .transition-calendar-container {
+    height: 100rem;
+  }
+
   .challenge-container {
     width: 100%;
+    position: relative;
   }
 
   .challenge-divs {
@@ -1148,25 +1154,23 @@ a.recipe-button {
     font-family: "Open Sans Condensed", sans-serif;
     text-align: center;
     margin: 0.5rem;
+    font-size: 3rem;
     padding: 0.5rem;
-    font-size: 2.5rem;
+    position: relative;
+    bottom: 50rem;
+    width: 95%;
   }
 
-  .check-your-progress {
-    margin-top: 2rem;
-    text-align: center;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin: 0px;
+  .challenge-day-progress {
+    width: 95%;
   }
 
   .progress-path {
     position: relative;
     align-items: center;
-    bottom: 2rem;
+    bottom: 51rem;
     width: 90%;
-    height: 1.5rem;
+    height: 2rem;
     background-color: #e0f3ed;
     border-radius: 100rem 100rem;
   }
@@ -1177,15 +1181,26 @@ a.recipe-button {
     position: absolute;
     font-weight: bolder;
     font-family: "Open Sans Condensed", sans-serif;
-    font-size: 1.2rem;
-    height: 1.5rem;
+    font-size: 1.5rem;
+    height: 2rem;
     background-color: var(--secondary-color);
     border-radius: 100rem 100rem;
+  }
+
+  .progress-percentage {
+    margin-bottom: 0rem;
+    text-align: center;
+    width: 95%;
+    font-size: 2rem;
+    font-family: "Open Sans Condensed", sans-serif;
   }
 
   .right-column {
     display: flex;
     width: 95%;
+    bottom: 4rem;
+    position: relative;
+    bottom: 48rem;
   }
 
   .menu-container {
@@ -1217,26 +1232,9 @@ a.recipe-button {
     font-size: 1rem;
   }
 
-  /* .recipe-button {
-    background: transparent;
-    border: 0.1rem solid black;
-    border-radius: 5rem;
-    padding: 0.8rem 1.2rem;
-    color: black;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: bolder;
-  } */
-
-  /* .recipe-button:hover {
-    background-color: var(--dominant-color);
-    border: 0.1rem solid var(--dominant-color);
-    font-weight: bolder;
-    color: white;
-    cursor: pointer;
-    transition-duration: 200ms;
-    transition-property: "background";
-  } */
+  .breakfast-details .lunch-details .dinner-details {
+    font-size: 1rem;
+  }
 
   .recipes {
     height: 30rem;
@@ -1245,6 +1243,12 @@ a.recipe-button {
   .lunch-container,
   .dinner-container {
     padding: 1rem;
+  }
+
+  .breakfast-img,
+  .lunch-img,
+  .dinner-img {
+    max-height: 15rem;
   }
 
   .help,
@@ -1312,6 +1316,10 @@ a.recipe-button {
     height: 90rem;
   }
 
+  .contact-left-column {
+    margin: 3rem 3rem 0 3rem;
+  }
+
   .dont-be-shy,
   .highlight-hi {
     font-family: "Amatic SC", cursive;
@@ -1326,5 +1334,15 @@ a.recipe-button {
 
   .blue-circle {
     bottom: 25rem;
+  }
+
+  .personal-information {
+    position: relative;
+    z-index: 4;
+  }
+
+  .shanice-image {
+    width: 55%;
+    z-index: 4;
   }
 }

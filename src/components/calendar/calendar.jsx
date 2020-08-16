@@ -1,5 +1,6 @@
 import React from "react";
 import Days from "./days";
+import NewProgressBar from "../progress/newProgressBar";
 
 const Calendar = ({
   challenges,
@@ -9,6 +10,7 @@ const Calendar = ({
   challengeDivColor,
   transitionColor,
   days,
+  item,
 }) => {
   return (
     <React.Fragment>
@@ -45,7 +47,6 @@ const Calendar = ({
             ))}
           </div>
         </div>
-        <div className="plus-sign">+</div>
       </div>
     </React.Fragment>
   );

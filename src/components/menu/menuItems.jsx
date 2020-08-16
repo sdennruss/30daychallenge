@@ -29,6 +29,7 @@ const MenuItems = ({
             onDaysClicked={onDaysClicked}
             value={value}
             days={days}
+            item={item}
           />
           <NewProgressBar item={item} value={value} days={days} />
         </div>
