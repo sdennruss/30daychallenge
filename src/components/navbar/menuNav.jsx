@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MenuNav = ({ navigations, expand, onClick }) => {
+const MenuNav = ({ navigations, expand, onToggle }) => {
   return (
     <React.Fragment>
       <div className="menu menuEffects">
@@ -12,7 +12,7 @@ const MenuNav = ({ navigations, expand, onClick }) => {
                 <li className="nav-items">
                   <Link
                     className="nav-links"
-                    onClick={() => onClick(!expand)}
+                    onClick={() => onToggle(!expand)}
                     to={`/${navigation}`}
                   >
                     {navigation}

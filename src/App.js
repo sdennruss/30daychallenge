@@ -7,68 +7,47 @@ import MenuItems from "./components/menu/menuItems";
 import Toggle from "./components/navbar/toggle";
 import Contact from "./components/contact/contact";
 import ContactUs from "./components/contact/contactUs";
-import HomePage from "./components/homepage/homepage";
 import "./App.css";
+import HomePage1 from "./components/homepage/homepage-1";
+import Calendar from "./components/calendar/calendar";
 
 class App extends Component {
   state = {
-    navigations: ["home", "resources", "connect"],
     challenges: [],
     meals: [],
-    item: 0,
-    expand: false,
-    showCalendar: "none",
-    hideLanding: "flex",
-    transitionColor: "#faf8f2",
-    challengeDivColor: "#60bea0",
-    resources: [],
-    imageIndex: "",
+    challengeIndex: 0,
+    progressPercentage: 3,
   };
 
   componentDidMount() {
     this.setState({ challenges });
   }
 
-  handleDaysClicked = (challenge, transitionColor, challengeDivColor) => {
-    const { challenges } = this.state;
-    const item = Math.round((challenge.days / 30) * 100);
+  handleDaysClicked = (challenge, food) => {
+    const percentage = Math.round((challenge.days / 30) * 100);
     const newChallenge = [...challenges];
     const imageIndex = newChallenge.indexOf(challenge);
-    console.log("This is the image index", imageIndex);
-    this.setState({ item, transitionColor, challengeDivColor, imageIndex });
-    console.log(item);
-  };
-
-  handleToggle = (expand) => {
-    this.setState({ expand });
-    console.log("Expand", expand);
-  };
-
-  handleCalendar = (show, hide) => {
-    this.setState({ showCalendar: show, hideLanding: hide });
+    console.log(
+      `Percentage: ${percentage}, Image Index: ${imageIndex}, Breakfast ${food}`
+    );
+    this.setState({
+      challengeIndex: imageIndex,
+      progressPercentage: percentage,
+      openBreaky: food,
+    });
   };
 
   render() {
     const {
-      navigations,
       challenges,
-      resources,
-      item: data,
-      expand,
-      showCalendar,
-      hideLanding,
-      challengeDivColor,
-      transitionColor,
-      imageIndex,
+      challengeIndex,
+      progressPercentage,
+      openBreaky,
     } = this.state;
 
     return (
       <React.Fragment>
-        <Toggle
-          navigations={navigations}
-          expand={expand}
-          onToggle={this.handleToggle}
-        />
+        <Toggle />
 
         <div className="routing-container">
           <Switch>
@@ -76,55 +55,33 @@ class App extends Component {
               path="/calendar/:breakfast/:lunch/:dinner/:days"
               render={(props) => (
                 <MenuItems
-                  onDaysClicked={this.handleDaysClicked}
-                  value={data}
-                  item={this.state.item}
                   challenges={challenges}
-                  challengeDivColor={challengeDivColor}
-                  transitionColor={transitionColor}
-                  imageIndex={imageIndex}
+                  openBreaky={openBreaky}
+                  challengeIndex={challengeIndex}
+                  progressPercentage={progressPercentage}
+                  onDaysClicked={this.handleDaysClicked}
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              path="/calendar"
+              render={(props) => (
+                <Calendar
+                  challenges={challenges}
+                  onDaysClicked={this.handleDaysClicked}
                   {...props}
                 />
               )}
             />
             <Route
               path="/resources"
-              render={(props) => <Resources resourcs={resources} {...props} />}
+              render={(props) => <Resources {...props} />}
             />
             <Route path="/notfound" component={NotFound} />
             <Route path="/connect" component={ContactUs} />
-            <Route
-              path="/home"
-              exact
-              render={(props) => (
-                <HomePage
-                  handleCalendar={this.handleCalendar}
-                  showCalendar={showCalendar}
-                  hideLanding={hideLanding}
-                  challenges={challenges}
-                  onDaysClicked={this.handleDaysClicked}
-                  value={data}
-                  item={this.state.item}
-                  {...props}
-                />
-              )}
-            />
-            <Route
-              path="/"
-              exact
-              render={(props) => (
-                <HomePage
-                  handleCalendar={this.handleCalendar}
-                  showCalendar={showCalendar}
-                  hideLanding={hideLanding}
-                  challenges={challenges}
-                  onDaysClicked={this.handleDaysClicked}
-                  value={data}
-                  item={this.state.item}
-                  {...props}
-                />
-              )}
-            />
+            <Route path="/home" exact component={HomePage1} />
+            <Route path="/" exact component={HomePage1} />
             <Redirect to="/notfound" />
           </Switch>
         </div>

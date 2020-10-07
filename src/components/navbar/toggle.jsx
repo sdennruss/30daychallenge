@@ -1,18 +1,28 @@
-import React from "react";
-import PlantLogo from "./veg-logo.png";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import MenuNav from "./menuNav";
+import vvcLogo from "./logo-2.png";
 
-const Toggle = ({ navigations, expand, onToggle }) => {
+const Toggle = () => {
+  const navigations = ["home", "calendar", "resources", "connect"];
+  const [expand, setExpand] = useState(false);
+
   return (
     <React.Fragment>
       <div className="hamburger-container">
+        <div className="vvc-logo">
+          <Link to="/calendar">
+            {" "}
+            <img src={vvcLogo} className="brand-logo" />
+          </Link>
+        </div>
         <div className="hamburger">
           <input
-            onClick={() => onToggle(!expand)}
+            onClick={() => setExpand(!expand)}
             type="checkbox"
             id="menuToggle"
             checked={expand}
-            onChange={() => onToggle(!expand)}
+            onChange={() => setExpand(!expand)}
           />
 
           <label htmlFor="menuToggle" className="menuOpen">
@@ -22,7 +32,11 @@ const Toggle = ({ navigations, expand, onToggle }) => {
       </div>
 
       {expand && (
-        <MenuNav onClick={onToggle} expand={expand} navigations={navigations} />
+        <MenuNav
+          onToggle={setExpand}
+          expand={expand}
+          navigations={navigations}
+        />
       )}
     </React.Fragment>
   );

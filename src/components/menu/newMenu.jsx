@@ -3,59 +3,63 @@ import { breakfastDetails } from "./breakfast";
 import { lunchDetails } from "./lunch";
 import { dinnerDetails } from "./dinner";
 
-const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
+const NewMenu = ({
+  breakfast,
+  lunch,
+  dinner,
+  challengeIndex,
+  onDaysClicked,
+}) => {
   const [openMenu, setOpenMenu] = useState(null);
 
-  const breakfastBrownDiv = openMenu === breakfast ? "#937e6a" : null;
-  const lunchBrownDiv = openMenu === lunch ? "#937e6a" : null;
-  const dinnerBrownDiv = openMenu === dinner ? "#937e6a" : null;
+  const breakfastBrownDiv =
+    (openMenu === breakfast && openMenu === lunch) || openMenu === dinner
+      ? "brown-b-c"
+      : "breakfast-container";
+  const lunchBrownDiv = openMenu === lunch ? "brown-l-c" : "lunch-container";
+  const dinnerBrownDiv = openMenu === dinner ? "brown-d-c" : "dinner-container";
+
+  const hideBreakfast =
+    openMenu === lunch || openMenu === dinner ? "none" : null;
 
   return (
     <React.Fragment>
+      <p className="challenge-number">{` Day ${challengeIndex + 1}`}</p>
       <div className="menu-container">
         <div
-          style={{ backgroundColor: breakfastBrownDiv }}
           onClick={() => setOpenMenu(breakfast)}
-          className="breakfast-container"
+          className={breakfastBrownDiv}
         >
           <a className="meal-name">Breakfast</a>
         </div>
-        <div
-          style={{ backgroundColor: lunchBrownDiv }}
-          onClick={() => setOpenMenu(lunch)}
-          className="lunch-container"
-        >
+        <div onClick={() => setOpenMenu(lunch)} className={lunchBrownDiv}>
           <a className="meal-name">Lunch</a>
         </div>
 
-        <div
-          style={{ backgroundColor: dinnerBrownDiv }}
-          onClick={() => setOpenMenu(dinner)}
-          className="dinner-container"
-        >
+        <div onClick={() => setOpenMenu(dinner)} className={dinnerBrownDiv}>
           <a className="meal-name">Dinner</a>
         </div>
       </div>
 
       <div className="menu-items">
-        {openMenu === breakfast && (
-          <div className="recipes">
+        {onDaysClicked && (
+          <div className="recipes-breakfast" style={{ display: hideBreakfast }}>
             <div className="breakfast-image-container">
               <img
                 className="breakfast-img"
                 src={
                   process.env.PUBLIC_URL +
-                  `/breakfast/breakfast-${imageIndex + 1}.jpg`
+                  `/breakfast/breakfast-${challengeIndex + 1}.jpg`
                 }
               />
             </div>
             <div className="breakfast-content">
               <p className="breakfast-item">{breakfast}</p>
               <p className="breakfast-details">
-                {breakfastDetails[imageIndex].description}
+                {breakfastDetails[challengeIndex].description}
               </p>
               <a
-                href={breakfastDetails[imageIndex].link}
+                href={breakfastDetails[challengeIndex].link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="recipe-button"
@@ -72,17 +76,18 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
               <img
                 className="lunch-img"
                 src={
-                  process.env.PUBLIC_URL + `/lunch/lunch-${imageIndex + 1}.jpg`
+                  process.env.PUBLIC_URL +
+                  `/lunch/lunch-${challengeIndex + 1}.jpg`
                 }
               />
             </div>
             <div className="lunch-content">
               <p className="lunch-item">{lunch}</p>
               <p className="lunch-details">
-                {lunchDetails[imageIndex].description}
+                {lunchDetails[challengeIndex].description}
               </p>
               <a
-                href={lunchDetails[imageIndex].link}
+                href={lunchDetails[challengeIndex].link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="recipe-button"
@@ -100,17 +105,17 @@ const NewMenu = ({ breakfast, lunch, dinner, imageIndex, onDaysClicked }) => {
                 className="dinner-img"
                 src={
                   process.env.PUBLIC_URL +
-                  `/dinner/dinner-${imageIndex + 1}.jpg`
+                  `/dinner/dinner-${challengeIndex + 1}.jpg`
                 }
               />
             </div>
             <div className="dinner-content">
               <p className="dinner-item">{dinner}</p>
               <p className="dinner-details">
-                {dinnerDetails[imageIndex].description}
+                {dinnerDetails[challengeIndex].description}
               </p>
               <a
-                href={dinnerDetails[imageIndex].link}
+                href={dinnerDetails[challengeIndex].link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="recipe-button"

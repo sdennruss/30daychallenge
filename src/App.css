@@ -62,30 +62,47 @@ body {
 }
 
 .overlay,
-.overlay-calendar {
+.overlay-calendar,
+.overlay-calendar-2,
+.over-column-container {
   display: flex;
-  position: absolute;
-  top: 0;
-  /* left: 0;
-  right: 0; */
-  bottom: 0.5rem;
-  height: 70rem;
-  z-index: -11;
+  height: 88vh;
+}
+
+.over-column-container {
+  display: flex;
+  position: relative;
   width: 95%;
+  left: 3.1rem;
 }
 
 .overlay {
   background-color: var(--accent-color-1);
+  bottom: 0.5rem;
+  z-index: -11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
 
 .overlay-calendar {
   background-color: var(--dominant-color);
+  width: 94%;
+  position: absolute;
+}
+
+.overlay-calendar-2 {
+  background-color: var(--dominant-color);
+  width: 95%;
+  left: 3.1rem;
+  position: absolute;
 }
 
 .homepage-container {
   display: flex;
   position: relative;
-  height: 70rem;
+  height: 88vh;
   top: 0;
   bottom: 0.5rem;
   justify-content: space-around;
@@ -94,7 +111,7 @@ body {
   background-color: var(--dominant-color);
   position: relative;
   transition: all 800ms ease;
-  width: 95%;
+  width: 94%;
 }
 
 .container-content {
@@ -161,7 +178,6 @@ body {
   font-weight: bolder;
   background-color: var(--accent-color-1);
   border: 0.1rem solid var(--accent-color-1);
-  padding: 1.1rem 2.5rem;
   color: black;
 }
 
@@ -287,10 +303,9 @@ input {
 }
 
 .menuOpen {
-  width: 2.4rem;
   height: 2rem;
+  margin: 0rem 3.1rem 0rem 0rem;
   display: block;
-  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -340,7 +355,7 @@ input {
   align-items: center;
   text-decoration: none;
   transition: color 0.3s;
-  font-size: 6rem;
+  font-size: 10rem;
   font-family: Trebuchet;
   text-transform: uppercase;
   padding: 2.5rem 0;
@@ -408,12 +423,21 @@ input {
 
 .hamburger-container {
   display: flex;
+  align-items: center;
   flex-direction: row;
   position: relative;
-  width: 6rem;
   margin: 0rem;
-  height: 3.2rem;
-  z-index: 10;
+  height: 6vh;
+}
+
+.vvc-logo {
+  position: relative;
+  flex: 1;
+}
+
+.brand-logo {
+  height: 5.5vh;
+  margin-left: 3.1rem;
 }
 
 .hamburger {
@@ -422,6 +446,9 @@ input {
   font-size: 3rem;
   position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
 }
 
 .line {
@@ -437,21 +464,22 @@ input {
 }
 
 .transition-outer-container {
-  display: flex;
   position: relative;
+  display: flex;
+  align-content: center;
   justify-content: center;
 }
 
 .transition-calendar-container {
   animation: transitionIn 1000ms;
   background-color: var(--secondary-color);
-  height: 70rem;
-  width: 95%;
+  height: 88vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
+  width: 95%;
 }
 
 .thirty-day-challenge {
@@ -502,8 +530,20 @@ input {
   justify-content: space-evenly;
   border-left: solid var(--secondary-color);
   border-top: solid var(--secondary-color);
-  padding: 2rem 0.5rem;
   background: var(--dominant-color);
+  padding: 2rem 0.5rem;
+}
+
+.challenge-divs {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  bottom: 1rem;
+  justify-content: space-evenly;
+  border-left: solid var(--secondary-color);
+  border-top: solid var(--secondary-color);
+  background: var(--dominant-color);
+  padding: 2rem 0.5rem;
 }
 
 .challenge-divs:hover {
@@ -543,30 +583,39 @@ a:hover {
 }
 
 .progress-days {
-  font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
   margin: 0.5rem;
   padding: 0.5rem;
   font-size: 3.5rem;
   flex-flow: column wrap;
-  /* position: relative; */
+  position: relative;
+  bottom: 10rem;
+  width: 94%;
 }
 
-.check-your-progress {
-  margin-top: 2rem;
-  text-align: center;
+.challenge-day-progress {
+  font-size: 2rem;
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  margin: 0px;
+  text-align: center;
+}
+
+.challenge-number {
+  top: 8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-family: "Amatic SC", cursive;
 }
 
 .progress-path {
   position: relative;
   align-items: center;
-  bottom: 2rem;
-  width: 88%;
-  height: 1.5rem;
+  /* bottom: 8rem; */
+  width: 94%;
+  height: 2rem;
+  left: 2rem;
   background-color: #e0f3ed;
   border-radius: 100rem 100rem;
 }
@@ -578,30 +627,14 @@ a:hover {
   font-weight: bolder;
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.2rem;
-  height: 1.5rem;
-  background-color: var(--secondary-color);
+  height: 2rem;
+  background-color: var(--accent-color-1);
   border-radius: 100rem 100rem;
-}
-
-.progress-bar-div {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  justify-content: center;
-}
-
-.progress-bar-container {
-  margin: 2rem 4rem !important;
-}
-
-.progressbar {
-  padding-right: 0px !important;
-  width: 30% !important;
 }
 
 /* left column */
 
 .progress-container {
-  /* height: 100%; */
   width: 95%;
   margin: 0 auto;
   display: flex;
@@ -612,49 +645,60 @@ a:hover {
 
 .right-column {
   position: relative;
-  bottom: 11.5rem;
+  /* margin-top: 23rem; */
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 92%;
 }
 
 .left-column {
-  flex-flow: column wrap;
-  display: flex;
+  background-color: var(--secondary-color);
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .menu-container {
+  flex: 1;
   display: flex;
+  position: relative;
   justify-content: space-evenly;
+  align-items: center;
   flex-direction: row;
+  top: 2rem;
 }
-
-/* .menu-container > div {
-  margin: 0rem 1rem 1rem 1rem;
-  height: 30rem;
-  border: solid 0.6rem #dae5ea;
-} */
 
 .breakfast-container,
 .lunch-container,
-.dinner-container {
+.dinner-container,
+.brown-b-c,
+.brown-l-c,
+.brown-d-c {
   padding: 0.5rem;
   flex: 1;
   height: 5rem;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 0rem 1rem 0rem 1rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
 }
 
+.brown-l-c,
+.brown-d-c {
+  background-color: var(--accent-color-2);
+}
+
 .breakfast-container {
-  background-color: var(--accent-color-3);
+  background-color: var(--accent-color-2);
   margin-left: 1rem;
+}
+
+.brown-b-c {
+  margin-left: 1rem;
+  background-color: var(--accent-color-3);
 }
 
 .breakfast-container:hover,
@@ -669,8 +713,16 @@ a:hover {
   margin: 0rem 1rem;
 }
 
+.brown-l-c {
+  margin: 0rem 1rem;
+}
+
 .dinner-container {
   background-color: var(--accent-color-3);
+  margin-right: 1rem;
+}
+
+.brown-d-c {
   margin-right: 1rem;
 }
 
@@ -715,14 +767,19 @@ a.recipe-button {
 }
 
 .menu-items {
+  display: flex;
   position: relative;
+  align-items: flex-end;
+  flex: 1;
   height: 0;
+  bottom: 4rem;
 }
 
-.recipes {
+.recipes,
+.recipes-breakfast {
   height: 32rem;
   width: 97%;
-  /* margin-top: 1rem; */
+  margin-top: 1rem;
   display: flex;
   position: relative;
 }
@@ -761,7 +818,7 @@ a.recipe-button {
 
 .cowspiracy-container {
   display: flex;
-  height: 70rem;
+  height: 88vh;
   background-color: var(--dominant-color);
   width: 95%;
 }
@@ -934,9 +991,8 @@ a.recipe-button {
 .contact-container {
   display: flex;
   position: relative;
-  /* height: 14rem; */
-  justify-content: flex-end;
-  align-items: baseline;
+  height: 6vh;
+  align-items: center;
 }
 
 .help {
@@ -955,12 +1011,13 @@ a.recipe-button {
 
 .contact-column-left {
   position: relative;
-  margin-left: 3.5rem;
+  margin-left: 4.3rem;
 }
 
 .contact-column-right {
+  position: relative;
   justify-content: flex-end;
-  margin-right: 3.5rem;
+  margin-right: 4.3rem;
 }
 
 .thick-border-line {
@@ -1011,9 +1068,18 @@ a.recipe-button {
   margin-left: 2rem;
 }
 
+.instagram-handle {
+  margin-bottom: 0rem;
+}
+
 .email-container {
   display: flex;
   flex-flow: row wrap;
+}
+
+.email-address,
+.instagram-container {
+  margin-bottom: 0rem;
 }
 
 /* mobile */
@@ -1093,7 +1159,7 @@ a.recipe-button {
   }
 
   .progress-container {
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
   }
@@ -1108,7 +1174,7 @@ a.recipe-button {
   }
 
   .transition-calendar-container {
-    height: 100rem;
+    height: 88vh;
   }
 
   .challenge-container {

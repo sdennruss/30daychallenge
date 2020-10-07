@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Calendar from "../calendar/calendar";
 import NewMenu from "./newMenu";
 import NewProgressBar from "../progress/newProgressBar";
 
 const MenuItems = ({
-  onDaysClicked,
   challenges,
   match,
-  value,
-  item,
-  showContact,
-  challengeDivColor,
-  transitionColor,
-  imageIndex,
+  onDaysClicked,
+  progressPercentage,
+  challengeIndex,
 }) => {
   const {
     params: { days, breakfast, lunch, dinner },
@@ -20,18 +16,20 @@ const MenuItems = ({
 
   return (
     <React.Fragment>
-      <div className="progress-container">
+      <div className="overlay-calendar-2"></div>
+      <div className="over-column-container">
         <div className="left-column">
           <Calendar
-            challengeDivColor={challengeDivColor}
-            transitionColor={transitionColor}
             challenges={challenges}
+            challengeIndex={challengeIndex}
             onDaysClicked={onDaysClicked}
-            value={value}
-            days={days}
-            item={item}
+            breakfast={breakfast}
           />
-          <NewProgressBar item={item} value={value} days={days} />
+          <NewProgressBar
+            progressPercentage={progressPercentage}
+            challengeIndex={challengeIndex}
+            challenges={challenges}
+          />
         </div>
 
         <div className="right-column">
@@ -39,10 +37,9 @@ const MenuItems = ({
             breakfast={breakfast}
             lunch={lunch}
             dinner={dinner}
-            imageIndex={imageIndex}
-            showContact={showContact}
-            onDaysClicked={onDaysClicked}
             days={days}
+            onDaysClicked={onDaysClicked}
+            challengeIndex={challengeIndex}
           />
         </div>
       </div>

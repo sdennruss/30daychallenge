@@ -1,7 +1,8 @@
 import React from "react";
 import CowSpiracy from "./cowspiracy";
+import resources from "./resourcesInfo";
 
-const Resources = ({ resources }) => {
+const Resources = () => {
   return (
     <React.Fragment>
       <div>

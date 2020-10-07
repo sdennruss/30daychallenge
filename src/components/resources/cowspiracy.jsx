@@ -3,12 +3,19 @@ import resourceDetails from "./resourcesInfo";
 
 const CowSpiracy = ({ resources }) => {
   const [next, setNext] = useState(0);
+  const [back, setBack] = useState(6);
 
   const handleNextResource = (next) => {
     const nextResource = next === 6 ? 0 : next;
-    // const prevResource = nextResource === -1 ? 5 : null;
     console.log("New resource has been clicked", next);
     setNext(nextResource);
+  };
+
+  const handleBackResource = (back) => {
+    const backResource = back === -1 ? 5 : back;
+    console.log("New resource has been clicked", back);
+
+    setNext(backResource);
   };
 
   return (
@@ -17,7 +24,7 @@ const CowSpiracy = ({ resources }) => {
         <div className="cowspiracy-container">
           <div className="arrow-left">
             <i
-              onClick={() => handleNextResource(next - 1)}
+              onClick={() => handleBackResource(next - 1)}
               className="fa fa-arrow-left"
               aria-hidden="true"
             ></i>
