@@ -1132,22 +1132,71 @@ a.recipe-button {
     margin-right: 0rem;
   }
 
-  .over-column-container {
-    flex-direction: column;
-    left: 0rem;
-  }
-
   .overlay-calendar-2 {
     width: 100%;
     left: 0rem;
     display: flex;
     align-items: center;
   }
+
+  .over-column-container {
+    flex-direction: column;
+    left: 0rem;
+    width: 100%;
+    align-items: center;
+  }
+
   .overlay,
   .overlay-calendar,
-  .overlay-calendar-2,
   .over-column-container {
-    height: 150vh;
+    height: 195vh;
+  }
+
+  .overlay-calendar-2 {
+    height: auto;
+  }
+
+  .overlay-calendar {
+    display: none;
+  }
+
+  .left-column {
+    width: 95%;
+  }
+
+  .progress-days {
+    bottom: 2rem;
+  }
+
+  .right-column {
+    width: 95%;
+    height: 60vh;
+  }
+
+  .challenge-number,
+  .menu-container {
+    top: 0;
+  }
+
+  .menu-container {
+    flex: unset;
+  }
+
+  .menu-items {
+    display: unset;
+    bottom: 0;
+  }
+
+  .recipes,
+  .recipes-breakfast {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .breakfast-img,
+  .lunch-img,
+  .dinner-img {
+    max-width: 60%;
   }
 
   /* .progress-container {
