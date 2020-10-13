@@ -7,7 +7,6 @@ const ContactUs = () => {
       <div className="contact-us-outer-container">
         <div className="contact-us-container">
           <div className="contact-left-column">
-            <div className="thick-border-line"></div>
             <h1 className="dont-be-shy">
               Don't be shy, say <span className="highlight-hi">hi!</span>
             </h1>

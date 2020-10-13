@@ -37,8 +37,7 @@ body {
   justify-content: center;
 }
 
-.yellow-circle,
-.brown-circle {
+.yellow-circle {
   position: absolute;
   display: flex;
   height: 25rem;
@@ -52,13 +51,6 @@ body {
   right: -6rem;
   top: -15rem;
   z-index: 5;
-}
-
-.brown-circle {
-  background-color: var(--accent-color-2);
-  left: -5rem;
-  top: 35rem;
-  z-index: -9;
 }
 
 .overlay,
@@ -143,7 +135,7 @@ body {
 
 .start-word {
   /* font-weight: bolder; */
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bolder;
   color: black;
   font-family: "Open Sans Condensed", sans-serif;
@@ -161,17 +153,23 @@ body {
   border: 0.1rem solid var(--accent-color-3);
   border-radius: 1rem;
   padding: 1rem 2.5rem;
-  font-size: 1.5rem;
   margin-top: 1.5rem;
   transform: translateY(5rem);
+  cursor: pointer;
+  animation: slideUp 1500ms ease-in-out forwards;
+}
+
+a.button-to-home {
+  text-decoration: none;
   text-transform: uppercase;
   position: relative;
+  outline: none;
   font-family: "Open Sans Condensed", sans-serif;
   color: black;
-  outline: none;
   cursor: pointer;
   font-weight: bolder;
-  animation: slideUp 800ms ease-in-out forwards 1000ms;
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
 }
 
 .button-to-calendar:hover {
@@ -187,7 +185,7 @@ body {
 }
 
 .veg-chal {
-  font-size: 8rem;
+  font-size: 6rem;
   margin-bottom: 2rem;
   transform: translateY(10rem);
   animation: slideUp 800ms ease forwards 500ms;
@@ -597,6 +595,7 @@ a:hover {
   font-size: 2rem;
   font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
+  font-weight: bold;
 }
 
 .challenge-number {
@@ -703,7 +702,8 @@ a:hover {
 
 .breakfast-container:hover,
 .lunch-container:hover,
-.dinner-container:hover {
+.dinner-container:hover,
+.brown-b-c:hover {
   background-color: var(--accent-color-2);
   color: white;
 }
@@ -913,7 +913,7 @@ a.recipe-button {
 }
 .contact-us-container {
   display: flex;
-  height: 70rem;
+  height: 88vh;
   width: 95%;
   background-color: var(--dominant-color);
   justify-content: space-between;
@@ -1020,15 +1020,6 @@ a.recipe-button {
   margin-right: 4.3rem;
 }
 
-.thick-border-line {
-  background-color: var(--secondary-color);
-  width: 26%;
-  height: 4rem;
-  position: absolute;
-  top: 13rem;
-  left: 11rem;
-}
-
 .blue-circle {
   position: absolute;
   background-color: var(--secondary-color);
@@ -1084,81 +1075,82 @@ a.recipe-button {
 
 /* mobile */
 @media (max-width: 768px) {
-  .hamburger-container {
-    display: flex;
-    flex-direction: row;
-    width: 6rem;
-    margin: 0.3rem;
-  }
-
-  .hamburger {
-    flex: 1;
-    padding: 0.3rem;
-    font-size: 3rem;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .line {
-    width: 3rem;
-    height: 0.3rem;
-    margin: 0.5rem;
-    background: black;
-  }
-
-  .x {
-    margin-left: 0.8rem;
-  }
-
   .menu {
     width: 100%;
     height: 100%;
   }
 
-  .brown-circle {
-    display: none;
-  }
-
-  .container-image {
+  .container-image,
+  .homepage-image-container {
     display: none;
   }
 
   .container-content {
-    width: 100%;
     flex: unset;
   }
 
-  .plus-sign {
-    font-size: 4rem;
-    bottom: 0.1rem;
-    left: 1rem;
+  .container-content-inner {
+    margin-left: 0rem;
+    width: 100%;
   }
 
   .button-to-calendar {
     font-size: 1.5rem;
   }
 
-  .thirty-day-challenge {
-    text-align: center;
-    font-family: "Amatic SC", cursive;
+  .veg-chal {
+    margin-top: 2.5rem;
     font-weight: bolder;
-    font-size: 4rem;
-    margin-top: 5rem;
-    padding: 0.5rem;
-    bottom: 24rem;
   }
 
-  .pick-calendar-day {
-    margin-top: 2rem;
-    text-align: center;
-    font-family: "Open Sans Condensed", sans-serif;
-    font-size: 2rem;
-    padding: 0.5rem;
-    position: relative;
-    bottom: 26rem;
+  .menu ul li a {
+    font-size: 8rem;
   }
 
-  .progress-container {
+  .challenge-container {
+    width: 100%;
+  }
+
+  .help,
+  .email,
+  .insta {
+    font-size: 1.5rem;
+  }
+
+  .contact-container {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .contact-column-left {
+    flex: 1;
+    display: unset;
+    margin: 0rem;
+  }
+
+  .contact-column-right {
+    margin-right: 0rem;
+  }
+
+  .over-column-container {
+    flex-direction: column;
+    left: 0rem;
+  }
+
+  .overlay-calendar-2 {
+    width: 100%;
+    left: 0rem;
+    display: flex;
+    align-items: center;
+  }
+  .overlay,
+  .overlay-calendar,
+  .overlay-calendar-2,
+  .over-column-container {
+    height: 150vh;
+  }
+
+  /* .progress-container {
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -1187,7 +1179,6 @@ a.recipe-button {
     justify-content: space-evenly;
     border-left: solid var(--secondary-color);
     border-top: solid var(--secondary-color);
-    /* padding: 2rem 0.5rem; */
     background: var(--dominant-color);
   }
 
@@ -1351,7 +1342,6 @@ a.recipe-button {
     font-size: 1.5rem;
     line-height: 3rem;
     width: 100%;
-    /* position: relative; */
   }
 
   .arrow-left,
@@ -1410,5 +1400,5 @@ a.recipe-button {
   .shanice-image {
     width: 55%;
     z-index: 4;
-  }
+  } */
 }

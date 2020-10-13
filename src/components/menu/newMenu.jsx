@@ -13,7 +13,7 @@ const NewMenu = ({
   const [openMenu, setOpenMenu] = useState(null);
 
   const breakfastBrownDiv =
-    (openMenu === breakfast && openMenu === lunch) || openMenu === dinner
+    openMenu === lunch || openMenu === dinner
       ? "brown-b-c"
       : "breakfast-container";
   const lunchBrownDiv = openMenu === lunch ? "brown-l-c" : "lunch-container";
