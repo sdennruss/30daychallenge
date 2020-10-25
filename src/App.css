@@ -703,7 +703,9 @@ a:hover {
 .breakfast-container:hover,
 .lunch-container:hover,
 .dinner-container:hover,
-.brown-b-c:hover {
+.brown-b-c:hover,
+.brown-l-c:hover,
+.brown-d-c:hover {
   background-color: var(--accent-color-2);
   color: white;
 }
@@ -1149,7 +1151,7 @@ a.recipe-button {
   .overlay,
   .overlay-calendar,
   .over-column-container {
-    height: 195vh;
+    height: 190vh;
   }
 
   .overlay-calendar-2 {
@@ -1162,6 +1164,8 @@ a.recipe-button {
 
   .left-column {
     width: 95%;
+    display: flex;
+    flex-direction: column;
   }
 
   .progress-days {
@@ -1169,8 +1173,9 @@ a.recipe-button {
   }
 
   .right-column {
-    width: 95%;
+    width: 100%;
     height: 60vh;
+    margin-top: unset;
   }
 
   .challenge-number,
@@ -1183,7 +1188,7 @@ a.recipe-button {
   }
 
   .menu-items {
-    display: unset;
+    align-items: center;
     bottom: 0;
   }
 
@@ -1191,12 +1196,25 @@ a.recipe-button {
   .recipes-breakfast {
     flex-direction: column;
     width: 100%;
+    height: unset;
   }
 
   .breakfast-img,
   .lunch-img,
   .dinner-img {
     max-width: 60%;
+  }
+
+  .breakfast-image-container,
+  .lunch-image-container,
+  .dinner-image-container {
+    flex: 1;
+  }
+
+  .breakfast-content,
+  .lunch-content,
+  .dinner-content {
+    flex: 1;
   }
 
   /* .progress-container {
