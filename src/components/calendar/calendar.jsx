@@ -5,7 +5,6 @@ const Calendar = ({ challenges, onDaysClicked }) => {
   return (
     <React.Fragment>
       <div className="transition-outer-container">
-        <div className="overlay-calendar"></div>
         <div className="transition-calendar-container">
           <h1 className="thirty-day-challenge">30 Day Vegan Calendar</h1>
           <h3 className="pick-calendar-day">

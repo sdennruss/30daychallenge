@@ -1,10 +1,9 @@
 export const dinnerDetails = [
   {
     days: 1,
-    link:
-      "https://www.bonappetit.com/recipe/rice-noodles-al-pomodoro-with-chili-oil",
+    link: "https://www.budgetbytes.com/summer-sweet-corn-salad/",
     description:
-      "We’ve got bursting, jammy cherry tomatoes that make their own sauce, rice noodles that cook in a flash, and a weeknight dinner that tastes like it took a lot longer than 20 minutes.",
+      "Colorful summer vegetables, creamy avocado, pasta shells, and a homemade lemon vinaigrette make this light and fresh Summer Sweet Corn Salad.",
   },
   {
     days: 2,
@@ -53,12 +52,14 @@ export const dinnerDetails = [
     days: 9,
     link:
       "https://www.bonappetit.com/recipe/curried-yellow-split-pea-soup-with-spiced-coconut",
-    description: "ADD LATER",
+    description:
+      "A fireside split pea soup with the combination of curry, and coconut so unique and delicious.",
   },
   {
     days: 10,
     link: "https://www.bonappetit.com/recipe/stellar-quinoa-burger",
-    description: "ADD LATER",
+    description:
+      "With sweet potato as a binder, quinoa for protein, and meaty mushrooms for depth, this veggie burger beats anything in the frozen foods aisle.",
   },
   {
     days: 11,

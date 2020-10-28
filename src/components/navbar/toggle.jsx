@@ -10,6 +10,8 @@ const Toggle = () => {
   return (
     <React.Fragment>
       <div className="hamburger-container">
+        <div className="yellow-circle"></div>
+
         <div className="vvc-logo">
           <Link to="/calendar">
             {" "}

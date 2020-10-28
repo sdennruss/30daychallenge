@@ -54,7 +54,7 @@ export const lunchDetails = [
     days: 9,
     link: "https://www.feastingathome.com/farmers-market-veggie-pasta/",
     description:
-      "Farmers Market Pasta Salad with grilled zucchini, corn, cherry tomatoes and black beans. Make this summer pasta salad recipe gluten - free with optional grain - free pasta. Very adaptable! Serve it warm for dinner or chilled for midweek lunches.",
+      "Farmers Market Pasta Salad with grilled zucchini, corn, cherry tomatoes and black beans. Very adaptable! Serve it warm for dinner or chilled for midweek lunches.",
   },
   {
     days: 10,
@@ -91,7 +91,7 @@ export const lunchDetails = [
     days: 15,
     link: "https://minimalistbaker.com/chickpea-sunflower-sandwich/",
     description:
-      "30-minute Chickpea Sunflower Sandwich with smashed chickpeas and roasted sunflower seeds in a simple dressing. Sandwiched between two slices of bread and topped with my secret garlic sauce, this is healthy lunch perfection.",
+      "30-minute Chickpea Sunflower Sandwich with smashed chickpeas and roasted sunflower seeds in a simple dressing.",
   },
   {
     days: 16,
@@ -161,28 +161,28 @@ export const lunchDetails = [
     link:
       "https://www.ambitiouskitchen.com/mango-avocado-black-rice-salad-with-cilantro-lime-vinaigrette-healthy-gluten-free-vegan/",
     description:
-      "Bright and fresh, this incredible black rice salad isn’t only flavorful, it’s packed with nutrients too. It’s sweet, creamy, and crunchy, and topped with an addicting cilantro-lime vinaigrette. You’ll love this for a healthy lunch.",
+      "Bright and fresh, this incredible black rice salad isn’t only flavorful, it’s packed with nutrients too. It’s sweet, creamy, and topped with an addicting cilantro-lime vinaigrette.",
   },
   {
     days: 27,
     link:
       "https://www.ambitiouskitchen.com/smashed-chickpea-avocado-salad-sandwich-with-cranberries-lemon/",
     description:
-      "Eliminate mayo in this recipe as it's unnecessary all thanks to the creamy, ripe avocado. Cranberries and lemon give it a nice sweet tang! You’ll love how easy this is to throw together for lunch.",
+      "Eliminate mayo in this recipe as it's unnecessary all thanks to the creamy, ripe avocado. Cranberries and lemon give it a nice sweet tang!",
   },
   {
     days: 28,
     link:
       "https://www.ambitiouskitchen.com/vegan-macadamia-coconut-tofu-bowls/",
     description:
-      "Vegan tofu bowls with sweet potato coconut milk sauce, spinach, sweet buttery macadamia nuts and brown rice. Made with organic, extra firm tofu. The perfect veggie packed lunch for meal prep!",
+      "Vegan tofu bowls with sweet potato coconut milk sauce, spinach, sweet buttery macadamia nuts and brown rice. The perfect veggie packed lunch for meal prep!",
   },
   {
     days: 29,
     link:
       "https://www.ambitiouskitchen.com/strawberry-mango-chopped-spinach-quinoa-salad-with-sesame-lime-vinaigrette/",
     description:
-      "Nutritious and flavorful spinach quinoa salad bursting with mango, strawberries, avocado and a scrumptious sesame-lime vinaigrette. Tangy and sweet, it makes an amazing side or meal that’s perfect for parties.",
+      "Nutritious and flavorful spinach quinoa salad bursting with mango, strawberries, avocado and a scrumptious sesame-lime vinaigrette.",
   },
   {
     days: 30,

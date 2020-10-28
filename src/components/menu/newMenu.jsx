@@ -46,6 +46,7 @@ const NewMenu = ({
           <div className="recipes-breakfast" style={{ display: hideBreakfast }}>
             <div className="breakfast-image-container">
               <img
+                style={{ width: "700", height: "400" }}
                 className="breakfast-img"
                 src={
                   process.env.PUBLIC_URL +
@@ -74,6 +75,7 @@ const NewMenu = ({
           <div className="recipes">
             <div className="lunch-image-container">
               <img
+                style={{ width: "700", height: "400" }}
                 className="lunch-img"
                 src={
                   process.env.PUBLIC_URL +
@@ -102,6 +104,7 @@ const NewMenu = ({
           <div className="recipes">
             <div className="dinner-image-container">
               <img
+                style={{ width: "700", height: "400" }}
                 className="dinner-img"
                 src={
                   process.env.PUBLIC_URL +

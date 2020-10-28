@@ -48,7 +48,6 @@ const HomePage1 = () => {
             </div>
           </div>
         </div>
-        <div className="yellow-circle"></div>
       </div>
     </React.Fragment>
   );

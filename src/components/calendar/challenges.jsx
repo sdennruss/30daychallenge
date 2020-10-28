@@ -5,7 +5,7 @@ export const challenges = [
     id: "challenge-1",
     breakfast: "Breakfast Potato Hash",
     lunch: "Lentils with Creamy Mushroom Gravy",
-    dinner: "Rice Noodles al Pomodoro with Chili Oil",
+    dinner: "Summer Sweet Corn Salad",
   },
 
   {
