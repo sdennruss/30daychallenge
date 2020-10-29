@@ -24,19 +24,6 @@ const Contact = () => {
               </a>
             </p>
           </div>
-
-          <div className="instagram-container">
-            <p className="instagram-handle">
-              <a
-                href="https://www.instagram.com/onewayshan/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="insta"
-              >
-                @onewayshan
-              </a>
-            </p>
-          </div>
         </div>
       </div>
     </React.Fragment>

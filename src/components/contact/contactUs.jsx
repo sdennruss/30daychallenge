@@ -12,15 +12,13 @@ const ContactUs = () => {
             </h1>
 
             <p className="contact-information">
-              Making the transition to eliminating meat, seafood and dairy
+              Making the transition towards eliminating meat, seafood and dairy
               products is never easy, especially when people are against your
               personal lifestyle choice. Shoot me a message if you're
               struggling, and I'll be more than happy to offer recommendations
               and hear ya out.
             </p>
-            <p className="contact-information-2">
-              With love, Shanice Dennis-Russell
-            </p>
+            <p className="contact-information-2">With love, Shan xo</p>
             <div className="personal-information">
               <a
                 href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=sdennisrussell@gmail.com&su=Hi Shan!&shva=1"
