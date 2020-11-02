@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Days from "./days";
 
 const Calendar = ({ challenges, onDaysClicked }) => {

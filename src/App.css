@@ -191,6 +191,7 @@ a.button-to-home {
   animation: slideUp 800ms ease forwards 500ms;
   color: black;
   font-family: "Amatic SC", cursive;
+  font-weight: bolder;
 }
 
 .homepage-image-container {
@@ -434,7 +435,7 @@ input {
 }
 
 .brand-logo {
-  height: 5.5vh;
+  height: 4vh;
   margin-left: 3.1rem;
 }
 
@@ -689,11 +690,13 @@ a:hover {
 .brown-l-c,
 .brown-d-c {
   background-color: var(--accent-color-2);
+  color: white;
 }
 
 .breakfast-container {
   background-color: var(--accent-color-2);
   margin-left: 1rem;
+  color: white;
 }
 
 .brown-b-c {

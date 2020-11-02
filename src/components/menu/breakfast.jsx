@@ -171,14 +171,14 @@ export const breakfastDetails = [
     days: 28,
     link: "https://www.wellplated.com/steel-cut-oats-recipe/",
     description:
-      "The secret to making perfect steel cut oatmeal on the stovetop that turns out delicious and creamy every time! Healthy and low calorie, this is the only oatmeal recipe you need. Simple, vegan, and high in fiber, steel cut oats keep you full all morning long.",
+      "The secret to making perfect steel cut oatmeal on the stovetop that turns out delicious and creamy every time! Healthy and low calorie, this is the only oatmeal recipe you need.",
   },
   {
     days: 29,
     link:
       "https://www.freshoffthegrid.com/johnny-apple-seed-oatmeal/#wprm-recipe-container-4122",
     description:
-      "While it’s not as flashy as a cast iron breakfast skillet or a well-prepared egg sandwich, a bowl of warm oatmeal never fails to come through in a pinch. Nothing else is as economical to buy, easy to make, or as fast to prepare. When times are tough or you’re just in a rush, it’s oatmeal that comes to the rescue.",
+      "While it’s not as flashy as a cast iron breakfast skillet or a well-prepared egg sandwich, a bowl of warm oatmeal never fails to come through in a pinch. Nothing else is as economical to buy, easy to make, or as fast to prepare.",
   },
   {
     days: 30,

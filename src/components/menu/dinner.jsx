@@ -40,13 +40,14 @@ export const dinnerDetails = [
     days: 7,
     link: "https://cookieandkate.com/sugar-snap-pea-and-carrot-soba-noodles/",
     description:
-      "A healthy, vibrant soba noodle recipe full of fresh springtime produce. Feel free to trade in other seasonal vegetables for the sugar snap peas, like chopped bell pepper. This recipe yields about six servings and the leftovers don’t keep particularly well, so halve the ingredients if you’re not serving a crowd.",
+      "A healthy, vibrant soba noodle recipe full of fresh springtime produce. Feel free to trade in other seasonal vegetables for the sugar snap peas, like chopped bell pepper.",
   },
   {
     days: 8,
     link:
       "https://www.bonappetit.com/recipe/roasted-broccoli-and-tofu-with-creamy-miso-dressing",
-    description: "ADD LATER",
+    description:
+      "Toasted sesame seeds can often be found in the Asian sections of some supermarkets, sometimes labeled Gomasio. If ever there was a time of year to keep a big jar of them on hand, pre-toasted and ready to go, this is it.",
   },
   {
     days: 9,
