@@ -1,7 +1,7 @@
 import React from "react";
 import Days from "./days";
 
-const Calendar = ({ challenges, onDaysClicked }) => {
+const Calendar = ({ challenges, onDaysClicked, handleScroll }) => {
   return (
     <React.Fragment>
       <div className="transition-outer-container">
@@ -13,7 +13,11 @@ const Calendar = ({ challenges, onDaysClicked }) => {
 
           <div className="challenge-container">
             {challenges.map((challenge) => (
-              <div key={challenge.id} className="challenge-divs">
+              <div
+                onClick={handleScroll}
+                key={challenge.id}
+                className="challenge-divs"
+              >
                 <Days challenge={challenge} onDaysClicked={onDaysClicked} />
               </div>
             ))}

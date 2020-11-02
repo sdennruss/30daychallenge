@@ -9,6 +9,7 @@ const NewMenu = ({
   dinner,
   challengeIndex,
   onDaysClicked,
+  scrollRef,
 }) => {
   const [openMenu, setOpenMenu] = useState(null);
 
@@ -27,6 +28,7 @@ const NewMenu = ({
       <p className="challenge-number">{` Day ${challengeIndex + 1}`}</p>
       <div className="menu-container">
         <div
+          ref={scrollRef}
           onClick={() => setOpenMenu(breakfast)}
           className={breakfastBrownDiv}
         >

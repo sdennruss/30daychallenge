@@ -14,6 +14,12 @@ const MenuItems = ({
     params: { days, breakfast, lunch, dinner },
   } = match;
 
+  const scrollRef = useRef();
+
+  function handleScroll() {
+    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <React.Fragment>
       <div className="overlay-calendar-2"></div>
@@ -24,6 +30,7 @@ const MenuItems = ({
             challengeIndex={challengeIndex}
             onDaysClicked={onDaysClicked}
             breakfast={breakfast}
+            handleScroll={handleScroll}
           />
           <NewProgressBar
             progressPercentage={progressPercentage}
@@ -40,6 +47,7 @@ const MenuItems = ({
             days={days}
             onDaysClicked={onDaysClicked}
             challengeIndex={challengeIndex}
+            scrollRef={scrollRef}
           />
         </div>
       </div>
