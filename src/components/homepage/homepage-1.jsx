@@ -29,7 +29,10 @@ const HomePage1 = () => {
 
               <div classNsame="homepage-button">
                 <button className="button-to-calendar">
-                  <Link className="button-to-home" to="/calendar">
+                  <Link
+                    className="button-to-home"
+                    to="/calendar/:breakfast/:lunch/:dinner/:days"
+                  >
                     {" "}
                     Start
                   </Link>

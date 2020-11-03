@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Resources from "./components/resources/resources";
 import NotFound from "./components/notfound/notfound";
@@ -67,8 +67,11 @@ class App extends Component {
             <Route
               path="/calendar"
               render={(props) => (
-                <Calendar
+                <MenuItems
                   challenges={challenges}
+                  openBreaky={openBreaky}
+                  challengeIndex={challengeIndex}
+                  progressPercentage={progressPercentage}
                   onDaysClicked={this.handleDaysClicked}
                   {...props}
                 />

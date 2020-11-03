@@ -27,13 +27,6 @@ const ContactUs = () => {
               >
                 <i className="fa fa-envelope" aria-hidden="true"></i>
               </a>
-              <a
-                href="https://www.instagram.com/onewayshan/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-instagram" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
           <div className="contact-right-column">
