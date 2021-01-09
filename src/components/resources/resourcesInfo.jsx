@@ -1,6 +1,6 @@
 import cowspiracyImage from "./cowspiracy.jpg";
 import gameChangersImage from "./gamechangers.jpg";
-import cheeseTrapImage from "./cheesetrap.png";
+import cheeseTrapImage from "./cheesetrap.jpg";
 import purePlantImage from "./pureplant.jpg";
 import fishFarmingImage from "./fishfarming.jpg";
 import theCoveImage from "./thecove.jpg";

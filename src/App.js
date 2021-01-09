@@ -65,19 +65,6 @@ class App extends Component {
               )}
             />
             <Route
-              path="/calendar"
-              render={(props) => (
-                <MenuItems
-                  challenges={challenges}
-                  openBreaky={openBreaky}
-                  challengeIndex={challengeIndex}
-                  progressPercentage={progressPercentage}
-                  onDaysClicked={this.handleDaysClicked}
-                  {...props}
-                />
-              )}
-            />
-            <Route
               path="/resources"
               render={(props) => <Resources {...props} />}
             />

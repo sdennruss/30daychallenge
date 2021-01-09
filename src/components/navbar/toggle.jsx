@@ -4,7 +4,7 @@ import MenuNav from "./menuNav";
 import vvcLogo from "./logo-2.png";
 
 const Toggle = () => {
-  const navigations = ["home", "calendar", "resources", "connect"];
+  const navigations = ["home", "resources", "connect"];
   const [expand, setExpand] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ const Toggle = () => {
         <div className="yellow-circle"></div>
 
         <div className="vvc-logo">
-          <Link to="/calendar">
+          <Link to="/home">
             {" "}
             <img src={vvcLogo} className="brand-logo" />
           </Link>

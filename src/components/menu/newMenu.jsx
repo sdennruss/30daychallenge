@@ -20,15 +20,22 @@ const NewMenu = ({
   const lunchBrownDiv = openMenu === lunch ? "brown-l-c" : "lunch-container";
   const dinnerBrownDiv = openMenu === dinner ? "brown-d-c" : "dinner-container";
 
+  const newBreakfast =
+    breakfast === ":breakfast" ? "Breakfast Potato Hash" : breakfast;
+  const newLunch =
+    lunch === ":lunch" ? "Lentils with Creamy Mushroom Gravy" : lunch;
+  const newDinner = dinner === ":dinner" ? "Summer Sweet Corn Salad" : dinner;
+
   const hideBreakfast =
     openMenu === lunch || openMenu === dinner ? "none" : null;
 
   return (
     <React.Fragment>
-      <p className="challenge-number">{` Day ${challengeIndex + 1}`}</p>
+      <p ref={scrollRef} className="challenge-number">{` Day ${
+        challengeIndex + 1
+      }`}</p>
       <div className="menu-container">
         <div
-          ref={scrollRef}
           onClick={() => setOpenMenu(breakfast)}
           className={breakfastBrownDiv}
         >
@@ -57,7 +64,7 @@ const NewMenu = ({
               />
             </div>
             <div className="breakfast-content">
-              <p className="breakfast-item">{breakfast}</p>
+              <p className="breakfast-item">{newBreakfast}</p>
               <p className="breakfast-details">
                 {breakfastDetails[challengeIndex].description}
               </p>
@@ -86,7 +93,7 @@ const NewMenu = ({
               />
             </div>
             <div className="lunch-content">
-              <p className="lunch-item">{lunch}</p>
+              <p className="lunch-item">{newLunch}</p>
               <p className="lunch-details">
                 {lunchDetails[challengeIndex].description}
               </p>
@@ -115,7 +122,7 @@ const NewMenu = ({
               />
             </div>
             <div className="dinner-content">
-              <p className="dinner-item">{dinner}</p>
+              <p className="dinner-item">{newDinner}</p>
               <p className="dinner-details">
                 {dinnerDetails[challengeIndex].description}
               </p>

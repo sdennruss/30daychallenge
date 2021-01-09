@@ -31,11 +31,8 @@ const MenuItems = ({
             onDaysClicked={onDaysClicked}
             breakfast={breakfast}
             handleScroll={handleScroll}
-          />
-          <NewProgressBar
             progressPercentage={progressPercentage}
             challengeIndex={challengeIndex}
-            challenges={challenges}
           />
         </div>
 
