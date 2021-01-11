@@ -6,7 +6,7 @@ const Contact = () => {
     <React.Fragment>
       <div className="contact-container">
         <div className="contact-column-left">
-          <Link to="/home">
+          <Link to="/connect">
             <h3 className="help">Need up with the transition?</h3>
           </Link>
         </div>

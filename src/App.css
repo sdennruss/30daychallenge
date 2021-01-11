@@ -1052,10 +1052,6 @@ a.recipe-button {
   color: var(--accent-color-1);
 }
 
-.help:hover::after {
-  content: " Connect With Me -->";
-}
-
 .email-container {
   display: flex;
   flex-flow: row wrap;
